@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
+import WireframeBackground from '../components/WireframeBackground.astro';
+---
+
+<Layout title="Blog - Azoth Automations">
+  <WireframeBackground />
+  <main class="pt-20">
+    <div class="relative min-h-[40vh] flex items-center justify-center">
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-6xl md:text-7xl font-orbitron font-black text-white mb-6">
+          Automation <span class="text-primary">Insights</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+          Expert insights, industry trends, and automation strategies to transform your business
+        </p>
+      </div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-6 pb-32">
+      <div class="glass-morphism rounded-2xl p-12 text-center">
+        <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+          <svg class="text-black w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-orbitron font-bold text-primary mb-4">
+          Coming Soon
+        </h2>
+        <p class="text-gray-300 mb-8 leading-relaxed">
+          We're preparing valuable content about automation strategies, case studies, and industry insights. 
+          Check back soon for expert articles that will help you transform your business operations.
+        </p>
+        <a
+          href="#contact"
+          class="inline-flex items-center bg-primary text-black px-8 py-3 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300"
+        >
+          Get Notified When We Launch
+          <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12l-4.58 4.59z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <ContactSection />
+  </main>
+  <Footer />
+</Layout>
