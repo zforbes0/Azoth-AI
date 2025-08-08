@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(0, 0%, 60%);
+  --popover: hsl(0, 0%, 5%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 5%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --border: hsl(164, 85%, 25%);
+  --input: hsl(0, 0%, 10%);
+  --primary: hsl(164, 85%, 45%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 10%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(0, 0%, 10%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(164, 85%, 45%);
+  --radius: 0.5rem;
+  
+  /* Azoth-inspired custom properties */
+  --matrix-green: hsl(164, 85%, 45%);
+  --matrix-dark: hsl(164, 85%, 28%);
+  --matrix-deep: hsl(164, 85%, 12%);
+  --matrix-bg: hsl(0, 0%, 0%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(0, 0%, 60%);
+  --popover: hsl(0, 0%, 5%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 5%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --border: hsl(164, 85%, 25%);
+  --input: hsl(0, 0%, 10%);
+  --primary: hsl(164, 85%, 45%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 10%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(0, 0%, 10%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(164, 85%, 45%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  /* Matrix Background with 3D depth */
+  .matrix-bg {
+    background: 
+      radial-gradient(circle at 20% 80%, hsla(164, 85%, 45%, 0.12) 0%, transparent 60%),
+      radial-gradient(circle at 80% 20%, hsla(164, 85%, 28%, 0.10) 0%, transparent 55%),
+      radial-gradient(circle at 50% 50%, hsla(164, 85%, 45%, 0.06) 0%, transparent 70%),
+      linear-gradient(135deg, transparent 20%, hsla(164, 85%, 45%, 0.02) 40%, transparent 60%),
+      hsl(0, 0%, 0%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 3D Wireframe Background */
+  .wireframe-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 3D Perspective Container */
+  .perspective-deep {
+    perspective: 2000px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+  }
+  
+  /* 3D Floating Animation */
+  .float-3d {
+    animation: float3d 8s ease-in-out infinite;
+  }
+  
+  .float-3d-delayed {
+    animation: float3d 10s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+  
+  .float-3d-slow {
+    animation: float3d 12s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+  
+  /* Glass Morphism Effects */
+  .glass-morphism {
+    background: hsla(164, 85%, 45%, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsla(164, 85%, 45%, 0.2);
+  }
+  
+  .glass-morphism-dark {
+    background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.95) 0%, hsla(0, 0%, 0%, 0.9) 40%, hsla(0, 0%, 0%, 0.6) 70%, hsla(0, 0%, 0%, 0) 100%);
+    backdrop-filter: blur(15px);
+    border: none;
+  }
+  
+  /* Matrix Text Effects - Removed glow */
+  .matrix-text-shadow {
+    /* No text shadow for cleaner look */
+  }
+  
+  /* Custom Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  /* Service Card Hover Effects */
+  .service-card {
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px hsla(164, 85%, 45%, 0.15);
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotateX(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotateX(10deg); 
+  }
+}
+
+@keyframes float3d {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  25% {
+    transform: translate3d(10px, -15px, 20px) rotateX(15deg) rotateY(25deg) rotateZ(5deg);
+  }
+  50% {
+    transform: translate3d(-5px, -25px, 40px) rotateX(25deg) rotateY(-15deg) rotateZ(-10deg);
+  }
+  75% {
+    transform: translate3d(-15px, -10px, 15px) rotateX(-10deg) rotateY(30deg) rotateZ(15deg);
+  }
+}
+
+@keyframes glow {
+  from { 
+    box-shadow: 0 0 20px hsla(120, 100%, 50%, 0.5); 
+  }
+  to { 
+    box-shadow: 0 0 30px hsla(120, 100%, 50%, 0.8), 0 0 40px hsla(120, 100%, 50%, 0.3); 
+  }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(50px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Matrix Rain Effect */
+@keyframes matrixRain {
+  0% { 
+    transform: translateY(-100vh) rotateZ(0deg); 
+  }
+  100% { 
+    transform: translateY(100vh) rotateZ(360deg); 
+  }
+}
+
+.animate-matrix-rain {
+  animation: matrixRain 20s linear infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scaleY(1.1);
+  }
+}
+
+/* 3D Perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Font Families */
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
