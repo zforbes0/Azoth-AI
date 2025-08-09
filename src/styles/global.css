@@ -112,7 +112,7 @@
   
   /* Glass Morphism Effects */
   .glass-morphism {
-    background: hsla(0, 0%, 0%, 0.8);
+    background: hsla(0, 0%, 0%, 0.95);
     backdrop-filter: blur(10px);
     border: 1px solid hsla(164, 85%, 45%, 0.3);
   }
