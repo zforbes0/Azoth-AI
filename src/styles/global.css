@@ -118,9 +118,9 @@
   }
   
   .glass-morphism-dark {
-    background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.95) 0%, hsla(0, 0%, 0%, 0.9) 40%, hsla(0, 0%, 0%, 0.6) 70%, hsla(0, 0%, 0%, 0) 100%);
+    background: hsla(0, 0%, 0%, 0.9);
     backdrop-filter: blur(15px);
-    border: none;
+    border: 1px solid hsla(164, 85%, 45%, 0.2);
   }
   
   /* Matrix Text Effects - Removed glow */
