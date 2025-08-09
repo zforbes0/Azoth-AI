@@ -54,12 +54,12 @@ const caseStudies = [
                 alt={study.category}
                 class="w-full h-full object-cover min-h-[400px]"
               />
-              <div class={`absolute inset-0 bg-gradient-to-r ${study.reverse ? 'from-transparent to-primary/20' : 'from-primary/20 to-transparent'}`}></div>
+              <div class={`absolute inset-0 bg-gradient-to-r ${study.reverse ? 'from-transparent to-primary/80' : 'from-primary/80 to-transparent'}`}></div>
               <div class={`absolute bottom-6 ${study.reverse ? 'right-6 text-right' : 'left-6'} text-white`}>
                 <div class="bg-primary text-black px-4 py-2 rounded-lg font-orbitron font-bold text-sm mb-2">
                   {study.metrics}
                 </div>
-                <div class="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg">
+                <div class="bg-black/90 backdrop-blur-sm px-4 py-2 rounded-lg">
                   {study.category}
                 </div>
               </div>
@@ -78,7 +78,7 @@ const caseStudies = [
               <div class="flex flex-wrap gap-4 mb-8">
                 {study.tags.map((tag, tagIndex) => (
                   <span
-                    class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-sm font-semibold"
+                    class="bg-primary/80 text-primary px-3 py-1 rounded-lg text-sm font-semibold"
                   >
                     {tag}
                   </span>

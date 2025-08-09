@@ -70,14 +70,9 @@
 }
 
 @layer utilities {
-  /* Matrix Background with 3D depth */
+  /* Matrix Background with 3D depth - SOLID OPAQUE */
   .matrix-bg {
-    background: 
-      radial-gradient(circle at 20% 80%, hsla(164, 85%, 45%, 0.12) 0%, transparent 60%),
-      radial-gradient(circle at 80% 20%, hsla(164, 85%, 28%, 0.10) 0%, transparent 55%),
-      radial-gradient(circle at 50% 50%, hsla(164, 85%, 45%, 0.06) 0%, transparent 70%),
-      linear-gradient(135deg, transparent 20%, hsla(164, 85%, 45%, 0.02) 40%, transparent 60%),
-      hsl(0, 0%, 0%);
+    background: hsl(0, 0%, 0%);
     position: relative;
     overflow: hidden;
   }
@@ -210,11 +205,11 @@
 
 @keyframes pulse {
   0%, 100% {
-    opacity: 0.2;
+    opacity: 1.0;
     transform: scaleY(1);
   }
   50% {
-    opacity: 0.6;
+    opacity: 1.0;
     transform: scaleY(1.1);
   }
 }
