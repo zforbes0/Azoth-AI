@@ -107,13 +107,27 @@
   
   /* Glass Morphism Effects - FULLY OPAQUE */
   .glass-morphism {
-    background: rgba(0, 0, 0, 1.0);
-    border: 1px solid hsla(164, 85%, 45%, 0.8);
+    background: rgba(0, 0, 0, 1.0) !important;
+    border: 1px solid hsla(164, 85%, 45%, 1.0) !important;
+    backdrop-filter: none !important;
   }
   
   .glass-morphism-dark {
-    background: rgba(0, 0, 0, 1.0);
-    border: 1px solid hsla(164, 85%, 45%, 0.5);
+    background: rgba(0, 0, 0, 1.0) !important;
+    border: 1px solid hsla(164, 85%, 45%, 1.0) !important;
+    backdrop-filter: none !important;
+  }
+  
+  /* Force full opacity on all primary backgrounds */
+  .bg-primary {
+    background: hsl(164, 85%, 45%) !important;
+    opacity: 1.0 !important;
+  }
+  
+  /* Force full opacity on all images */
+  img {
+    opacity: 1.0 !important;
+    background: rgba(0, 0, 0, 1.0) !important;
   }
   
   /* Matrix Text Effects - Removed glow */
