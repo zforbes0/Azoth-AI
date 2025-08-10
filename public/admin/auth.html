@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Authenticating...</title>
+  <script>
+    // Extract access token from URL fragment and pass it to the parent window
+    if (window.location.hash) {
+      const token = new URLSearchParams(window.location.hash.substring(1)).get('access_token');
+      if (token) {
+        window.opener.postMessage({
+          type: 'authorization_granted',
+          token: token
+        }, window.location.origin);
+        window.close();
+      }
+    }
+    
+    // Handle the case where we're redirected here with a code parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    const state = urlParams.get('state');
+    
+    if (code && state) {
+      window.opener.postMessage({
+        type: 'authorization_code',
+        code: code,
+        state: state
+      }, window.location.origin);
+      window.close();
+    }
+  </script>
+</head>
+<body>
+  <p>Authenticating with GitHub...</p>
+</body>
+</html>

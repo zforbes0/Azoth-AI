@@ -105,29 +105,36 @@
     animation-delay: -4s;
   }
   
-  /* Glass Morphism Effects - FULLY OPAQUE */
+  /* Glass Morphism Effects - Black interior with wireframe border */
   .glass-morphism {
-    background: rgba(0, 0, 0, 1.0) !important;
-    border: 1px solid hsla(164, 85%, 45%, 1.0) !important;
-    backdrop-filter: none !important;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid hsla(164, 85%, 45%, 0.3);
+    backdrop-filter: blur(10px);
   }
   
   .glass-morphism-dark {
-    background: rgba(0, 0, 0, 1.0) !important;
-    border: 1px solid hsla(164, 85%, 45%, 1.0) !important;
-    backdrop-filter: none !important;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid hsla(164, 85%, 45%, 0.3);
+    backdrop-filter: blur(10px);
   }
   
-  /* Force full opacity on all primary backgrounds */
+  /* Force green statistics boxes to be completely solid */
   .bg-primary {
     background: hsl(164, 85%, 45%) !important;
     opacity: 1.0 !important;
   }
   
-  /* Force full opacity on all images */
-  img {
-    opacity: 1.0 !important;
-    background: rgba(0, 0, 0, 1.0) !important;
+  /* Force pillar page grid layout to work */
+  .pillar-grid {
+    display: grid !important;
+    grid-template-columns: 3fr 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  @media (max-width: 1023px) {
+    .pillar-grid {
+      grid-template-columns: 1fr !important;
+    }
   }
   
   /* Matrix Text Effects - Removed glow */

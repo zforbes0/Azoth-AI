@@ -1,34 +1,30 @@
 ---
-// Success Stories component - converted from React
+// Blog Articles Preview component
 
-const caseStudies = [
+const blogArticles = [
   {
-    title: "GlobalTech Manufacturing",
-    subtitle: "Complete Production Line Automation Reduces Costs by 60%",
-    description: "Azoth AI completely revolutionized our certification system for AL2A certifications. If a client needs certifications for all their calibrated equipment, it's now the push of a button away, saving us time while maintaining a professional quality!",
-    metrics: "85% Efficiency Increase",
-    category: "Manufacturing Process Automation",
-    tags: ["Industrial IoT", "Predictive Maintenance", "Real-time Analytics"],
-    image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+    title: "AI Document Management System",
+    subtitle: "Intelligent Retrieval & Organization for Business",
+    description: "Transform how your organization manages, retrieves, and organizes documents with cutting-edge artificial intelligence technology.",
+    url: "/blog/ai-document-management-system",
+    image: "https://images.pexels.com/photos/7679562/pexels-photo-7679562.jpeg?auto=compress&cs=tinysrgb&h=300&w=500",
+    readTime: "15 min read"
   },
   {
-    title: "FinanceFlow Corp",
-    subtitle: "AI-Powered Document Processing Saves 500+ Hours Monthly",
-    description: "Our intelligent document automation system transformed FinanceFlow's manual data entry processes. Using advanced OCR, machine learning, and natural language processing, we created a solution that automatically extracts, validates, and processes financial documents with 99.7% accuracy.",
-    metrics: "99.7% Accuracy Rate",
-    category: "Document Processing Automation",
-    tags: ["Document AI", "OCR Technology", "Workflow Automation"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    reverse: true
+    title: "RAG AI Document Retrieval",
+    subtitle: "How Retrieval-Augmented Generation Transforms Knowledge Access",
+    description: "Discover how RAG technology revolutionizes document search, making enterprise knowledge instantly accessible and contextually relevant.",
+    url: "/blog/rag-ai-document-retrieval",
+    image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&h=400&w=800",
+    readTime: "12 min read"
   },
   {
-    title: "RetailTech Solutions",
-    subtitle: "Complete E-commerce Automation Handles 10x Order Volume",
-    description: "RetailTech's rapid growth was bottlenecked by manual processes. We implemented comprehensive automation covering inventory management, order processing, customer service, and fulfillment. The result: seamless scaling to handle massive order volumes during peak seasons without additional staff.",
-    metrics: "300% Order Volume Increase",
-    category: "E-commerce Platform Automation",
-    tags: ["Inventory Management", "Order Automation", "CRM Integration"],
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+    title: "Intelligent Document Retrieval Software",
+    subtitle: "Features to Look For in 2025",
+    description: "Essential features and capabilities for next-generation document retrieval systems that deliver real business value.",
+    url: "/blog/intelligent-document-retrieval-software",
+    image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&h=400&w=800",
+    readTime: "10 min read"
   }
 ];
 ---
@@ -37,62 +33,47 @@ const caseStudies = [
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-20">
       <h2 class="text-5xl md:text-6xl font-orbitron font-black text-white mb-6">
-        Efficiency + Intelligence + <span class="text-primary matrix-text-shadow">ROI: Delivered</span>
+        AI Document Management <span class="text-primary matrix-text-shadow">Insights</span>
       </h2>
       <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        Real automation success stories that transformed operations and accelerated growth
+        Expert insights and comprehensive guides on AI-powered document solutions
       </p>
     </div>
 
     <div class="space-y-16">
-      {caseStudies.map((study, index) => (
-        <div class="glass-morphism rounded-2xl overflow-hidden">
-          <div class={`grid md:grid-cols-2 gap-0 ${study.reverse ? 'md:grid-flow-col-dense' : ''}`}>
-            <div class={`relative ${study.reverse ? 'md:order-2' : ''}`}>
+      {blogArticles.map((article, index) => (
+        <a href={article.url} class="glass-morphism rounded-2xl overflow-hidden block hover:border-primary transition-all duration-300">
+          <div class="grid md:grid-cols-2 gap-0">
+            <div class="relative">
               <img
-                src={study.image}
-                alt={study.category}
-                class="w-full h-full object-cover min-h-[400px]"
+                src={article.image}
+                alt={article.title}
+                class="w-full h-full object-cover min-h-[300px]"
               />
-              <div class={`absolute inset-0 bg-gradient-to-r ${study.reverse ? 'from-transparent to-primary/80' : 'from-primary/80 to-transparent'}`}></div>
-              <div class={`absolute bottom-6 ${study.reverse ? 'right-6 text-right' : 'left-6'} text-white`}>
-                <div class="bg-primary text-black px-4 py-2 rounded-lg font-orbitron font-bold text-sm mb-2">
-                  {study.metrics}
-                </div>
-                <div class="bg-black/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  {study.category}
+              <div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <div class="bg-primary text-black px-3 py-1 rounded-lg font-orbitron font-bold text-xs">
+                  {article.readTime}
                 </div>
               </div>
             </div>
 
-            <div class={`p-12 ${study.reverse ? 'md:order-1' : ''}`}>
-              <h3 class="text-3xl font-orbitron font-bold text-primary mb-4">
-                {study.title}
+            <div class="p-8">
+              <h3 class="text-2xl font-orbitron font-bold text-primary mb-3">
+                {article.title}
               </h3>
-              <h4 class="text-xl font-semibold text-white mb-6">
-                {study.subtitle}
+              <h4 class="text-lg font-semibold text-white mb-4">
+                {article.subtitle}
               </h4>
-              <p class="text-gray-300 mb-8 leading-relaxed">
-                {study.description}
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                {article.description}
               </p>
-              <div class="flex flex-wrap gap-4 mb-8">
-                {study.tags.map((tag, tagIndex) => (
-                  <span
-                    class="bg-primary/80 text-primary px-3 py-1 rounded-lg text-sm font-semibold"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <div class="inline-block bg-primary text-black px-4 py-2 rounded-lg font-semibold hover:bg-primary/80 transition-all duration-300">
+                Read Article →
               </div>
-              <a 
-                href="#contact"
-                class="inline-block bg-primary text-black px-6 py-3 rounded-lg font-semibold hover:bg-primary/80 transition-all duration-300"
-              >
-                View Case Study
-              </a>
             </div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </div>

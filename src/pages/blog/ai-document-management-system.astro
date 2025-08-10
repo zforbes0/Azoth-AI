@@ -7,13 +7,13 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
 <Layout title="AI Document Management System – Intelligent Retrieval & Organization for Business">
   <main>
     <!-- Hero Section -->
-    <section class="relative min-h-[70vh] flex items-center justify-center wireframe-bg overflow-hidden">
+    <section class="relative min-h-[60vh] flex items-center justify-center wireframe-bg overflow-hidden pt-20">
       <WireframeBackground />
-      <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 text-center">
+      <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 text-center">
         <div class="animate-slide-up">
           <div class="bg-primary/20 border-2 border-primary px-4 py-2 rounded-full inline-block mb-6">
             <p class="text-primary font-orbitron text-sm tracking-wider font-bold">
-              🏛️ PILLAR PAGE - ENTERPRISE AI SOLUTIONS
+              🤖 ENTERPRISE AI SOLUTIONS
             </p>
           </div>
           <h1 class="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-white">
@@ -26,22 +26,24 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
       </div>
     </section>
 
-    <!-- Pillar Overview Section -->
-    <section class="py-16 bg-black border-t border-primary">
+    <!-- Main Content Area with Right Panel -->
+    <section class="py-8 bg-black border-t border-primary">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-orbitron font-bold text-primary mb-6">Complete AI Document Management Ecosystem</h2>
-          <p class="text-lg text-white max-w-4xl mx-auto mb-12">Explore our comprehensive suite of AI-powered document solutions, from intelligent retrieval to automated workflow integration.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pillar Content with Sidebar -->
-    <article class="py-12 bg-black">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-4 gap-8">
-          <!-- Main Content -->
+        <div class="grid lg:grid-cols-4 gap-8 pillar-page-grid" style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+        <style>
+          @media (min-width: 1024px) {
+            .pillar-page-grid {
+              grid-template-columns: 3fr 1fr !important;
+            }
+          }
+        </style>
+          <!-- Main Content (3/4 width) -->
           <div class="lg:col-span-3">
+            <!-- Page Header -->
+            <div class="mb-8">
+              <h2 class="text-3xl font-orbitron font-bold text-primary mb-6 text-left">Complete AI Document Management Ecosystem</h2>
+              <p class="text-lg text-white mb-8 text-left">Explore our comprehensive suite of AI-powered document solutions, from intelligent retrieval to automated workflow integration.</p>
+            </div>
         
         <!-- Pillar Overview -->
         <div class="bg-primary/10 border-2 border-primary p-8 rounded-2xl mb-12">
@@ -433,54 +435,26 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
             </button>
           </div>
         </section>
-
-        <!-- Related Articles -->
-        <section class="mt-16">
-          <h2 class="text-2xl font-orbitron font-bold text-white mb-6">Related Articles</h2>
-          <div class="grid md:grid-cols-2 gap-6">
-            <a href="/blog/rag-ai-document-retrieval" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
-              <h3 class="font-orbitron font-bold text-primary mb-2">RAG AI Document Retrieval: How Retrieval-Augmented Generation Transforms Knowledge Access</h3>
-              <p class="text-white text-sm">Learn how RAG technology revolutionizes document search and retrieval processes.</p>
-            </a>
-            <a href="/blog/intelligent-document-retrieval-software" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
-              <h3 class="font-orbitron font-bold text-primary mb-2">Intelligent Document Retrieval Software: Features to Look For in 2025</h3>
-              <p class="text-white text-sm">Essential features and capabilities for modern document retrieval systems.</p>
-            </a>
-          </div>
-        </section>
-        
+          
           </div>
           
-          <!-- Right Sidebar with Sub-Articles -->
+          <!-- Right Panel with Sub-Articles -->
           <div class="lg:col-span-1">
             <div class="sticky top-8">
               <div class="glass-morphism p-6 rounded-xl mb-6">
                 <h3 class="font-orbitron font-bold text-primary mb-4 text-center">📚 Related Articles</h3>
-                <div class="space-y-4">
-                  <a href="/blog/rag-ai-document-retrieval" class="block p-4 bg-primary/20 rounded-lg hover:bg-primary/40 transition-all duration-300 group">
-                    <h4 class="font-bold text-white text-sm mb-2 group-hover:text-primary">RAG AI Document Retrieval</h4>
-                    <p class="text-white text-xs opacity-80">12 min read</p>
-                  </a>
-                  
-                  <a href="/blog/intelligent-document-retrieval-software" class="block p-4 bg-primary/20 rounded-lg hover:bg-primary/40 transition-all duration-300 group">
-                    <h4 class="font-bold text-white text-sm mb-2 group-hover:text-primary">Intelligent Document Retrieval Software</h4>
-                    <p class="text-white text-xs opacity-80">10 min read</p>
-                  </a>
-                  
-                  <a href="/blog/ai-powered-document-classification" class="block p-4 bg-primary/20 rounded-lg hover:bg-primary/40 transition-all duration-300 group">
-                    <h4 class="font-bold text-white text-sm mb-2 group-hover:text-primary">AI-Powered Document Classification</h4>
-                    <p class="text-white text-xs opacity-80">11 min read</p>
-                  </a>
-                  
-                  <a href="/blog/enterprise-knowledge-management-solutions" class="block p-4 bg-primary/20 rounded-lg hover:bg-primary/40 transition-all duration-300 group">
-                    <h4 class="font-bold text-white text-sm mb-2 group-hover:text-primary">Enterprise Knowledge Management</h4>
-                    <p class="text-white text-xs opacity-80">13 min read</p>
-                  </a>
-                  
-                  <a href="/blog/intelligent-workflow-automation" class="block p-4 bg-primary/20 rounded-lg hover:bg-primary/40 transition-all duration-300 group">
-                    <h4 class="font-bold text-white text-sm mb-2 group-hover:text-primary">Intelligent Workflow Automation</h4>
-                    <p class="text-white text-xs opacity-80">9 min read</p>
-                  </a>
+                <div id="articles-container" class="space-y-4">
+                  <!-- Articles will be populated by JavaScript -->
+                </div>
+                <!-- Pagination Controls -->
+                <div class="flex justify-between items-center mt-6 pt-4 border-t border-primary/30">
+                  <button id="prev-btn" class="px-3 py-1 text-xs bg-primary/20 text-white rounded hover:bg-primary/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    ← Previous
+                  </button>
+                  <span id="page-info" class="text-xs text-white"></span>
+                  <button id="next-btn" class="px-3 py-1 text-xs bg-primary/20 text-white rounded hover:bg-primary/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                    Next →
+                  </button>
                 </div>
               </div>
               
@@ -495,10 +469,88 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
           </div>
         </div>
       </div>
-    </article>
+    </section>
   </main>
   <Footer />
 </Layout>
+
+<script>
+  // Related articles data
+  const articles = [
+    {
+      title: "RAG AI Document Retrieval",
+      url: "/blog/rag-ai-document-retrieval",
+      readTime: "12 min read"
+    },
+    {
+      title: "Intelligent Document Retrieval Software",
+      url: "/blog/intelligent-document-retrieval-software", 
+      readTime: "10 min read"
+    },
+    {
+      title: "AI-Powered Document Classification",
+      url: "/blog/ai-powered-document-classification",
+      readTime: "11 min read"
+    },
+    {
+      title: "Enterprise Knowledge Management",
+      url: "/blog/enterprise-knowledge-management-solutions",
+      readTime: "13 min read"
+    },
+    {
+      title: "Intelligent Workflow Automation",
+      url: "/blog/intelligent-workflow-automation",
+      readTime: "9 min read"
+    }
+  ];
+
+  let currentPage = 0;
+  const articlesPerPage = 3;
+  const totalPages = Math.ceil(articles.length / articlesPerPage);
+
+  function renderArticles() {
+    const container = document.getElementById('articles-container');
+    const start = currentPage * articlesPerPage;
+    const end = start + articlesPerPage;
+    const pageArticles = articles.slice(start, end);
+    
+    container.innerHTML = pageArticles.map(article => `
+      <a href="${article.url}" class="block p-4 bg-primary/20 rounded-lg hover:bg-primary/40 transition-all duration-300 group">
+        <h4 class="font-bold text-white text-sm mb-2 group-hover:text-primary">${article.title}</h4>
+        <p class="text-white text-xs opacity-80">${article.readTime}</p>
+      </a>
+    `).join('');
+    
+    // Update pagination info
+    document.getElementById('page-info').textContent = `${currentPage + 1} of ${totalPages}`;
+    
+    // Update button states
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    prevBtn.disabled = currentPage === 0;
+    nextBtn.disabled = currentPage === totalPages - 1;
+  }
+
+  // Initialize pagination
+  document.addEventListener('DOMContentLoaded', function() {
+    renderArticles();
+    
+    document.getElementById('prev-btn').addEventListener('click', function() {
+      if (currentPage > 0) {
+        currentPage--;
+        renderArticles();
+      }
+    });
+    
+    document.getElementById('next-btn').addEventListener('click', function() {
+      if (currentPage < totalPages - 1) {
+        currentPage++;
+        renderArticles();
+      }
+    });
+  });
+</script>
 
 <style>
   .line-clamp-3 {

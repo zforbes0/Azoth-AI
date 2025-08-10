@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import WireframeBackground from '../components/WireframeBackground.astro';
 
-const categories = ["All", "AI Document Management", "AI Customer Support Automation"];
+const categories = ["AI Document Management", "AI Customer Support Automation"];
 
 const pillarPages = [
   {
@@ -95,43 +95,21 @@ const blogPosts = [
       </div>
     </section>
 
-    <!-- Pillar Categories -->
-    <section class="py-12 bg-black border-t border-primary">
+    <!-- Pillar Navigation -->
+    <section class="py-8 bg-black border-t border-primary">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-2xl font-orbitron font-bold text-white mb-8 text-center">
-          Our Content Pillars
-        </h2>
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-          {pillarPages.map((pillar) => (
-            <a href={pillar.url} class="glass-morphism p-8 rounded-xl hover:border-primary transition-all duration-300 group block">
-              <div class="flex items-center gap-4 mb-4">
-                <span class="bg-primary/80 text-primary px-3 py-1 rounded-full text-sm font-orbitron">
-                  {pillar.category}
-                </span>
-                <span class="text-white text-sm">Pillar Page</span>
-              </div>
-              <h3 class="text-xl font-orbitron font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300">
-                {pillar.title}
-              </h3>
-              <p class="text-white leading-relaxed">
-                {pillar.description}
-              </p>
-            </a>
-          ))}
-        </div>
-        
         <div class="flex flex-wrap justify-center gap-4">
           {categories.map((category) => (
-            <button class="border-primary text-white hover:border-primary hover:text-primary hover:bg-primary/80 transition-all duration-300 px-4 py-2 border rounded">
+            <a href={category === "AI Document Management" ? "/blog/ai-document-management-system" : "/blog/ai-customer-support-automation"} class="border-primary text-white hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300 px-6 py-3 border rounded-lg font-orbitron font-bold">
               {category}
-            </button>
+            </a>
           ))}
         </div>
       </div>
     </section>
 
     <!-- All Blog Posts -->
-    <section class="py-16 bg-black">
+    <section class="py-8 bg-black">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-3xl font-orbitron font-bold text-primary mb-12 text-center">
           Latest Articles
