@@ -1,0 +1,52 @@
+---
+export interface Props {
+  path: Array<{
+    name: string;
+    url: string;
+  }>;
+}
+
+const { path } = Astro.props;
+
+// Generate JSON-LD breadcrumb schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": path.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": `https://azoth-ai.vercel.app${item.url}`
+  }))
+};
+---
+
+<!-- Breadcrumb Schema JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+<!-- Breadcrumb Navigation -->
+<nav class="mb-6" aria-label="Breadcrumb">
+  <div class="max-w-7xl mx-auto px-6">
+    <ol class="flex items-center space-x-2 text-sm text-gray-400">
+      {path.map((item, index) => (
+        <li class="flex items-center">
+          {index > 0 && (
+            <svg class="w-4 h-4 mx-2 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12l-4.58 4.59z"/>
+            </svg>
+          )}
+          {index === path.length - 1 ? (
+            <span class="text-primary font-medium" aria-current="page">{item.name}</span>
+          ) : (
+            <a 
+              href={item.url} 
+              class="text-gray-400 hover:text-primary transition-colors duration-300"
+            >
+              {item.name}
+            </a>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+</nav>

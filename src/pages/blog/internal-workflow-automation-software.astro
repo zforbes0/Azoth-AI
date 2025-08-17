@@ -2,9 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 
 <Layout title="Internal Workflow Automation Software: Free Your Team from Repetitive Tasks" description="Internal Workflow Automation Software: Free Your Team from Repetitive Tasks — Learn best practices, benefits, and implementation tips for internal workflow automation software.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Internal Workflow Automation Software: Free Your Team from Repetitive Tasks",
+    "description": "Transform your internal operations with intelligent workflow automation software that eliminates repetitive tasks, accelerates process completion, and enables teams to focus on strategic high-value activities.",
+    "author": {
+      "@type": "Person",
+      "name": "Sarah Chen"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-10",
+    "dateModified": "2025-01-10",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/internal-workflow-automation-software"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Workflow Automation Technology",
+    "keywords": ["internal workflow automation", "workflow software", "process automation", "task automation", "business efficiency"],
+    "wordCount": "2900",
+    "timeRequired": "PT15M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Business Process Automation Services",
+      "url": "https://azoth-ai.vercel.app/blog/business-process-automation-services"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "Internal Workflow Automation Software: Free Your Team from Repetitive Tasks", url: "/blog/internal-workflow-automation-software" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -171,7 +226,7 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
                 <div>
                   <h3 class="text-xl font-bold text-primary mb-3">Improved Accuracy and Compliance Adherence</h3>
                   <p class="text-white mb-4">
-                    Automated workflows eliminate human error through consistent process execution, mandatory field validation, and automatic compliance checks. Built-in audit trails and documentation ensure regulatory adherence while reducing the risk of costly mistakes in critical business processes.
+                    Automated workflows eliminate human error through consistent process execution, mandatory field validation, and automatic compliance checks. Built-in audit trails and documentation ensure regulatory adherence while reducing the risk of costly mistakes in critical business processes. These accuracy improvements complement specialized automation in areas like <a href="/blog/crm-automation-sales-teams" class="text-primary hover:underline">CRM automation for sales teams</a> and <a href="/blog/ai-powered-knowledge-base-software" class="text-primary hover:underline">AI-powered knowledge base software</a> for comprehensive organizational efficiency.
                   </p>
                   <div class="bg-black p-4 rounded-lg">
                     <h4 class="font-bold text-white mb-2">Quality Assurance Benefits</h4>
@@ -650,6 +705,21 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
       ]
     }
     </script>
+
+    <!-- Related Articles -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-orbitron font-bold text-white mb-6">Related Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="/blog/enterprise-process-automation-solutions" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">Enterprise Process Automation Solutions: Scale Operations Efficiently</h3>
+          <p class="text-white text-sm">Advanced enterprise automation strategies for large-scale operations.</p>
+        </a>
+        <a href="/blog/ai-customer-support-automation" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">AI Customer Support Automation: Transforming Service Excellence</h3>
+          <p class="text-white text-sm">Complete guide to implementing AI-powered customer support automation.</p>
+        </a>
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>

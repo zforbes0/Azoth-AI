@@ -2,9 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 
 <Layout title="Case Study: AI-Driven Customer Service Workflows that Increased Retention" description="Case Study: AI-Driven Customer Service Workflows that Increased Retention – Learn best practices, benefits, and implementation tips for AI in customer service case study.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Case Study: AI-Driven Customer Service Workflows that Increased Retention",
+    "description": "Real-world implementation showing how AI automation increased customer retention by 34% and reduced support costs by 45%.",
+    "author": {
+      "@type": "Person",
+      "name": "Lisa Thompson"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-05",
+    "dateModified": "2025-01-05",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/ai-driven-customer-service-case-study"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Case Study",
+    "keywords": ["AI customer service", "case study", "customer retention", "support automation", "workflow optimization"],
+    "wordCount": "1500",
+    "timeRequired": "PT9M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "AI Customer Support Automation",
+      "url": "https://azoth-ai.vercel.app/blog/ai-customer-support-automation"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "Case Study: AI-Driven Customer Service Workflows that Increased Retention", url: "/blog/ai-driven-customer-service-case-study" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -194,7 +249,7 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
                 <ol class="text-white space-y-2">
                   <li>1. <strong class="text-primary">Training data compilation</strong> from 24 months of support tickets</li>
                   <li>2. <strong class="text-primary">Natural language processing</strong> model fine-tuning for industry-specific terminology</li>
-                  <li>3. <strong class="text-primary">Integration testing</strong> with existing CRM and knowledge management systems</li>
+                  <li>3. <strong class="text-primary">Integration testing</strong> with existing CRM and <a href="/blog/ai-powered-knowledge-base-software" class="text-primary hover:underline">AI-powered knowledge base software</a> systems</li>
                   <li>4. <strong class="text-primary">Agent collaboration protocols</strong> for seamless human handoffs</li>
                 </ol>
               </div>
@@ -414,6 +469,63 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
             </a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AI in customer service case study?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI in customer service case study documents real-world implementations of artificial intelligence technologies in customer support operations, showcasing measurable improvements in efficiency, customer satisfaction, and business outcomes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can AI improve customer service metrics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Based on documented case studies, AI implementations typically improve response times by 60-85%, increase customer satisfaction by 25-50%, and reduce operational costs by 30-60% while improving retention rates by 25-47%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What ROI can businesses expect from AI customer service implementations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most organizations see 200-500% ROI within 12-18 months through reduced labor costs, improved customer lifetime value, decreased churn, and increased operational efficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long did it take to see measurable results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Initial improvements were visible within 3 months during the pilot phase, with full benefits realized by month 12 of the implementation timeline."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Related Articles -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-orbitron font-bold text-white mb-6">Related Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="/blog/ai-customer-support-automation" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">AI Customer Support Automation: Transforming Service Excellence</h3>
+          <p class="text-white text-sm">Complete guide to implementing AI-powered customer support automation.</p>
+        </a>
+        <a href="/blog/sales-outreach-automation-case-study" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">Sales Outreach Automation Case Study: 300% Lead Conversion Increase</h3>
+          <p class="text-white text-sm">Real-world implementation showing how automation transforms sales outcomes.</p>
+        </a>
       </div>
     </section>
   </main>

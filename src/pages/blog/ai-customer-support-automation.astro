@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 
 // Blog articles for this pillar (most recent first)
 const pillarArticles = [
@@ -49,7 +50,86 @@ const pillarArticles = [
 ---
 
 <Layout title="AI Customer Support Automation Services for 24/7 Scalability" description="AI Customer Support Automation Services for 24/7 Scalability – Learn best practices, benefits, and implementation tips for AI customer support automation.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Customer Support Automation Services for 24/7 Scalability",
+    "description": "Transform your customer support operations with intelligent automation that provides instant, personalized assistance around the clock.",
+    "author": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "url": "https://azoth-ai.vercel.app"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-20",
+    "dateModified": "2025-01-20",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/ai-customer-support-automation"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "AI Automation",
+    "keywords": ["AI customer support", "automation services", "24/7 support", "customer service automation", "AI chatbots"],
+    "wordCount": "2400",
+    "timeRequired": "PT12M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    }
+  }
+  </script>
+  
+  <!-- FAQ Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is AI customer support automation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI customer support automation uses artificial intelligence to handle customer inquiries, provide instant responses, and route complex issues to human agents when needed."
+      }
+    }, {
+      "@type": "Question", 
+      "name": "How much can AI automation reduce support costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI customer support automation typically reduces operational costs by 30-50% while improving response times by up to 80%."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Can AI handle complex customer issues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modern AI systems can handle 70-80% of routine customer inquiries, with intelligent escalation to human agents for complex issues requiring empathy or specialized knowledge."
+      }
+    }]
+  }
+  </script>
   <main>
+    <!-- Breadcrumb Navigation -->
+    <Breadcrumb path={[
+      { name: "Home", url: "/" },
+      { name: "Blog", url: "/blog" },
+      { name: "AI Customer Support Automation", url: "/blog/ai-customer-support-automation" }
+    ]} />
+    
     <!-- Hero Section with Content Hub -->
     <section class="relative min-h-[60vh] wireframe-bg overflow-hidden pt-20">
       <WireframeBackground />
@@ -211,7 +291,7 @@ const pillarArticles = [
                   <div class="glass-morphism p-4 rounded-xl">
                     <h4 class="font-bold text-primary mb-2 text-sm">Predictive Customer Analytics</h4>
                     <p class="text-white leading-relaxed text-sm">
-                      Machine learning algorithms that analyze customer behavior patterns to anticipate needs, prevent issues, and personalize support experiences.
+                      Machine learning algorithms that analyze customer behavior patterns to anticipate needs, prevent issues, and personalize support experiences. This capability is enhanced by <a href="/blog/ai-document-management-system" class="text-primary hover:underline">AI document management systems</a> that provide instant access to customer history and product information.
                     </p>
                   </div>
                 </div>
@@ -913,6 +993,21 @@ const pillarArticles = [
       ]
     }
     </script>
+
+    <!-- Related Articles -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-orbitron font-bold text-white mb-6">Related Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="/blog/ai-chatbots-help-desk" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience</h3>
+          <p class="text-white text-sm">Transform your help desk operations with AI chatbots that provide instant, accurate responses.</p>
+        </a>
+        <a href="/blog/automated-customer-onboarding" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">Automated Customer Onboarding: Streamlining the First Impression</h3>
+          <p class="text-white text-sm">Create seamless onboarding experiences that guide new customers through setup.</p>
+        </a>
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>

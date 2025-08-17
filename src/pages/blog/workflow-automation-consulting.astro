@@ -2,9 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 
 <Layout title="Workflow Automation Consulting: How to Identify High-ROI Processes" description="Workflow Automation Consulting: How to Identify High-ROI Processes — Learn best practices, benefits, and implementation tips for workflow automation consulting that delivers measurable ROI and operational efficiency.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Workflow Automation Consulting: How to Identify High-ROI Processes",
+    "description": "Transform your business operations with strategic workflow automation consulting. Learn proven methodologies for identifying, evaluating, and implementing high-ROI automation opportunities that deliver measurable results.",
+    "author": {
+      "@type": "Person",
+      "name": "Emily Watson"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-06",
+    "dateModified": "2025-01-06",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/workflow-automation-consulting"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Consulting Services",
+    "keywords": ["workflow automation consulting", "ROI process identification", "automation strategy", "workflow optimization", "business process consulting"],
+    "wordCount": "3100",
+    "timeRequired": "PT15M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Business Process Automation Services",
+      "url": "https://azoth-ai.vercel.app/blog/business-process-automation-services"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "Workflow Automation Consulting: How to Identify High-ROI Processes", url: "/blog/workflow-automation-consulting" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <header class="hero-section mb-12 text-center">
@@ -167,7 +222,7 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
       </div>
       
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Phase 2 focuses on strategic planning and solution design. Consultants prioritize automation opportunities based on ROI potential, implementation complexity, and business impact. This prioritization ensures that high-value, low-risk processes are automated first, creating early wins that build momentum for broader automation initiatives.
+        Phase 2 focuses on strategic planning and solution design. Consultants prioritize automation opportunities based on ROI potential, implementation complexity, and business impact. This prioritization ensures that high-value, low-risk processes are automated first, creating early wins that build momentum for broader automation initiatives. Organizations often integrate specialized solutions like <a href="/blog/sales-prospecting-automation-tools" class="text-primary hover:underline">sales prospecting automation tools</a> for revenue generation and <a href="/blog/ai-customer-support-automation" class="text-primary hover:underline">AI customer support automation</a> for enhanced customer experiences during their workflow transformation journey.
       </p>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">

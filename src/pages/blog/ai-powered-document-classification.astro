@@ -2,10 +2,65 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { Image } from 'astro:assets';
 ---
 
-<Layout title="AI-Powered Document Classification: Automating Compliance & Organization">
+<Layout title="AI-Powered Document Classification: Automating Compliance & Organization" description="AI-Powered Document Classification: Automating Compliance & Organization — Eliminate manual document sorting and ensure regulatory compliance with intelligent classification systems.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI-Powered Document Classification: Automating Compliance & Organization",
+    "description": "Eliminate manual document sorting and ensure regulatory compliance with intelligent classification systems that understand content, context, and compliance requirements.",
+    "author": {
+      "@type": "Person",
+      "name": "Jennifer Park"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-10",
+    "dateModified": "2025-01-10",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/ai-powered-document-classification"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Compliance Technology",
+    "keywords": ["AI document classification", "automated compliance", "document organization", "regulatory compliance", "intelligent classification"],
+    "wordCount": "2650",
+    "timeRequired": "PT11M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "AI Document Management System",
+      "url": "https://azoth-ai.vercel.app/blog/ai-document-management-system"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "AI-Powered Document Classification: Automating Compliance & Organization", url: "/blog/ai-powered-document-classification" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -157,7 +212,7 @@ import { Image } from 'astro:assets';
               
               <h3 class="text-lg font-orbitron font-bold text-white mb-4">Automated Compliance & Risk Management</h3>
               <p class="text-white leading-relaxed mb-6">
-                AI classification systems automatically identify documents containing sensitive information, apply appropriate retention policies, and flag potential compliance violations. This proactive approach significantly reduces regulatory risk and ensures consistent policy enforcement across the organization.
+                AI classification systems automatically identify documents containing sensitive information, apply appropriate retention policies, and flag potential compliance violations. This proactive approach significantly reduces regulatory risk and ensures consistent policy enforcement across the organization. When integrated with <a href="/blog/ai-customer-support-automation" class="text-primary hover:text-primary/80 underline">AI customer support automation</a>, classified documents enable faster, more accurate customer query resolution.
               </p>
               
               <div class="grid md:grid-cols-2 gap-6">
@@ -243,7 +298,7 @@ import { Image } from 'astro:assets';
               <div class="border border-primary p-6 rounded-lg">
                 <h4 class="font-bold text-primary mb-3">Phase 1: Data Preparation & Model Training</h4>
                 <p class="text-white mb-4">
-                  The implementation begins with analysis of existing document repositories to understand document types, current classification schemes, and compliance requirements. AI models are trained on representative document samples to learn organizational patterns and classification criteria.
+                  The implementation begins with analysis of existing document repositories to understand document types, current classification schemes, and compliance requirements. AI models are trained on representative document samples to learn organizational patterns and classification criteria. This process benefits from <a href="/blog/enterprise-process-automation-solutions" class="text-primary hover:text-primary/80 underline">enterprise process automation</a> to streamline data preparation and model training workflows.
                 </p>
                 <div class="bg-black p-3 rounded text-sm text-white">
                   <strong>Timeline:</strong> 2-4 weeks depending on document variety and volume
@@ -307,7 +362,7 @@ import { Image } from 'astro:assets';
             <div>
               <h3 class="text-lg font-orbitron font-bold text-white mb-4">Healthcare: HIPAA Compliance Automation</h3>
               <p class="text-white leading-relaxed mb-6">
-                Healthcare organizations handle millions of documents containing Protected Health Information (PHI) that must be classified, secured, and managed according to HIPAA regulations. AI classification systems automatically identify PHI in various document types and apply appropriate security controls.
+                Healthcare organizations handle millions of documents containing Protected Health Information (PHI) that must be classified, secured, and managed according to HIPAA regulations. AI classification systems automatically identify PHI in various document types and apply appropriate security controls. These systems work seamlessly with <a href="/blog/automated-customer-onboarding" class="text-primary hover:text-primary/80 underline">automated customer onboarding</a> processes to ensure compliant patient data handling from the initial registration.
               </p>
               
               <div class="bg-primary border border-primary p-6 rounded-lg">
@@ -524,6 +579,40 @@ import { Image } from 'astro:assets';
 
       </div>
     </article>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does AI classification handle documents with multiple classification criteria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern AI classification systems support multi-label classification, allowing documents to belong to multiple categories simultaneously. For example, a financial report might be classified as both \"Financial Document\" and \"Confidential\" while also being tagged for specific regulatory requirements. The system applies all relevant classifications with individual confidence scores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when the AI system encounters completely new document types?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intelligent systems use anomaly detection to identify documents that don't fit existing classification categories. These documents are flagged for human review, and the feedback is used to create new classification categories or refine existing ones. Leading platforms can adapt to new document types within 24-48 hours of initial detection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is AI classification for industry-specific documents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI classification systems achieve 95-99% accuracy for industry-specific documents when properly trained on domain-specific data. Specialized models for healthcare, legal, financial, and technical documents often outperform general-purpose systems. Custom training on organizational documents typically improves accuracy by an additional 3-5%."
+          }
+        }
+      ]
+    }
+    </script>
   </main>
   <Footer />
 </Layout>

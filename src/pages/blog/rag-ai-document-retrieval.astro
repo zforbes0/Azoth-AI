@@ -6,6 +6,52 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout title="RAG AI Document Retrieval: How Retrieval-Augmented Generation Transforms Knowledge Access">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "RAG AI Document Retrieval: How Retrieval-Augmented Generation Transforms Knowledge Access",
+    "description": "Discover how RAG technology revolutionizes document search, making enterprise knowledge instantly accessible and contextually relevant.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Sarah Chen"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-01-15",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/rag-ai-document-retrieval"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "AI Technology",
+    "keywords": ["RAG AI", "document retrieval", "retrieval augmented generation", "knowledge access", "AI technology"],
+    "wordCount": "2100",
+    "timeRequired": "PT12M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "AI Document Management",
+      "url": "https://azoth-ai.vercel.app/blog/ai-document-management-system"
+    }
+  }
+  </script>
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -105,7 +151,7 @@ import { Image } from 'astro:assets';
             </div>
 
             <p class="text-white leading-relaxed">
-              This approach ensures that responses are grounded in actual organizational knowledge while maintaining the conversational and analytical capabilities of modern AI systems. The result is enterprise-grade accuracy with the flexibility to handle complex, nuanced queries that traditional search systems cannot address.
+              This approach ensures that responses are grounded in actual organizational knowledge while maintaining the conversational and analytical capabilities of modern AI systems. The result is enterprise-grade accuracy with the flexibility to handle complex, nuanced queries that traditional search systems cannot address. Organizations often integrate RAG systems with <a href="/blog/ai-customer-support-automation" class="text-primary hover:underline">AI customer support automation</a> to provide agents with instant access to comprehensive knowledge resources.
             </p>
           </div>
         </section>
@@ -483,6 +529,40 @@ import { Image } from 'astro:assets';
 
       </div>
     </article>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does RAG AI handle sensitive or confidential documents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RAG systems implement enterprise-grade security including document-level access controls, encryption at rest and in transit, and audit logging. The AI only accesses documents that users have permission to view, maintaining existing security hierarchies. On-premises deployments ensure sensitive data never leaves your infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between RAG and traditional enterprise search?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional enterprise search returns lists of potentially relevant documents that users must manually review. RAG AI retrieval provides direct, synthesized answers by combining information from multiple sources, significantly reducing the time from query to actionable insight. Users get answers, not just links."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate are RAG AI responses compared to human experts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Studies show RAG AI systems achieve 90-95% accuracy on factual questions when properly implemented, often matching or exceeding human expert performance for routine queries. For complex analysis requiring judgment, RAG provides comprehensive background information that enhances human decision-making rather than replacing it."
+          }
+        }
+      ]
+    }
+    </script>
   </main>
   <Footer />
 </Layout>

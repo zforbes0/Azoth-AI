@@ -2,9 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 
 <Layout title="Case Study: How Sales Outreach Automation Tripled Our Client's Pipeline" description="Case Study: How Sales Outreach Automation Tripled Our Client's Pipeline — Real-world results from implementing comprehensive sales outreach automation strategies.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Case Study: How Sales Outreach Automation Tripled Our Client's Pipeline",
+    "description": "Discover how CloudTech Solutions transformed their sales operation with automated outreach, generating $8.4M in new pipeline within 18 months.",
+    "author": {
+      "@type": "Person",
+      "name": "Michael Rodriguez"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-01-15",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/sales-outreach-automation-case-study"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Case Study",
+    "keywords": ["sales outreach automation", "case study", "pipeline growth", "sales automation", "outreach strategy"],
+    "wordCount": "2200",
+    "timeRequired": "PT14M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Automated Lead Generation Tools",
+      "url": "https://azoth-ai.vercel.app/blog/automated-lead-generation-tools"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "Case Study: How Sales Outreach Automation Tripled Our Client's Pipeline", url: "/blog/sales-outreach-automation-case-study" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -380,6 +435,63 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
         </div>
       </div>
     </article>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What was the company's total investment in sales outreach automation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "6clicks implemented HubSpot's comprehensive CRM and automation platform across all five product suites (CRM, marketing automation, sales, service, and CMS). This implementation resulted in transformative 806% operational growth and improved efficiency across the entire organization, demonstrating exceptional ROI from automation investment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long did it take to see measurable results from the automation implementation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "the company began seeing increased lead generation within 45 days of implementation launch, achieved 2x pipeline growth by month 6, and reached their target of 3x pipeline generation by month 14. The gradual ramp allowed for continuous optimization while maintaining high conversion quality throughout the scaling process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What challenges did the company face during their automation transformation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Primary challenges included initial data quality issues requiring 3 months of cleansing, sales team adaptation to automation-generated leads requiring additional training, and message personalization optimization taking 6 months to achieve optimal conversion rates. All challenges were resolved through systematic process refinement and team development."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How did automation affect the company's customer relationships and satisfaction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Customer satisfaction actually improved due to more timely, relevant outreach and better-prepared sales conversations. The 92% retention rate among automation-generated customers exceeded their overall average, and NPS scores increased by 23 points as prospects received more personalized, valuable interactions throughout their buying journey."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Related Articles -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-orbitron font-bold text-white mb-6">Related Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="/blog/b2b-lead-automation-software" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">B2B Lead Automation Software: Streamline Your Sales Pipeline</h3>
+          <p class="text-white text-sm">Advanced B2B lead automation strategies for enterprise sales success.</p>
+        </a>
+        <a href="/blog/ai-driven-customer-service-case-study" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">Case Study: AI-Driven Customer Service Workflows that Increased Retention</h3>
+          <p class="text-white text-sm">Real-world implementation showing how AI automation increased customer retention.</p>
+        </a>
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>

@@ -2,9 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 
 <Layout title="AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience" description="AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience – Learn best practices, benefits, and implementation tips for AI chatbot for help desk.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience",
+    "description": "Transform your help desk operations with AI chatbots that provide instant, accurate responses and seamless escalation to human agents.",
+    "author": {
+      "@type": "Person",
+      "name": "David Chen"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-12",
+    "dateModified": "2025-01-12",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/ai-chatbots-help-desk"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "AI Chatbots",
+    "keywords": ["AI chatbots", "help desk automation", "customer experience", "automated support", "help desk efficiency"],
+    "wordCount": "1600",
+    "timeRequired": "PT10M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "AI Customer Support Automation",
+      "url": "https://azoth-ai.vercel.app/blog/ai-customer-support-automation"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience", url: "/blog/ai-chatbots-help-desk" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -171,7 +226,7 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
                 <div>
                   <h3 class="text-xl font-bold text-primary mb-3">Intelligent Issue Resolution & Escalation</h3>
                   <p class="text-white mb-4">
-                    AI chatbots analyze customer issues, determine complexity levels, and either provide immediate solutions or intelligently escalate to appropriate human specialists with full context and recommended resolutions. This ensures optimal resource allocation and faster problem solving.
+                    AI chatbots analyze customer issues, determine complexity levels, and either provide immediate solutions or intelligently escalate to appropriate human specialists with full context and recommended resolutions. This ensures optimal resource allocation and faster problem solving. These capabilities are enhanced through integration with <a href="/blog/ai-powered-knowledge-base-software" class="text-primary hover:underline">AI-powered knowledge base software</a> for comprehensive solution databases and <a href="/blog/intelligent-workflow-automation" class="text-primary hover:underline">intelligent workflow automation</a> for end-to-end customer service processes.
                   </p>
                   <div class="bg-black p-4 rounded-lg">
                     <h4 class="font-bold text-white mb-2">Resolution Capabilities</h4>
@@ -847,6 +902,21 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
       ]
     }
     </script>
+
+    <!-- Related Articles -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-orbitron font-bold text-white mb-6">Related Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="/blog/ai-customer-support-automation" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">AI Customer Support Automation: Transforming Service Excellence</h3>
+          <p class="text-white text-sm">Complete guide to implementing AI-powered customer support automation.</p>
+        </a>
+        <a href="/blog/ai-powered-knowledge-base-software" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">AI-Powered Knowledge Base Software: Intelligent Information Access</h3>
+          <p class="text-white text-sm">Transform knowledge management with AI-powered information retrieval systems.</p>
+        </a>
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>

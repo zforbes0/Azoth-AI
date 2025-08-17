@@ -2,9 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 
 <Layout title="Case Study: Cutting Operational Costs with Business Process Automation" description="Case Study: Cutting Operational Costs with Business Process Automation — Learn best practices, benefits, and implementation tips for business process automation through real-world examples and measurable results.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Case Study: Cutting Operational Costs with Business Process Automation",
+    "description": "Discover how three organizations achieved remarkable cost savings and operational efficiency through strategic business process automation implementation. Real results, proven methodologies, and actionable insights.",
+    "author": {
+      "@type": "Person",
+      "name": "Rebecca Martinez"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-08",
+    "dateModified": "2025-01-08",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/business-process-automation-case-study"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Case Study",
+    "keywords": ["business process automation", "case study", "cost reduction", "operational efficiency", "automation implementation"],
+    "wordCount": "3200",
+    "timeRequired": "PT16M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Business Process Automation Services",
+      "url": "https://azoth-ai.vercel.app/blog/business-process-automation-services"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "Case Study: Cutting Operational Costs with Business Process Automation", url: "/blog/business-process-automation-case-study" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <header class="hero-section mb-12 text-center">
@@ -46,11 +101,11 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
         <div class="lg:col-span-2">
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            Business process automation case studies provide detailed analysis of real-world implementations, documenting the journey from manual processes to automated workflows. These comprehensive examinations reveal actual costs, timelines, challenges, and measurable results achieved through strategic automation initiatives.
+            Business process automation case studies provide detailed analysis of real-world implementations, documenting the journey from manual processes to automated workflows. These comprehensive examinations reveal actual costs, timelines, challenges, and measurable results achieved through strategic automation initiatives. Organizations often discover that integrating <a href="/blog/sales-prospecting-automation-tools" class="text-blue-600 hover:underline">sales prospecting automation</a> alongside process automation creates compound efficiency gains.
           </p>
           
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            Unlike theoretical discussions, case studies offer concrete evidence of automation value through documented metrics, financial impact, and operational improvements. They serve as powerful tools for organizations considering automation investments, providing realistic expectations and proven implementation strategies.
+            Unlike theoretical discussions, case studies offer concrete evidence of automation value through documented metrics, financial impact, and operational improvements. They serve as powerful tools for organizations considering automation investments, providing realistic expectations and proven implementation strategies. Many successful implementations also incorporate <a href="/blog/customer-service-automation-software" class="text-blue-600 hover:underline">customer service automation</a> to create end-to-end operational efficiency.
           </p>
           
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">

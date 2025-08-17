@@ -2,10 +2,65 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { Image } from 'astro:assets';
 ---
 
-<Layout title="Enterprise Knowledge Management Solutions: The Role of AI">
+<Layout title="Enterprise Knowledge Management Solutions: The Role of AI" description="Enterprise Knowledge Management Solutions: The Role of AI — Discover how AI transforms knowledge management from static repositories into intelligent systems that accelerate innovation.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Enterprise Knowledge Management Solutions: The Role of AI",
+    "description": "How artificial intelligence is transforming enterprise knowledge management from static repositories into dynamic, intelligent systems that accelerate innovation and decision-making.",
+    "author": {
+      "@type": "Person",
+      "name": "David Kim"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-08",
+    "dateModified": "2025-01-08",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/enterprise-knowledge-management-solutions"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Enterprise Solutions",
+    "keywords": ["enterprise knowledge management", "AI knowledge systems", "enterprise AI solutions", "knowledge base automation", "intelligent document management"],
+    "wordCount": "2800",
+    "timeRequired": "PT13M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "AI Document Management System",
+      "url": "https://azoth-ai.vercel.app/blog/ai-document-management-system"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "Enterprise Knowledge Management Solutions: The Role of AI", url: "/blog/enterprise-knowledge-management-solutions" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -155,7 +210,7 @@ import { Image } from 'astro:assets';
             <div class="bg-primary border-l-4 border-primary p-6 rounded-r-xl">
               <h3 class="font-orbitron font-bold text-black mb-3">The AI Advantage in Enterprise Knowledge Management</h3>
               <p class="text-black leading-relaxed">
-                AI transforms knowledge management from a passive repository into an active intelligence system that learns organizational patterns, identifies knowledge gaps, suggests relevant content, and facilitates knowledge transfer between teams and individuals. This shift enables organizations to leverage their collective intelligence more effectively than ever before.
+                AI transforms knowledge management from a passive repository into an active intelligence system that learns organizational patterns, identifies knowledge gaps, suggests relevant content, and facilitates knowledge transfer between teams and individuals. This intelligent foundation supports <a href="/blog/ai-customer-support-automation" class="text-primary hover:underline">AI customer support automation</a> by providing agents with instant access to comprehensive knowledge resources. This shift enables organizations to leverage their collective intelligence more effectively than ever before.
               </p>
             </div>
           </div>
@@ -530,6 +585,40 @@ import { Image } from 'astro:assets';
 
       </div>
     </article>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does AI knowledge management handle tacit knowledge from experienced employees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI systems capture tacit knowledge through multiple channels including analysis of expert communications, decision patterns, and work outputs. Advanced implementations use conversational AI to conduct structured interviews with subject matter experts, automatically extracting and codifying experiential knowledge that would otherwise be lost during employee transitions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between knowledge management and document management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Document management focuses on storing and organizing files, while knowledge management emphasizes capturing, sharing, and applying the insights and expertise contained within those documents. AI-enhanced knowledge management creates connections between ideas, identifies expertise networks, and facilitates knowledge transfer in ways that traditional document systems cannot achieve."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you measure the ROI of enterprise knowledge management software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ROI measurement includes quantifiable metrics like reduced project duplication (typically 25-40% savings), faster decision-making (average 30-50% improvement), accelerated employee onboarding (60-80% time reduction), and increased innovation velocity (40-60% faster time-to-market). Many organizations also track soft benefits like improved employee satisfaction and reduced knowledge loss during turnover."
+          }
+        }
+      ]
+    }
+    </script>
   </main>
   <Footer />
 </Layout>

@@ -2,10 +2,65 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { Image } from 'astro:assets';
 ---
 
-<Layout title="Intelligent Document Retrieval Software: Features to Look For in 2025">
+<Layout title="Intelligent Document Retrieval Software: Features to Look For in 2025" description="Intelligent Document Retrieval Software: Features to Look For in 2025 — Essential capabilities and advanced features that define cutting-edge document retrieval systems.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Intelligent Document Retrieval Software: Features to Look For in 2025",
+    "description": "Essential capabilities and advanced features that define cutting-edge document retrieval systems in the modern enterprise landscape.",
+    "author": {
+      "@type": "Person",
+      "name": "Michael Rodriguez"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-12",
+    "dateModified": "2025-01-12",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/intelligent-document-retrieval-software"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1562813733-b31f71025d54?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Enterprise Technology",
+    "keywords": ["intelligent document retrieval", "document search software", "enterprise document management", "AI document search", "retrieval systems"],
+    "wordCount": "2400",
+    "timeRequired": "PT10M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "RAG AI Document Retrieval",
+      "url": "https://azoth-ai.vercel.app/blog/rag-ai-document-retrieval"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "Intelligent Document Retrieval Software: Features to Look For in 2025", url: "/blog/intelligent-document-retrieval-software" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -156,7 +211,7 @@ import { Image } from 'astro:assets';
               </div>
               <div class="bg-primary p-4 rounded-lg">
                 <h4 class="font-orbitron font-bold text-black mb-2">2025+</h4>
-                <p class="text-sm text-black">Fully intelligent, conversational document intelligence</p>
+                <p class="text-sm text-black">Fully intelligent, conversational document intelligence supporting <a href="/blog/ai-customer-support-automation" class="text-primary hover:underline">AI customer support</a></p>
               </div>
             </div>
           </div>
@@ -566,6 +621,40 @@ import { Image } from 'astro:assets';
 
       </div>
     </article>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does intelligent document retrieval handle different file formats?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern systems process 50+ file formats including PDFs, Word documents, Excel spreadsheets, PowerPoint presentations, images, videos, and even legacy formats. Advanced OCR technology handles scanned documents with 99.5%+ accuracy, while specialized parsers extract structured data from complex formats like CAD files and scientific datasets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the typical ROI timeline for intelligent document retrieval software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Organizations typically see immediate productivity improvements within 30 days of deployment, with full ROI achieved in 6-12 months. Microsoft's Work Trend Index research shows that 90% of AI users report significant time savings, with 85% saying AI helps them focus on their most important work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do intelligent systems maintain accuracy as document repositories grow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intelligent systems use advanced indexing strategies, hierarchical storage, and continuous model updates to maintain performance at scale. Vector databases are optimized for similarity search across millions of documents, while machine learning models are retrained periodically on new content to maintain accuracy and relevance."
+          }
+        }
+      ]
+    }
+    </script>
   </main>
   <Footer />
 </Layout>

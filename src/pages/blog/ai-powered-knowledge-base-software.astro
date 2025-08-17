@@ -2,9 +2,64 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 
 <Layout title="AI-Powered Knowledge Base Software: Self-Service That Works" description="AI-Powered Knowledge Base Software: Self-Service That Works – Learn best practices, benefits, and implementation tips for AI-powered knowledge base software.">
+  <!-- Article Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI-Powered Knowledge Base Software: Self-Service That Works",
+    "description": "Empower customers with intelligent self-service solutions that learn from interactions and provide personalized, contextual assistance.",
+    "author": {
+      "@type": "Person",
+      "name": "Rachel Martinez"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nexitas",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://azoth-ai.vercel.app/assets/NEXITAS circle.png"
+      }
+    },
+    "datePublished": "2025-01-10",
+    "dateModified": "2025-01-10",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://azoth-ai.vercel.app/blog/ai-powered-knowledge-base-software"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=400",
+      "width": 800,
+      "height": 400
+    },
+    "articleSection": "Knowledge Management",
+    "keywords": ["AI knowledge base", "self-service software", "customer support", "knowledge management", "intelligent assistance"],
+    "wordCount": "1900",
+    "timeRequired": "PT11M",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Nexitas AI Integration Blog"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "AI Customer Support Automation",
+      "url": "https://azoth-ai.vercel.app/blog/ai-customer-support-automation"
+    }
+  }
+  </script>
+  
+  <!-- Breadcrumb Navigation -->
+  <Breadcrumb path={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "AI-Powered Knowledge Base Software: Self-Service That Works", url: "/blog/ai-powered-knowledge-base-software" }
+  ]} />
+  
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -59,7 +114,7 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
                 </div>
               </div>
               <p class="text-white leading-relaxed">
-                AI knowledge bases handle routine inquiries automatically, reducing support ticket volume by <strong class="text-primary">60%</strong> and allowing agents to focus on complex issues requiring human expertise.
+                AI knowledge bases handle routine inquiries automatically, reducing support ticket volume by <strong class="text-primary">60%</strong> and allowing agents to focus on complex issues requiring human expertise. This seamless integration with <a href="/blog/ai-customer-support-automation" class="text-primary hover:text-primary/80 underline">AI customer support automation</a> creates a comprehensive self-service ecosystem that enhances overall support efficiency.
               </p>
             </div>
 
@@ -104,6 +159,7 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
                   <li>• Categorize content by topic, complexity, and usage frequency</li>
                   <li>• Identify outdated or redundant information for removal</li>
                   <li>• Structure content using standardized templates</li>
+                  <li>• Implement <a href="/blog/enterprise-process-automation-solutions" class="text-primary hover:text-primary/80 underline">enterprise process automation</a> for content updates and maintenance workflows</li>
                 </ul>
               </div>
             </div>
@@ -134,7 +190,7 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
                 <strong>Challenge:</strong> 200+ daily support tickets with 40% being repetitive questions about software features and troubleshooting.
               </p>
               <p class="text-white mb-4">
-                <strong>AI Knowledge Base Solution:</strong>
+                <strong>AI Knowledge Base Solution:</strong> Integrated with comprehensive <a href="/blog/ai-chatbots-help-desk" class="text-primary hover:text-primary/80 underline">AI chatbots for help desk support</a> to provide escalation paths when self-service isn't sufficient.
               </p>
               <ul class="text-white space-y-2 mb-4">
                 <li>• Implemented <strong class="text-primary">contextual search</strong> with software version detection</li>
@@ -216,6 +272,55 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
             </a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AI-powered knowledge base software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI-powered knowledge base software is an intelligent documentation platform that uses artificial intelligence to automatically organize, update, and deliver relevant information to users through self-service portals, reducing support ticket volume by up to 60%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AI improve knowledge base effectiveness?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI enhances knowledge bases through intelligent search algorithms, automated content tagging, natural language processing for better user queries, personalized content recommendations, and automatic content gap detection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What ROI can I expect from AI knowledge base implementation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Organizations typically see 300-500% ROI within 12 months through reduced support costs, improved agent productivity, faster resolution times, and increased customer satisfaction scores."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Related Articles -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-orbitron font-bold text-white mb-6">Related Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="/blog/ai-document-management-system" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">AI Document Management System: Transform Information Control</h3>
+          <p class="text-white text-sm">Revolutionize document processing with AI-powered classification and retrieval.</p>
+        </a>
+        <a href="/blog/ai-customer-support-automation" class="glass-morphism p-6 rounded-xl hover:border-primary transition-all duration-300 block">
+          <h3 class="font-orbitron font-bold text-primary mb-2">AI Customer Support Automation: Transforming Service Excellence</h3>
+          <p class="text-white text-sm">Complete guide to implementing AI-powered customer support automation.</p>
+        </a>
       </div>
     </section>
   </main>
