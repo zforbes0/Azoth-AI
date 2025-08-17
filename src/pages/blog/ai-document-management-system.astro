@@ -2,474 +2,692 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+
+// Blog articles for this pillar (most recent first)
+const pillarArticles = [
+  {
+    title: "RAG AI Document Retrieval: How Retrieval-Augmented Generation Transforms Knowledge Access",
+    url: "/blog/rag-ai-document-retrieval",
+    excerpt: "Discover how RAG technology revolutionizes document search and retrieval processes with contextual understanding.",
+    date: "2025-01-15",
+    readTime: "12 min read",
+    tags: ["RAG", "Document Retrieval"]
+  },
+  {
+    title: "Intelligent Document Retrieval Software: Features to Look For in 2025",
+    url: "/blog/intelligent-document-retrieval-software",
+    excerpt: "Essential capabilities and advanced features that define cutting-edge document retrieval systems.",
+    date: "2025-01-12",
+    readTime: "10 min read",
+    tags: ["Software Features", "Enterprise"]
+  },
+  {
+    title: "AI-Powered Document Classification: Automating Compliance & Organization",
+    url: "/blog/ai-powered-document-classification",
+    excerpt: "Learn how AI automates document classification while ensuring regulatory compliance and organizational efficiency.",
+    date: "2025-01-10",
+    readTime: "11 min read",
+    tags: ["Classification", "Compliance"]
+  },
+  {
+    title: "Enterprise Knowledge Management Solutions: The Role of AI",
+    url: "/blog/enterprise-knowledge-management-solutions",
+    excerpt: "How AI transforms enterprise knowledge management from static repositories into dynamic intelligence systems.",
+    date: "2025-01-08",
+    readTime: "13 min read",
+    tags: ["Knowledge Management", "Enterprise AI"]
+  },
+  {
+    title: "How Intelligent Workflow Automation Boosts Document Efficiency",
+    url: "/blog/intelligent-workflow-automation",
+    excerpt: "Discover how AI-powered workflow automation transforms document processes and eliminates operational bottlenecks.",
+    date: "2025-01-05",
+    readTime: "9 min read",
+    tags: ["Workflow Automation", "Efficiency"]
+  }
+];
 ---
 
-<Layout title="AI Document Management System – Intelligent Retrieval & Organization for Business">
+<Layout title="AI Document Management System – Intelligent Retrieval & Organization for Business" description="Comprehensive guide to AI-powered document management systems. Discover how intelligent document retrieval, automated classification, and smart organization transform business efficiency and compliance.">
   <main>
-    <!-- Hero Section -->
-    <section class="relative min-h-[60vh] flex items-center justify-center wireframe-bg overflow-hidden pt-20">
+    <!-- Hero Section with Content Hub -->
+    <section class="relative min-h-[60vh] wireframe-bg overflow-hidden pt-20">
       <WireframeBackground />
-      <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 text-center">
-        <div class="animate-slide-up">
-          <div class="bg-primary/20 border-2 border-primary px-4 py-2 rounded-full inline-block mb-6">
-            <p class="text-primary font-orbitron text-sm tracking-wider font-bold">
-              🤖 ENTERPRISE AI SOLUTIONS
-            </p>
-          </div>
-          <h1 class="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-white">
-            AI Document Management System – Intelligent <span class="text-primary">Retrieval & Organization</span> for Business
-          </h1>
-          <p class="text-xl text-white max-w-5xl mx-auto mb-12 leading-relaxed">
-            Transform how your organization manages, retrieves, and organizes documents with cutting-edge artificial intelligence technology.
-          </p>
-        </div>
-      </div>
-    </section>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <!-- Left Column - Hero Content (66%) -->
+          <div class="lg:col-span-2" style="grid-column: span 2;">
+            <div class="animate-slide-up text-left">
+              <h1 class="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-white" style="line-height: 1.3;">
+                AI Document Management System – Intelligent <span class="text-primary">Retrieval & Organization</span> for Business
+              </h1>
+              <p class="text-xl text-white mb-12 leading-relaxed">
+                The complete guide to AI-powered document management systems that revolutionize how enterprises capture, organize, retrieve, and analyze business documents with intelligent automation.
+              </p>
+            </div>
 
-    <!-- Main Content Area with Right Panel -->
-    <section class="py-8 bg-black border-t border-primary">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-4 gap-8 pillar-page-grid" style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-        <style>
-          @media (min-width: 1024px) {
-            .pillar-page-grid {
-              grid-template-columns: 3fr 1fr !important;
-            }
-          }
-        </style>
-          <!-- Main Content (3/4 width) -->
-          <div class="lg:col-span-3">
-            <!-- Page Header -->
+            <!-- Table of Contents -->
+            <div class="mb-12">
+              <div class="bg-primary/10 border border-primary/30 p-6 rounded-xl">
+                <h3 class="text-lg font-orbitron font-bold text-primary mb-4 flex items-center gap-2">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3,3H21V5H3V3M3,7H21V9H3V7M3,11H21V13H3V11M3,15H21V17H3V15M3,19H21V21H3V19Z"/>
+                  </svg>
+                  Table of Contents
+                </h3>
+                <div class="grid md:grid-cols-2 gap-3 text-sm">
+                  <div class="space-y-2">
+                    <a href="#what-is-ai-document-management" class="block text-gray-300 hover:text-primary transition-colors duration-300">• What is AI Document Management?</a>
+                    <a href="#core-capabilities" class="block text-gray-300 hover:text-primary transition-colors duration-300">• Core AI Capabilities</a>
+                    <a href="#benefits-roi" class="block text-gray-300 hover:text-primary transition-colors duration-300">• Benefits & ROI Analysis</a>
+                    <a href="#implementation-guide" class="block text-gray-300 hover:text-primary transition-colors duration-300">• Implementation Guide</a>
+                  </div>
+                  <div class="space-y-2">
+                    <a href="#use-cases" class="block text-gray-300 hover:text-primary transition-colors duration-300">• Industry Use Cases</a>
+                    <a href="#technology-comparison" class="block text-gray-300 hover:text-primary transition-colors duration-300">• Technology Comparison</a>
+                    <a href="#best-practices" class="block text-gray-300 hover:text-primary transition-colors duration-300">• Best Practices</a>
+                    <a href="#faq" class="block text-gray-300 hover:text-primary transition-colors duration-300">• Frequently Asked Questions</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image for empty space -->
             <div class="mb-8">
-              <h2 class="text-3xl font-orbitron font-bold text-primary mb-6 text-left">Complete AI Document Management Ecosystem</h2>
-              <p class="text-lg text-white mb-8 text-left">Explore our comprehensive suite of AI-powered document solutions, from intelligent retrieval to automated workflow integration.</p>
-            </div>
-        
-        <!-- Pillar Overview -->
-        <div class="bg-primary/10 border-2 border-primary p-8 rounded-2xl mb-12">
-          <div class="text-center mb-8">
-            <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-              </svg>
-            </div>
-            <h2 class="text-3xl font-orbitron font-bold text-primary mb-4">AI Document Management Pillar</h2>
-            <p class="text-lg text-white max-w-3xl mx-auto">This comprehensive guide covers all aspects of AI-powered document management, from basic retrieval to enterprise-grade automation solutions.</p>
-          </div>
-        </div>
-
-        <!-- Key Statistics -->
-        <div class="grid md:grid-cols-4 gap-6 mb-12">
-          <div class="bg-primary text-black opacity-100 backdrop-filter-none p-6 rounded-xl text-center">
-            <div class="text-2xl font-orbitron font-bold mb-2">85%</div>
-            <div class="text-sm font-semibold">Faster Document Retrieval</div>
-          </div>
-          <div class="bg-primary text-black opacity-100 backdrop-filter-none p-6 rounded-xl text-center">
-            <div class="text-2xl font-orbitron font-bold mb-2">60%</div>
-            <div class="text-sm font-semibold">Cost Reduction</div>
-          </div>
-          <div class="bg-primary text-black opacity-100 backdrop-filter-none p-6 rounded-xl text-center">
-            <div class="text-2xl font-orbitron font-bold mb-2">99.7%</div>
-            <div class="text-sm font-semibold">Classification Accuracy</div>
-          </div>
-          <div class="bg-primary text-black opacity-100 backdrop-filter-none p-6 rounded-xl text-center">
-            <div class="text-2xl font-orbitron font-bold mb-2">24/7</div>
-            <div class="text-sm font-semibold">Automated Processing</div>
-          </div>
-        </div>
-
-        <!-- Introduction -->
-        <div class="mb-8">
-          <p class="text-base text-white leading-relaxed mb-4">
-            In today's data-driven business environment, organizations generate and manage unprecedented volumes of documents. Studies show that knowledge workers spend up to <strong class="text-primary">30% of their workday</strong> searching for information across scattered document repositories. This inefficiency costs businesses an estimated <strong class="text-primary">$31,000 per employee annually</strong> in lost productivity, according to IDC research.
-          </p>
-          
-          <p class="text-base text-white leading-relaxed">
-            AI document management systems represent a revolutionary approach to solving these challenges, leveraging artificial intelligence to automatically organize, classify, and retrieve documents with human-like understanding and contextual awareness.
-          </p>
-        </div>
-
-        <!-- What is AI Document Management System -->
-        <section class="mb-8">
-          <h2 class="text-xl font-orbitron font-bold text-primary mb-6">What is AI document management system?</h2>
-          
-          <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <p class="text-white leading-relaxed mb-4">
-                An AI document management system is an intelligent software platform that uses machine learning, natural language processing, and computer vision to automatically organize, classify, and retrieve documents without human intervention. Unlike traditional document management systems that rely on manual tagging and folder structures, AI-powered solutions understand document content, context, and relationships.
-              </p>
-              
-              <p class="text-white leading-relaxed">
-                These systems employ advanced technologies including <strong class="text-primary">optical character recognition (OCR)</strong>, <strong class="text-primary">semantic search capabilities</strong>, and <strong class="text-primary">automated metadata extraction</strong> to create self-organizing digital repositories that improve over time through continuous learning.
-              </p>
-            </div>
-            
-            <div>
-              <img 
-                src="https://images.pexels.com/photos/7679562/pexels-photo-7679562.jpeg?auto=compress&cs=tinysrgb&h=300&w=500" 
-                alt="Business professionals discussing AI document management implementation" 
-                class="w-full h-48 object-cover rounded-xl border border-primary"
-              />
-              <p class="text-xs text-white mt-2">Strategic planning for AI document management implementation</p>
-            </div>
-          </div>
-
-          <div class="bg-primary border-l-4 border-primary p-6 rounded-r-xl mb-8">
-            <h3 class="font-orbitron font-bold text-white mb-3">Key Technologies Powering AI Document Management</h3>
-            <ul class="text-white space-y-2">
-              <li><strong class="text-primary">Natural Language Processing (NLP):</strong> Understands document content and context</li>
-              <li><strong class="text-primary">Machine Learning Algorithms:</strong> Improves classification accuracy over time</li>
-              <li><strong class="text-primary">Computer Vision:</strong> Processes images, charts, and visual document elements</li>
-              <li><strong class="text-primary">Semantic Search:</strong> Finds documents based on meaning, not just keywords</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Key Benefits -->
-        <section class="mb-8">
-          <h2 class="text-xl font-orbitron font-bold text-primary mb-6">Key Benefits of AI document management system</h2>
-          
-          <div class="glass-morphism p-4 rounded-xl mb-8">
-            <p class="text-lg text-white leading-relaxed mb-6">
-              Organizations implementing AI document management systems report transformative improvements across multiple operational dimensions. Research from McKinsey & Company indicates that businesses can achieve <strong class="text-primary">25-35% productivity gains</strong> within the first year of implementation.
-            </p>
-
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
-              <div>
-                <h3 class="text-lg font-orbitron font-bold text-white mb-4">Operational Efficiency</h3>
-                <ul class="text-white space-y-3">
-                  <li class="flex items-start">
-                    <span class="text-primary mr-2">•</span>
-                    <span><strong class="text-primary">Automated Classification:</strong> Documents are automatically tagged and organized based on content analysis, reducing manual effort by up to 90%</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-primary mr-2">•</span>
-                    <span><strong class="text-primary">Intelligent Search:</strong> Natural language queries return contextually relevant results, improving search accuracy by 60-80%</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-primary mr-2">•</span>
-                    <span><strong class="text-primary">Version Control:</strong> AI tracks document versions and changes automatically, preventing confusion and data loss</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 class="text-lg font-orbitron font-bold text-white mb-4">Business Impact</h3>
-                <ul class="text-white space-y-3">
-                  <li class="flex items-start">
-                    <span class="text-primary mr-2">•</span>
-                    <span><strong class="text-primary">Cost Reduction:</strong> Average 40-60% reduction in document processing costs through automation</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-primary mr-2">•</span>
-                    <span><strong class="text-primary">Compliance Assurance:</strong> Automated compliance monitoring and audit trails reduce regulatory risk</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-primary mr-2">•</span>
-                    <span><strong class="text-primary">Security Enhancement:</strong> AI-driven access controls and anomaly detection protect sensitive information</span>
-                  </li>
-                </ul>
+              <div class="bg-primary/10 border border-primary/30 p-4 rounded-xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  alt="AI and machine learning technology dashboard" 
+                  class="w-full h-48 object-cover rounded-lg shadow-lg"
+                />
               </div>
             </div>
-          </div>
-
-          <!-- Case Study Callout -->
-          <div class="bg-primary border border-primary p-6 rounded-xl">
-            <h3 class="font-orbitron font-bold text-primary mb-3">Case Study: Fortune 500 Manufacturing Company</h3>
-            <p class="text-white leading-relaxed mb-4">
-              A leading manufacturing company with 50,000+ employees implemented an AI document management system to handle their 2.3 million technical documents, contracts, and compliance records. The results after 18 months:
-            </p>
-            <div class="grid md:grid-cols-3 gap-4 text-center">
-              <div class="bg-black p-4 rounded-lg">
-                <div class="text-xl font-orbitron font-bold text-primary">85%</div>
-                <div class="text-sm text-white">Reduction in document retrieval time</div>
-              </div>
-              <div class="bg-black p-4 rounded-lg">
-                <div class="text-xl font-orbitron font-bold text-primary">$2.1M</div>
-                <div class="text-sm text-white">Annual cost savings</div>
-              </div>
-              <div class="bg-black p-4 rounded-lg">
-                <div class="text-xl font-orbitron font-bold text-primary">99.7%</div>
-                <div class="text-sm text-white">Compliance accuracy rate</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- How AI Document Management Works -->
-        <section class="mb-8">
-          <h2 class="text-xl font-orbitron font-bold text-primary mb-6">How AI document management system Works / Implementation</h2>
-          
-          <div class="glass-morphism p-4 rounded-xl mb-8">
-            <p class="text-lg text-white leading-relaxed mb-6">
-              Modern AI document management systems operate through a sophisticated multi-layer architecture that processes, understands, and organizes documents with minimal human intervention. The implementation process typically follows a structured approach designed to maximize ROI while minimizing business disruption.
-            </p>
-
-            <h3 class="text-lg font-orbitron font-bold text-white mb-4">Core AI Processing Pipeline</h3>
-            
-            <div class="space-y-4">
-              <div class="border-l-4 border-primary pl-6">
-                <h4 class="font-bold text-primary mb-2">1. Document Ingestion & OCR</h4>
-                <p class="text-white">
-                  The system automatically scans and processes documents in multiple formats (PDF, Word, images, scanned documents) using advanced OCR technology with 99.5%+ accuracy rates. This stage converts all content into searchable, machine-readable text while preserving original formatting and metadata.
-                </p>
-              </div>
-              
-              <div class="border-l-4 border-primary pl-6">
-                <h4 class="font-bold text-primary mb-2">2. Content Analysis & Understanding</h4>
-                <p class="text-white">
-                  Natural language processing algorithms analyze document content to identify key entities, topics, sentiment, and relationships. The system recognizes document types (contracts, invoices, reports, emails) and extracts critical information like dates, names, financial figures, and legal clauses.
-                </p>
-              </div>
-              
-              <div class="border-l-4 border-primary pl-6">
-                <h4 class="font-bold text-primary mb-2">3. Intelligent Classification & Tagging</h4>
-                <p class="text-white">
-                  Machine learning models automatically assign documents to appropriate categories, apply relevant tags, and establish connections with related documents. This creates a dynamic, self-organizing knowledge graph that improves searchability and discovery.
-                </p>
-              </div>
-              
-              <div class="border-l-4 border-primary pl-6">
-                <h4 class="font-bold text-primary mb-2">4. Semantic Search & Retrieval</h4>
-                <p class="text-white">
-                  Advanced search capabilities allow users to find documents using natural language queries, conceptual searches, and contextual relationships. The system understands intent and returns relevant results even when exact keywords aren't present in the query.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Implementation Timeline -->
-          <div class="bg-black border border-primary p-6 rounded-xl">
-            <h3 class="font-orbitron font-bold text-primary mb-4">Typical Implementation Timeline</h3>
-            <div class="grid md:grid-cols-4 gap-4 text-center">
-              <div class="p-4">
-                <div class="text-primary font-orbitron font-bold mb-2">Week 1-2</div>
-                <div class="text-sm text-white">System Setup & Integration</div>
-              </div>
-              <div class="p-4">
-                <div class="text-primary font-orbitron font-bold mb-2">Week 3-6</div>
-                <div class="text-sm text-white">Data Migration & Training</div>
-              </div>
-              <div class="p-4">
-                <div class="text-primary font-orbitron font-bold mb-2">Week 7-8</div>
-                <div class="text-sm text-white">User Training & Testing</div>
-              </div>
-              <div class="p-4">
-                <div class="text-primary font-orbitron font-bold mb-2">Week 9+</div>
-                <div class="text-sm text-white">Full Deployment & Optimization</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Use Cases and Examples -->
-        <section class="mb-8">
-          <h2 class="text-xl font-orbitron font-bold text-primary mb-6">Use Cases and Examples</h2>
-          
-          <div class="space-y-8">
-            <!-- Legal Firms -->
-            <div>
-              <h3 class="text-lg font-orbitron font-bold text-white mb-4">Legal Firms & Contract Management</h3>
-              <p class="text-white leading-relaxed mb-4">
-                Law firms handling thousands of contracts, case files, and legal precedents benefit enormously from AI document management. The system can instantly identify contract clauses, extract key terms, flag potential compliance issues, and connect related cases across decades of legal documentation.
-              </p>
-              
-              <div class="bg-black p-4 rounded-lg">
-                <p class="text-sm text-white italic">
-                  "Our AI document system reduced contract review time from 4 hours to 30 minutes while improving accuracy. We can now handle 3x more cases with the same team." - Senior Partner, AmLaw 200 Firm
-                </p>
-              </div>
-            </div>
-
-            <!-- Healthcare -->
-            <div>
-              <h3 class="text-lg font-orbitron font-bold text-white mb-4">Healthcare & Patient Records</h3>
-              <p class="text-white leading-relaxed mb-4">
-                Healthcare organizations must manage complex patient records, medical imaging, research data, and compliance documentation. AI systems can automatically extract patient information, identify treatment patterns, flag drug interactions, and ensure HIPAA compliance across all documentation.
-              </p>
-              
-              <div class="grid md:grid-cols-2 gap-4 mt-4">
-                <div class="bg-primary p-4 rounded-lg text-center">
-                  <div class="text-xl font-orbitron font-bold text-primary">92%</div>
-                  <div class="text-sm text-white">Faster patient record retrieval</div>
-                </div>
-                <div class="bg-primary p-4 rounded-lg text-center">
-                  <div class="text-xl font-orbitron font-bold text-primary">99.8%</div>
-                  <div class="text-sm text-white">HIPAA compliance accuracy</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Financial Services -->
-            <div>
-              <h3 class="text-lg font-orbitron font-bold text-white mb-4">Financial Services & Regulatory Compliance</h3>
-              <p class="text-white leading-relaxed mb-4">
-                Financial institutions process millions of documents including loan applications, compliance reports, trading records, and regulatory filings. AI document management systems automatically categorize documents by risk level, regulatory requirements, and retention policies while maintaining complete audit trails.
-              </p>
-              
-              <p class="text-white leading-relaxed">
-                Banks using AI document management report <strong class="text-primary">75% faster regulatory reporting</strong> and <strong class="text-primary">90% reduction in compliance violations</strong> due to automated monitoring and classification systems.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Best Practices and Tools -->
-        <section class="mb-8">
-          <h2 class="text-xl font-orbitron font-bold text-primary mb-6">Best Practices and Tools</h2>
-          
-          <div class="glass-morphism p-4 rounded-xl mb-8">
-            <h3 class="text-lg font-orbitron font-bold text-white mb-6">Implementation Best Practices</h3>
-            
-            <div class="space-y-4">
-              <div class="border border-primary p-6 rounded-lg">
-                <h4 class="font-bold text-primary mb-3">1. Start with Data Quality Assessment</h4>
-                <p class="text-white mb-3">
-                  Before implementing AI document management, conduct a comprehensive audit of your existing document repositories. Clean, consistent data improves AI accuracy by up to 40%. Remove duplicates, standardize naming conventions, and establish clear document hierarchies.
-                </p>
-                <div class="bg-black p-3 rounded text-sm text-white">
-                  <strong>Pro Tip:</strong> Organizations with clean data see ROI 6 months faster than those with messy repositories.
-                </div>
-              </div>
-              
-              <div class="border border-primary p-6 rounded-lg">
-                <h4 class="font-bold text-primary mb-3">2. Define Clear Governance Policies</h4>
-                <p class="text-white mb-3">
-                  Establish document retention policies, access controls, and workflow approval processes before implementation. AI systems work best when they understand your business rules and can enforce them automatically.
-                </p>
-                <ul class="text-white text-sm space-y-1 ml-4">
-                  <li>• Document lifecycle management rules</li>
-                  <li>• User permission matrices</li>
-                  <li>• Compliance requirements mapping</li>
-                  <li>• Backup and disaster recovery protocols</li>
-                </ul>
-              </div>
-              
-              <div class="border border-primary p-6 rounded-lg">
-                <h4 class="font-bold text-primary mb-3">3. Implement Gradual Rollout Strategy</h4>
-                <p class="text-white">
-                  Deploy AI document management in phases, starting with less critical document types. This allows teams to adapt to new workflows while the AI system learns your organization's specific patterns and requirements. Most successful implementations follow a 3-month phased approach.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Leading Tools Comparison -->
-          <div class="overflow-x-auto">
-            <table class="w-full bg-black border border-primary rounded-xl overflow-hidden">
-              <thead class="bg-primary">
-                <tr>
-                  <th class="text-left p-4 font-orbitron font-bold text-white">Solution</th>
-                  <th class="text-left p-4 font-orbitron font-bold text-white">Best For</th>
-                  <th class="text-left p-4 font-orbitron font-bold text-white">Key AI Features</th>
-                  <th class="text-left p-4 font-orbitron font-bold text-white">Starting Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-t border-primary">
-                  <td class="p-4 text-primary font-bold">Microsoft SharePoint Premium</td>
-                  <td class="p-4 text-white">Enterprise organizations</td>
-                  <td class="p-4 text-white">Content understanding, auto-classification</td>
-                  <td class="p-4 text-white">$22/user/month</td>
-                </tr>
-                <tr class="border-t border-primary">
-                  <td class="p-4 text-primary font-bold">Box Intelligence</td>
-                  <td class="p-4 text-white">Cloud-first businesses</td>
-                  <td class="p-4 text-white">Metadata extraction, smart insights</td>
-                  <td class="p-4 text-white">$20/user/month</td>
-                </tr>
-                <tr class="border-t border-primary">
-                  <td class="p-4 text-primary font-bold">M-Files</td>
-                  <td class="p-4 text-white">Metadata-driven workflows</td>
-                  <td class="p-4 text-white">Intelligent information management</td>
-                  <td class="p-4 text-white">Custom pricing</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- FAQs -->
-        <section class="mb-8">
-          <h2 class="text-xl font-orbitron font-bold text-primary mb-6">FAQs</h2>
-          
-          <div class="space-y-4">
-            <div>
-              <h3 class="font-bold text-white mb-3">How accurate is AI document classification compared to manual processes?</h3>
-              <p class="text-white leading-relaxed">
-                Modern AI document management systems achieve 95-99% classification accuracy, significantly higher than manual processes which typically range from 70-85%. The accuracy improves over time as the system learns from user interactions and feedback, often reaching enterprise-grade precision within 3-6 months of deployment.
-              </p>
-            </div>
-            
-            <div>
-              <h3 class="font-bold text-white mb-3">What security measures protect documents in AI-powered systems?</h3>
-              <p class="text-white leading-relaxed">
-                Enterprise AI document management systems implement multiple security layers including end-to-end encryption, role-based access controls, audit logging, and anomaly detection. Many solutions are SOC 2 Type II certified and comply with GDPR, HIPAA, and other regulatory frameworks. Data never leaves your security perimeter in on-premises deployments.
-              </p>
-            </div>
-            
-            <div>
-              <h3 class="font-bold text-white mb-3">How long does it take to see ROI from AI document management implementation?</h3>
-              <p class="text-white leading-relaxed">
-                Most organizations begin seeing productivity improvements within 30-60 days of implementation. Full ROI typically occurs within 8-14 months, with break-even points averaging 6-9 months. Organizations with well-organized existing systems see faster returns, while those with complex legacy systems may require 12-18 months for maximum benefit realization.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="glass-morphism p-4 rounded-xl text-center">
-          <h2 class="text-xl font-orbitron font-bold text-primary mb-4">
-            Ready to Transform Your Document Management?
-          </h2>
-          <p class="text-white mb-6 leading-relaxed">
-            Discover how AI document management can revolutionize your organization's efficiency and compliance. 
-            Get expert guidance on implementation strategies tailored to your specific business needs.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="bg-primary text-black opacity-100 backdrop-filter-none py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary transition-all duration-300">
-              Request Demo
-            </button>
-            <button class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary transition-all duration-300">
-              Download Whitepaper
-            </button>
-          </div>
-        </section>
-          
           </div>
           
-          <!-- Right Panel with Sub-Articles -->
+          <!-- Right Column - AI Document Hub (33%) -->
           <div class="lg:col-span-1">
-            <div class="sticky top-8">
-              <div class="glass-morphism p-6 rounded-xl mb-6">
-                <h3 class="font-orbitron font-bold text-primary mb-4 text-center">📚 Related Articles</h3>
-                <div id="articles-container" class="space-y-4">
-                  <!-- Articles will be populated by JavaScript -->
-                </div>
-                <!-- Pagination Controls -->
-                <div class="flex justify-between items-center mt-6 pt-4 border-t border-primary/30">
-                  <button id="prev-btn" class="px-3 py-1 text-xs bg-primary/20 text-white rounded hover:bg-primary/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
-                    ← Previous
-                  </button>
-                  <span id="page-info" class="text-xs text-white"></span>
-                  <button id="next-btn" class="px-3 py-1 text-xs bg-primary/20 text-white rounded hover:bg-primary/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
-                    Next →
-                  </button>
-                </div>
+            <div class="glass-morphism rounded-xl p-4 sticky top-24 border border-primary/30">
+              <div class="text-center mb-6">
+                <h3 class="text-lg font-orbitron font-bold text-primary mb-2 flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19,3H5C3.9,3 3,3.9 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.9 20.1,3 19,3M5,7H19V19H5V7M6,8V10H8V8H6M6,11V13H8V11H6M6,14V16H8V14H6M10,8V10H18V8H10M10,11V13H18V11H10M10,14V16H18V14H10Z"/>
+                  </svg>
+                  AI Document Hub
+                </h3>
+                <p class="text-gray-300 text-xs">Explore our comprehensive AI document management resources</p>
               </div>
               
-              <div class="glass-morphism p-4 rounded-xl text-center">
-                <h4 class="font-orbitron font-bold text-primary mb-3">Get Expert Help</h4>
-                <p class="text-white text-xs mb-4">Ready to implement AI document management?</p>
-                <button class="w-full bg-primary text-black opacity-100 backdrop-filter-none py-2 px-4 rounded font-bold text-sm hover:bg-primary/80 transition-all duration-300">
-                  Schedule Consultation
+              <div class="space-y-4 text-sm">
+                {pillarArticles.map((article, index) => (
+                  <div key={index} class="bg-black/50 p-3 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-300">
+                    <div class="flex items-start gap-2 mb-2">
+                      <span class="text-primary font-bold text-xs mt-0.5">#{index + 1}</span>
+                      <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                          <span class="text-primary text-xs font-bold">{article.date}</span>
+                          <span class="text-gray-400 text-xs">•</span>
+                          <span class="text-gray-400 text-xs">{article.readTime}</span>
+                        </div>
+                        <h4 class="text-white font-semibold text-xs leading-tight mb-2">
+                          <a href={article.url} class="hover:text-primary transition-colors duration-300">
+                            {article.title}
+                          </a>
+                        </h4>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-2">{article.excerpt}</p>
+                        <div class="flex flex-wrap gap-1">
+                          {article.tags.map((tag, tagIndex) => (
+                            <span key={tagIndex} class="bg-primary/20 text-primary px-2 py-0.5 rounded text-xs">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <!-- Pagination -->
+              <div class="flex items-center justify-between mt-4 pt-4 border-t border-primary/30">
+                <button id="prev-page" class="bg-primary/20 text-primary px-3 py-2 rounded-lg text-sm font-semibold hover:bg-primary/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                  ← Previous
+                </button>
+                <span id="page-indicator" class="text-gray-300 text-sm">1 of 1</span>
+                <button id="next-page" class="bg-primary/20 text-primary px-3 py-2 rounded-lg text-sm font-semibold hover:bg-primary/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                  Next →
                 </button>
               </div>
+              
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Main Content Section -->
+    <section class="py-8 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Comprehensive Introduction -->
+        <div class="mb-12">
+          <h2 id="what-is-ai-document-management" class="text-3xl font-orbitron font-bold text-primary mb-8">What is an AI Document Management System?</h2>
+              
+              <div class="mb-8">
+                <!-- Image 1: AI Technology - Right positioned, medium size -->
+                <div class="float-right ml-6 mb-4 w-56" style="float: right; margin-left: 1.5rem; margin-bottom: 1rem; width: 14rem; max-width: 14rem;">
+                  <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                    <img 
+                      src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80" 
+                      alt="AI and machine learning technology for document management" 
+                      class="w-full h-44 object-cover shadow-lg"
+                      style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                    />
+                  </div>
+                </div>
+                
+                <p class="text-lg text-white leading-relaxed mb-6">
+                  An <strong class="text-primary">AI document management system</strong> is an intelligent software platform that leverages artificial intelligence, machine learning, and natural language processing to automatically capture, classify, organize, and retrieve business documents. Unlike traditional document management software that relies on manual filing and keyword searches, AI-powered systems understand document content, context, and relationships to provide intelligent document organization and retrieval capabilities.
+                </p>
+                
+                <p class="text-lg text-white leading-relaxed mb-6">
+                  Modern organizations generate and process millions of documents annually – from contracts and invoices to research reports and compliance documentation. Research from IDC shows that enterprises spend over <strong class="text-primary">$12,000 per knowledge worker annually</strong> on document-related activities, yet 90% of business information remains unstructured and difficult to access when needed.
+                </p>
+                
+                <div class="bg-primary border-l-4 border-primary p-6 rounded-r-xl mb-6">
+                  <h3 class="font-orbitron font-bold text-black mb-3">The Evolution of Document Management Technology</h3>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-black p-3 rounded">
+                      <h4 class="font-bold text-white mb-2 text-sm">Traditional Systems</h4>
+                      <p class="text-gray-300 text-xs">Manual filing, folder hierarchies, basic keyword search</p>
+                    </div>
+                    <div class="bg-black p-3 rounded">
+                      <h4 class="font-bold text-primary mb-2 text-sm">Digital Systems</h4>
+                      <p class="text-gray-300 text-xs">Electronic storage, metadata tagging, workflow automation</p>
+                    </div>
+                    <div class="bg-black p-3 rounded">
+                      <h4 class="font-bold text-primary mb-2 text-sm">AI-Powered Systems</h4>
+                      <p class="text-gray-300 text-xs">Intelligent classification, semantic search, predictive organization</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <p class="text-lg text-white leading-relaxed">
+                  <strong class="text-primary">Intelligent document management systems</strong> represent the next generation of enterprise content management, combining advanced AI capabilities with traditional document storage to create systems that learn, adapt, and improve over time. These platforms typically achieve <strong class="text-primary">85-95% automation rates</strong> for document processing tasks while maintaining <strong class="text-primary">99%+ accuracy</strong> in classification and retrieval operations.
+                </p>
+              </div>
+            </div>
+
+            <!-- Key Features Section -->
+            <div class="mb-12">
+              <h2 id="core-capabilities" class="text-3xl font-orbitron font-bold text-primary mb-8">Core AI Document Management Capabilities</h2>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-morphism p-6 rounded-xl">
+                  <div class="bg-primary/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-3">AI-Powered Document Retrieval</h3>
+                  <p class="text-gray-300">Advanced RAG (Retrieval-Augmented Generation) technology enables semantic search, contextual understanding, and intelligent document discovery across massive repositories.</p>
+                </div>
+                
+                <div class="glass-morphism p-6 rounded-xl">
+                  <div class="bg-primary/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6Z"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-3">Automated Document Classification</h3>
+                  <p class="text-gray-300">Machine learning algorithms automatically categorize, tag, and organize documents based on content analysis, ensuring consistent classification and compliance adherence.</p>
+                </div>
+                
+                <div class="glass-morphism p-6 rounded-xl">
+                  <div class="bg-primary/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-3">Intelligent Workflow Automation</h3>
+                  <p class="text-gray-300">Smart routing, approval processes, and business rule automation that adapts to organizational workflows and decision patterns.</p>
+                </div>
+                
+                <div class="glass-morphism p-6 rounded-xl">
+                  <div class="bg-primary/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-3">AI-Enhanced Security & Compliance</h3>
+                  <p class="text-gray-300">Automated security classification, sensitive data detection, role-based access control, and comprehensive audit trail generation for regulatory compliance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Full Width Main Content -->
+    <section class="py-16 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Benefits & ROI Analysis -->
+        <div class="mb-16">
+          <h2 id="benefits-roi" class="text-3xl font-orbitron font-bold text-primary mb-8">Benefits & ROI of AI Document Management Systems</h2>
+              
+              <div class="space-y-8">
+                <div>
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-6">Quantified Business Impact</h3>
+                  <!-- Image 2: Business Analytics - Left positioned, small size -->
+                  <div class="float-left mr-6 mb-4 w-48" style="float: left; margin-left: 1rem; margin-right: 2rem; margin-bottom: 2.5rem; margin-top: 1rem; width: 12rem; max-width: 12rem; clear: left;">
+                    <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                      <img 
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                        alt="Business analytics dashboard showing ROI and performance metrics" 
+                        class="w-full h-44 object-cover shadow-lg"
+                        style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                      />
+                    </div>
+                  </div>
+                  
+                  <p class="text-lg text-white leading-relaxed mb-6">
+                    Organizations implementing AI document management systems typically see dramatic improvements in operational efficiency and cost reduction. According to Forrester Research, enterprises achieve an average <strong class="text-primary">312% ROI within 18 months</strong> of implementation, with payback periods averaging 8-12 months.
+                  </p>
+                  
+                  <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-primary p-6 rounded-xl text-center">
+                      <div class="text-3xl font-orbitron font-bold text-black mb-2">75%</div>
+                      <div class="text-sm text-black font-semibold">Reduction in document search time</div>
+                    </div>
+                    <div class="bg-primary p-6 rounded-xl text-center">
+                      <div class="text-3xl font-orbitron font-bold text-black mb-2">$3.70</div>
+                      <div class="text-sm text-black font-semibold">ROI for every $1 invested</div>
+                    </div>
+                    <div class="bg-primary p-6 rounded-xl text-center">
+                      <div class="text-3xl font-orbitron font-bold text-black mb-2">90%</div>
+                      <div class="text-sm text-black font-semibold">Improvement in compliance accuracy</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-6">Strategic Business Advantages</h3>
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div class="glass-morphism p-6 rounded-xl">
+                      <h4 class="font-orbitron font-bold text-primary mb-3">Enhanced Decision Making</h4>
+                      <p class="text-white text-sm leading-relaxed">
+                        AI-powered document analysis provides executives with faster access to critical business information, enabling data-driven decision making with comprehensive context from historical documents and real-time data.
+                      </p>
+                    </div>
+                    <div class="glass-morphism p-6 rounded-xl">
+                      <h4 class="font-orbitron font-bold text-primary mb-3">Competitive Intelligence</h4>
+                      <p class="text-white text-sm leading-relaxed">
+                        Intelligent document systems can automatically extract market insights, competitive analysis, and trend identification from vast document repositories, providing strategic advantages in market positioning.
+                      </p>
+                    </div>
+                    <div class="glass-morphism p-6 rounded-xl">
+                      <h4 class="font-orbitron font-bold text-primary mb-3">Risk Mitigation</h4>
+                      <p class="text-white text-sm leading-relaxed">
+                        Automated compliance monitoring, policy enforcement, and audit trail generation significantly reduce regulatory risk while ensuring consistent adherence to industry standards and internal policies.
+                      </p>
+                    </div>
+                    <div class="glass-morphism p-6 rounded-xl">
+                      <h4 class="font-orbitron font-bold text-primary mb-3">Innovation Acceleration</h4>
+                      <p class="text-white text-sm leading-relaxed">
+                        By eliminating time spent searching for information, teams can focus on higher-value activities like innovation, strategic planning, and customer engagement, driving organizational growth.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Implementation Guide -->
+            <div class="mb-12">
+              <h2 id="implementation-guide" class="text-3xl font-orbitron font-bold text-primary mb-8">AI Document Management Implementation Guide</h2>
+              
+              <div class="space-y-6">
+                <div class="border border-primary p-6 rounded-xl">
+                  <h3 class="font-orbitron font-bold text-primary mb-4">Phase 1: Assessment & Planning (2-4 weeks)</h3>
+                  <p class="text-white mb-4">
+                    Begin with comprehensive analysis of current document management practices, identifying pain points, volume requirements, and compliance needs. This phase establishes the foundation for successful AI implementation.
+                  </p>
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 class="font-bold text-white mb-2">Technical Assessment</h4>
+                      <ul class="text-gray-300 text-sm space-y-1">
+                        <li>• Document volume and growth analysis</li>
+                        <li>• Current system integration requirements</li>
+                        <li>• Security and compliance framework review</li>
+                        <li>• Infrastructure capacity planning</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white mb-2">Business Requirements</h4>
+                      <ul class="text-gray-300 text-sm space-y-1">
+                        <li>• User workflow analysis</li>
+                        <li>• Performance improvement targets</li>
+                        <li>• ROI projections and success metrics</li>
+                        <li>• Change management planning</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="border border-primary p-6 rounded-xl">
+                  <h3 class="font-orbitron font-bold text-primary mb-4">Phase 2: AI Model Development & Training (4-8 weeks)</h3>
+                  <!-- Image 3: AI Model Training - Right positioned, medium size -->
+                  <div class="float-right ml-6 mb-4 w-56" style="float: right; margin-left: 1.5rem; margin-bottom: 1rem; width: 14rem; max-width: 14rem;">
+                    <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                      <img 
+                        src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                        alt="AI model training and machine learning algorithms for document processing" 
+                        class="w-full h-48 object-cover shadow-lg"
+                        style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                      />
+                    </div>
+                  </div>
+                  
+                  <p class="text-white mb-4">
+                    Configure and train AI models specific to your organization's document types, terminology, and business processes. This customization ensures optimal performance and accuracy for your unique requirements.
+                  </p>
+                  <ul class="text-white space-y-2">
+                    <li>• <strong class="text-primary">Document Classification Training:</strong> AI models learn to recognize and categorize your specific document types</li>
+                    <li>• <strong class="text-primary">Content Extraction Optimization:</strong> Configure OCR and NLP models for your document formats</li>
+                    <li>• <strong class="text-primary">Search Algorithm Tuning:</strong> Optimize semantic search for organizational terminology</li>
+                    <li>• <strong class="text-primary">Workflow Integration:</strong> Connect AI capabilities with existing business processes</li>
+                  </ul>
+                </div>
+                
+                <div class="border border-primary p-6 rounded-xl">
+                  <h3 class="font-orbitron font-bold text-primary mb-4">Phase 3: Deployment & Optimization (2-6 weeks)</h3>
+                  <p class="text-white mb-4">
+                    Roll out the system in phases, starting with pilot groups and expanding based on performance feedback. Continuous monitoring and adjustment ensure optimal performance and user adoption.
+                  </p>
+                  <div class="bg-black p-4 rounded-lg">
+                    <h4 class="font-bold text-primary mb-2">Success Metrics to Monitor</h4>
+                    <div class="grid md:grid-cols-3 gap-4 text-center text-sm">
+                      <div>
+                        <div class="text-lg font-orbitron font-bold text-white">Search Speed</div>
+                        <div class="text-gray-300">Average query response time</div>
+                      </div>
+                      <div>
+                        <div class="text-lg font-orbitron font-bold text-white">Classification Accuracy</div>
+                        <div class="text-gray-300">Correct categorization rate</div>
+                      </div>
+                      <div>
+                        <div class="text-lg font-orbitron font-bold text-white">User Adoption</div>
+                        <div class="text-gray-300">Active user engagement</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Industry Use Cases -->
+            <div class="mb-12">
+              <h2 id="use-cases" class="text-3xl font-orbitron font-bold text-primary mb-8">Industry-Specific AI Document Management Use Cases</h2>
+              
+              <div class="space-y-8">
+                <div class="glass-morphism p-6 rounded-xl">
+                  <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Healthcare: Patient Records & Compliance</h3>
+                  <p class="text-white mb-4">
+                    Healthcare organizations use AI document management to handle millions of patient records, research documents, and regulatory filings while maintaining HIPAA compliance and enabling rapid clinical decision support.
+                  </p>
+                  <div class="grid md:grid-cols-3 gap-4 text-center">
+                    <div class="bg-black p-3 rounded">
+                      <div class="text-lg font-orbitron font-bold text-primary">67%</div>
+                      <div class="text-xs text-white">Faster clinical research</div>
+                    </div>
+                    <div class="bg-black p-3 rounded">
+                      <div class="text-lg font-orbitron font-bold text-primary">100%</div>
+                      <div class="text-xs text-white">HIPAA compliance rate</div>
+                    </div>
+                    <div class="bg-black p-3 rounded">
+                      <div class="text-lg font-orbitron font-bold text-primary">$50M</div>
+                      <div class="text-xs text-white">Lumen's annual savings</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="glass-morphism p-6 rounded-xl">
+                  <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Legal: Contract Analysis & Discovery</h3>
+                  <p class="text-white mb-4">
+                    Law firms and corporate legal departments leverage AI to analyze contracts, conduct legal research, and manage discovery processes with unprecedented speed and accuracy.
+                  </p>
+                  <div class="bg-primary p-4 rounded-lg">
+                    <p class="text-black text-sm italic">
+                      "Our AI document system reduced contract review time from 8 hours to 45 minutes while identifying 23% more risk clauses than manual review. It's transformed our entire legal operations."
+                    </p>
+                    <p class="text-black text-xs mt-2">- General Counsel, Fortune 500 Technology Company</p>
+                  </div>
+                </div>
+                
+                <div class="glass-morphism p-6 rounded-xl">
+                  <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Financial Services: Regulatory Compliance</h3>
+                  <p class="text-white mb-4">
+                    Banks and financial institutions use intelligent document management to handle regulatory reporting, customer onboarding, and risk assessment while maintaining compliance with multiple regulatory frameworks.
+                  </p>
+                  <ul class="text-white text-sm space-y-2">
+                    <li>• <strong class="text-primary">Automated KYC Processing:</strong> 89% reduction in customer onboarding time</li>
+                    <li>• <strong class="text-primary">Regulatory Reporting:</strong> Real-time compliance monitoring and automated report generation</li>
+                    <li>• <strong class="text-primary">Risk Assessment:</strong> AI-powered analysis of loan documents and financial statements</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technology Comparison -->
+            <div class="mb-12">
+              <h2 id="technology-comparison" class="text-3xl font-orbitron font-bold text-primary mb-8">AI Document Management Technology Comparison</h2>
+              
+              <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="glass-morphism p-6 rounded-xl">
+                  <h4 class="font-orbitron font-bold text-primary mb-4">Cloud-Native Platforms</h4>
+                  <div class="space-y-3">
+                    <div>
+                      <span class="text-sm text-gray-300">AI Capabilities:</span>
+                      <p class="text-white text-sm">Pre-trained models, rapid deployment</p>
+                    </div>
+                    <div>
+                      <span class="text-sm text-gray-300">Best For:</span>
+                      <p class="text-white text-sm">SMBs and rapid implementations</p>
+                    </div>
+                    <div>
+                      <span class="text-sm text-gray-300">Timeline:</span>
+                      <p class="text-primary font-semibold text-sm">2-6 weeks</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="glass-morphism p-6 rounded-xl">
+                  <h4 class="font-orbitron font-bold text-primary mb-4">Enterprise AI Suites</h4>
+                  <div class="space-y-3">
+                    <div>
+                      <span class="text-sm text-gray-300">AI Capabilities:</span>
+                      <p class="text-white text-sm">Customizable models, integration focus</p>
+                    </div>
+                    <div>
+                      <span class="text-sm text-gray-300">Best For:</span>
+                      <p class="text-white text-sm">Large enterprises with existing systems</p>
+                    </div>
+                    <div>
+                      <span class="text-sm text-gray-300">Timeline:</span>
+                      <p class="text-primary font-semibold text-sm">3-6 months</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="glass-morphism p-6 rounded-xl">
+                  <h4 class="font-orbitron font-bold text-primary mb-4">Custom AI Solutions</h4>
+                  <div class="space-y-3">
+                    <div>
+                      <span class="text-sm text-gray-300">AI Capabilities:</span>
+                      <p class="text-white text-sm">Fully customized, domain-specific</p>
+                    </div>
+                    <div>
+                      <span class="text-sm text-gray-300">Best For:</span>
+                      <p class="text-white text-sm">Specialized industries, unique requirements</p>
+                    </div>
+                    <div>
+                      <span class="text-sm text-gray-300">Timeline:</span>
+                      <p class="text-primary font-semibold text-sm">6-12 months</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="mb-12">
+              <h2 id="best-practices" class="text-3xl font-orbitron font-bold text-primary mb-8">AI Document Management Best Practices</h2>
+              
+              <div class="space-y-6">
+                <div class="border border-primary p-6 rounded-xl">
+                  <h3 class="font-orbitron font-bold text-primary mb-4">1. Start with High-Impact, Low-Risk Use Cases</h3>
+                  <!-- Image 4: Document Processing - Left positioned, small size -->
+                  <div class="float-left mr-6 mb-4 w-48" style="float: left; margin-left: 1rem; margin-right: 2rem; margin-bottom: 2.5rem; margin-top: 1rem; width: 12rem; max-width: 12rem; clear: left;">
+                    <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                      <img 
+                        src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80" 
+                        alt="Modern business office with digital transformation technology" 
+                        class="w-full h-44 object-cover shadow-lg"
+                        style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                      />
+                    </div>
+                  </div>
+                  
+                  <p class="text-white mb-4">
+                    Begin AI implementation with document types that have clear classification criteria and high processing volumes. This approach builds confidence while demonstrating immediate value.
+                  </p>
+                  <div class="bg-black p-4 rounded-lg">
+                    <h4 class="font-bold text-white mb-2">Ideal Starting Points</h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                      <ul class="text-gray-300 space-y-1">
+                        <li>• Invoice processing and accounts payable</li>
+                        <li>• HR forms and employee documentation</li>
+                        <li>• Customer service tickets and responses</li>
+                      </ul>
+                      <ul class="text-gray-300 space-y-1">
+                        <li>• Standard contracts and agreements</li>
+                        <li>• Regulatory compliance reports</li>
+                        <li>• Internal policy and procedure documents</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="border border-primary p-6 rounded-xl">
+                  <h3 class="font-orbitron font-bold text-primary mb-4">2. Ensure Data Quality and Preparation</h3>
+                  <p class="text-white mb-4">
+                    AI systems require high-quality training data to achieve optimal performance. Invest time in data cleaning, standardization, and proper labeling to ensure successful AI model training.
+                  </p>
+                </div>
+                
+                <div class="border border-primary p-6 rounded-xl">
+                  <h3 class="font-orbitron font-bold text-primary mb-4">3. Plan for Continuous Learning and Improvement</h3>
+                  <p class="text-white">
+                    Implement feedback loops and monitoring systems that allow AI models to learn from user interactions and improve accuracy over time. Regular model updates and performance reviews ensure sustained value delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mb-12">
+              <h2 id="faq" class="text-3xl font-orbitron font-bold text-primary mb-8">Frequently Asked Questions</h2>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-morphism p-4 rounded-xl">
+                  <h3 class="font-bold text-primary mb-2 text-sm">What is the difference between traditional document management and AI-powered systems?</h3>
+                  <p class="text-white leading-relaxed text-sm">
+                    Traditional systems rely on manual filing and basic keyword searches. AI-powered systems understand content, automatically classify documents, and provide semantic search with intelligent insights.
+                  </p>
+                </div>
+                
+                <div class="glass-morphism p-4 rounded-xl">
+                  <h3 class="font-bold text-primary mb-2 text-sm">How accurate is AI document classification?</h3>
+                  <p class="text-white leading-relaxed text-sm">
+                    Modern AI classification achieves 95-99% accuracy when properly trained, improving over time through machine learning and user feedback to reach 99%+ accuracy within 6-12 months.
+                  </p>
+                </div>
+                
+                <div class="glass-morphism p-4 rounded-xl">
+                  <h3 class="font-bold text-primary mb-2 text-sm">What are the security implications of AI document management?</h3>
+                  <p class="text-white leading-relaxed text-sm">
+                    AI systems enhance security through automated sensitivity classification, access control enforcement, and anomaly detection with enterprise-grade encryption and compliance frameworks.
+                  </p>
+                </div>
+                
+                <div class="glass-morphism p-4 rounded-xl">
+                  <h3 class="font-bold text-primary mb-2 text-sm">How long does implementation take?</h3>
+                  <p class="text-white leading-relaxed text-sm">
+                    Cloud-based solutions: 2-6 weeks. Custom enterprise implementations: 3-6 months. Timeline depends on data migration complexity and integration requirements.
+                  </p>
+                </div>
+                
+                <div class="glass-morphism p-4 rounded-xl">
+                  <h3 class="font-bold text-primary mb-2 text-sm">What is the typical ROI for AI document management?</h3>
+                  <p class="text-white leading-relaxed text-sm">
+                    Organizations see 200-400% ROI within 18 months from reduced processing time (75-90%), improved compliance, and enhanced decision-making. Average payback: 8-12 months.
+                  </p>
+                </div>
+                
+                <div class="glass-morphism p-4 rounded-xl">
+                  <h3 class="font-bold text-primary mb-2 text-sm">Can AI document management integrate with existing systems?</h3>
+                  <p class="text-white leading-relaxed text-sm">
+                    Yes, through APIs, connectors, and middleware. Common integrations include ERP, CRM, Microsoft 365, Google Workspace, and industry-specific applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <section class="glass-morphism p-8 rounded-xl text-center">
+              <h2 class="text-2xl font-orbitron font-bold text-primary mb-4">
+                Transform Your Document Management with AI
+              </h2>
+              <p class="text-white mb-6 leading-relaxed">
+                Stop struggling with inefficient document processes and missed information. Discover how AI document management can revolutionize your organization's productivity, compliance, and decision-making capabilities.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/#contact" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block text-center">
+                  Get AI Implementation Consultation
+                </a>
+                <a href="/assets/RAG-whitepaper.pdf" download class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/20 transition-all duration-300 inline-block text-center">
+                  Download AI Strategy Guide
+                </a>
+              </div>
+            </section>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AI Document Management System – Intelligent Retrieval & Organization for Business",
+      "description": "Comprehensive guide to AI-powered document management systems. Discover how intelligent document retrieval, automated classification, and smart organization transform business efficiency and compliance.",
+      "author": {
+        "@type": "Organization",
+        "name": "Azoth Automations"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Azoth Automations",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://azothautomations.com/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15",
+      "dateModified": "2025-01-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://azothautomations.com/blog/ai-document-management-system"
+      }
+    }
+    </script>
   </main>
   <Footer />
 </Layout>
@@ -478,55 +696,72 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
   // Related articles data
   const articles = [
     {
-      title: "RAG AI Document Retrieval",
+      title: "RAG AI Document Retrieval: Advanced Search Technology",
       url: "/blog/rag-ai-document-retrieval",
-      readTime: "12 min read"
+      excerpt: "How RAG technology revolutionizes document search and intelligent retrieval",
+      readTime: "12 min read",
+      date: "Jan 15"
     },
     {
       title: "Intelligent Document Retrieval Software",
       url: "/blog/intelligent-document-retrieval-software", 
-      readTime: "10 min read"
+      excerpt: "Essential features that define cutting-edge document retrieval systems",
+      readTime: "10 min read",
+      date: "Jan 12"
     },
     {
       title: "AI-Powered Document Classification",
       url: "/blog/ai-powered-document-classification",
-      readTime: "11 min read"
+      excerpt: "Automating compliance and organization with AI classification",
+      readTime: "11 min read",
+      date: "Jan 10"
     },
     {
       title: "Enterprise Knowledge Management",
       url: "/blog/enterprise-knowledge-management-solutions",
-      readTime: "13 min read"
+      excerpt: "How AI transforms enterprise knowledge management systems",
+      readTime: "13 min read",
+      date: "Jan 8"
     },
     {
       title: "Intelligent Workflow Automation",
       url: "/blog/intelligent-workflow-automation",
-      readTime: "9 min read"
+      excerpt: "Boost document efficiency with AI-powered workflow automation",
+      readTime: "9 min read",
+      date: "Jan 5"
     }
   ];
 
   let currentPage = 0;
-  const articlesPerPage = 3;
+  const articlesPerPage = 8;
   const totalPages = Math.ceil(articles.length / articlesPerPage);
 
   function renderArticles() {
-    const container = document.getElementById('articles-container');
+    const container = document.getElementById('blog-articles-container');
     const start = currentPage * articlesPerPage;
     const end = start + articlesPerPage;
     const pageArticles = articles.slice(start, end);
     
     container.innerHTML = pageArticles.map(article => `
-      <a href="${article.url}" class="block p-4 bg-primary/20 rounded-lg hover:bg-primary/40 transition-all duration-300 group">
-        <h4 class="font-bold text-white text-sm mb-2 group-hover:text-primary">${article.title}</h4>
-        <p class="text-white text-xs opacity-80">${article.readTime}</p>
+      <a href="${article.url}" class="block p-4 bg-black/30 border border-primary/20 rounded-lg hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 group">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-primary text-xs">${article.date}</span>
+          <span class="text-gray-500 text-xs">•</span>
+          <span class="text-gray-300 text-xs">${article.readTime}</span>
+        </div>
+        <h4 class="font-orbitron font-bold text-white text-sm mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+          ${article.title}
+        </h4>
+        <p class="text-gray-300 text-xs line-clamp-2">${article.excerpt}</p>
       </a>
     `).join('');
     
     // Update pagination info
-    document.getElementById('page-info').textContent = `${currentPage + 1} of ${totalPages}`;
+    document.getElementById('page-indicator').textContent = `${currentPage + 1} of ${totalPages}`;
     
     // Update button states
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
     
     prevBtn.disabled = currentPage === 0;
     nextBtn.disabled = currentPage === totalPages - 1;
@@ -536,14 +771,14 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
   document.addEventListener('DOMContentLoaded', function() {
     renderArticles();
     
-    document.getElementById('prev-btn').addEventListener('click', function() {
+    document.getElementById('prev-page').addEventListener('click', function() {
       if (currentPage > 0) {
         currentPage--;
         renderArticles();
       }
     });
     
-    document.getElementById('next-btn').addEventListener('click', function() {
+    document.getElementById('next-page').addEventListener('click', function() {
       if (currentPage < totalPages - 1) {
         currentPage++;
         renderArticles();
@@ -553,9 +788,9 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
 </script>
 
 <style>
-  .line-clamp-3 {
+  .line-clamp-2 {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }

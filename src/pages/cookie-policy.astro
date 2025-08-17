@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import WireframeBackground from '../components/WireframeBackground.astro';
+---
+
+<Layout title="Cookie Policy - Nexitas">
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
+      <WireframeBackground />
+      <div class="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center">
+        <h1 class="text-4xl md:text-5xl font-orbitron font-black text-white mb-6">
+          Cookie <span class="text-primary matrix-text-shadow">Policy</span>
+        </h1>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+          How we use cookies to enhance your browsing experience on our website
+        </p>
+      </div>
+    </section>
+
+    <!-- Cookie Policy Content -->
+    <section class="py-16 bg-black">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="glass-morphism p-8 md:p-12 rounded-2xl">
+          <div class="prose prose-invert max-w-none">
+            
+            <div class="text-sm text-gray-400 mb-8">
+              Last updated: January 12, 2025
+            </div>
+
+            <div class="text-gray-300 leading-relaxed space-y-6">
+              <p>
+                At Nexitas, we value your privacy and strive to provide a transparent experience while you use our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">What Are Cookies?</h2>
+              <p>
+                Cookies are small text files stored on your device (computer, smartphone, or tablet) when you visit a website. They help the website remember information about your visit, such as your preferences or login status, improving your browsing experience.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">How Nexitas Uses Cookies</h2>
+              <p>We use cookies to:</p>
+              <ul class="list-disc list-inside ml-4 space-y-2">
+                <li>Enhance website functionality and performance</li>
+                <li>Remember your preferences and settings</li>
+                <li>Analyze website traffic and usage to improve our services</li>
+                <li>Deliver personalized content and relevant advertisements</li>
+              </ul>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">Types of Cookies We Use</h2>
+              
+              <div class="space-y-4">
+                <div class="bg-black/30 p-4 rounded-lg border border-primary/20">
+                  <h3 class="text-lg font-semibold text-primary mb-2">Essential Cookies</h3>
+                  <p class="text-sm">
+                    These cookies are necessary for the website to function properly, such as enabling secure login and maintaining session information. They cannot be disabled.
+                  </p>
+                </div>
+
+                <div class="bg-black/30 p-4 rounded-lg border border-primary/20">
+                  <h3 class="text-lg font-semibold text-primary mb-2">Performance Cookies</h3>
+                  <p class="text-sm">
+                    These collect anonymous data about how visitors use the site, helping us improve its performance and user experience.
+                  </p>
+                </div>
+
+                <div class="bg-black/30 p-4 rounded-lg border border-primary/20">
+                  <h3 class="text-lg font-semibold text-primary mb-2">Functional Cookies</h3>
+                  <p class="text-sm">
+                    These remember your preferences (such as language or region) to provide a more personalized experience.
+                  </p>
+                </div>
+
+                <div class="bg-black/30 p-4 rounded-lg border border-primary/20">
+                  <h3 class="text-lg font-semibold text-primary mb-2">Advertising and Targeting Cookies</h3>
+                  <p class="text-sm">
+                    These track your browsing habits to deliver relevant ads and marketing messages.
+                  </p>
+                </div>
+              </div>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">Third-Party Cookies</h2>
+              <p>
+                We may allow third-party services (such as Google Analytics, advertising partners, or social media platforms) to place cookies on our site. These third parties have their own privacy policies governing their cookie use.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">Your Cookie Choices</h2>
+              <p>
+                Most web browsers automatically accept cookies, but you can usually adjust your browser settings to block or delete cookies if you prefer. Please note that disabling certain cookies may affect the functionality and user experience on our website.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">Updates to This Cookie Policy</h2>
+              <p>
+                We may update this policy from time to time to reflect changes in our practices or applicable laws. We encourage you to review this page periodically for the latest information.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">Contact Us</h2>
+              <p>
+                If you have any questions about our use of cookies or your privacy, please contact us at:
+              </p>
+              <div class="bg-primary/10 p-4 rounded-lg border border-primary/30 mt-4">
+                <p class="font-semibold text-white">Nexitas</p>
+                <p class="text-gray-300">
+                  Email: <a href="mailto:zach@nexitasai.com" class="text-primary hover:text-primary/80">zach@nexitasai.com</a>
+                </p>
+                <p class="text-gray-300">
+                  Phone: <a href="tel:+16304886751" class="text-primary hover:text-primary/80">+1 (630) 488-6751</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    @apply text-2xl font-orbitron font-bold text-primary mt-8 mb-4;
+  }
+  
+  .prose p {
+    @apply mb-4;
+  }
+  
+  .prose ul {
+    @apply mb-4;
+  }
+</style>

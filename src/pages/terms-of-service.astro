@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import WireframeBackground from '../components/WireframeBackground.astro';
+---
+
+<Layout title="Terms of Service - Nexitas">
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
+      <WireframeBackground />
+      <div class="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center">
+        <h1 class="text-4xl md:text-5xl font-orbitron font-black text-white mb-6">
+          Terms of <span class="text-primary matrix-text-shadow">Service</span>
+        </h1>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+          Please read our terms and conditions carefully before using our services
+        </p>
+      </div>
+    </section>
+
+    <!-- Terms of Service Content -->
+    <section class="py-16 bg-black">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="glass-morphism p-8 md:p-12 rounded-2xl">
+          <div class="prose prose-invert max-w-none">
+            
+            <div class="text-sm text-gray-400 mb-8">
+              Last updated: January 12, 2025
+            </div>
+
+            <div class="text-gray-300 leading-relaxed space-y-6">
+              <p>
+                Welcome to Nexitas. By accessing or using our website and services, you agree to comply with and be bound by these Terms of Service. Please read them carefully.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">1. Acceptance of Terms</h2>
+              <p>
+                By using Nexitas's website or services, you accept these Terms of Service and our Privacy Policy. If you do not agree, please do not use our services.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">2. Intellectual Property</h2>
+              <p>
+                All content, trademarks, logos, and materials on the Nexitas website are the property of Nexitas or its licensors and are protected by intellectual property laws. You may not use, reproduce, or distribute any materials without prior written permission.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">3. User Content</h2>
+              <p>
+                If you submit any content (such as feedback or other materials), you grant Nexitas a worldwide, royalty-free, non-exclusive license to use, reproduce, modify, and display that content for the purposes of contributing to our portfolio and the promotion of our services.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">4. Disclaimer of Warranties</h2>
+              <p>
+                Our services are provided "as is" and "as available" without warranties of any kind, either express or implied. Nexitas does not guarantee that the services will be uninterrupted or error-free.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">5. Termination</h2>
+              <p>
+                We reserve the right to suspend or terminate your access to our services at any time, without notice, however if we do, a full refund will be issued for any prior payments for any services not completed.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">6. Governing Law</h2>
+              <p>
+                These Terms are governed by and construed in accordance with the laws of Illinois, United States, without regard to conflict of law principles.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">7. Changes to Terms</h2>
+              <p>
+                Nexitas may update these Terms from time to time. We will notify you of significant changes by posting the new Terms on our website. Your continued use of our services constitutes acceptance of the updated Terms.
+              </p>
+
+              <h2 class="text-2xl font-orbitron font-bold text-primary mt-8 mb-4">8. Contact Information</h2>
+              <p>
+                If you have any questions about these Terms of Service, please contact us at:
+              </p>
+              <div class="bg-primary/10 p-4 rounded-lg border border-primary/30 mt-4">
+                <p class="font-semibold text-white">Nexitas</p>
+                <p class="text-gray-300">
+                  Email: <a href="mailto:zach@nexitasai.com" class="text-primary hover:text-primary/80">zach@nexitasai.com</a>
+                </p>
+                <p class="text-gray-300">
+                  Phone: <a href="tel:+16304886751" class="text-primary hover:text-primary/80">+1 (630) 488-6751</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    @apply text-2xl font-orbitron font-bold text-primary mt-8 mb-4;
+  }
+  
+  .prose p {
+    @apply mb-4;
+  }
+  
+  .prose ul {
+    @apply mb-4;
+  }
+</style>

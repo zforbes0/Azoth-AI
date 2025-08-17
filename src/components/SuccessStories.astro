@@ -1,80 +1,94 @@
 ---
-// Blog Articles Preview component
-
-const blogArticles = [
-  {
-    title: "AI Document Management System",
-    subtitle: "Intelligent Retrieval & Organization for Business",
-    description: "Transform how your organization manages, retrieves, and organizes documents with cutting-edge artificial intelligence technology.",
-    url: "/blog/ai-document-management-system",
-    image: "https://images.pexels.com/photos/7679562/pexels-photo-7679562.jpeg?auto=compress&cs=tinysrgb&h=300&w=500",
-    readTime: "15 min read"
-  },
-  {
-    title: "RAG AI Document Retrieval",
-    subtitle: "How Retrieval-Augmented Generation Transforms Knowledge Access",
-    description: "Discover how RAG technology revolutionizes document search, making enterprise knowledge instantly accessible and contextually relevant.",
-    url: "/blog/rag-ai-document-retrieval",
-    image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&h=400&w=800",
-    readTime: "12 min read"
-  },
-  {
-    title: "Intelligent Document Retrieval Software",
-    subtitle: "Features to Look For in 2025",
-    description: "Essential features and capabilities for next-generation document retrieval systems that deliver real business value.",
-    url: "/blog/intelligent-document-retrieval-software",
-    image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&h=400&w=800",
-    readTime: "10 min read"
-  }
-];
+// Portfolio Preview component showcasing key success stories
 ---
 
-<section id="portfolio" class="relative pt-16 pb-32 mt-[-121px] mb-[-121px]">
+<section id="success-stories" class="relative pt-18 pb-32 mt-[25px] mb-[-80px]">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-20">
       <h2 class="text-5xl md:text-6xl font-orbitron font-black text-white mb-6">
-        AI Document Management <span class="text-primary matrix-text-shadow">Insights</span>
+        <span class="text-primary matrix-text-shadow">Successful Projects</span>
       </h2>
       <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        Expert insights and comprehensive guides on AI-powered document solutions
+        Real automation solutions delivering measurable results for our clients
       </p>
     </div>
 
-    <div class="space-y-16">
-      {blogArticles.map((article, index) => (
-        <a href={article.url} class="glass-morphism rounded-2xl overflow-hidden block hover:border-primary transition-all duration-300">
-          <div class="grid md:grid-cols-2 gap-0">
-            <div class="relative">
-              <img
-                src={article.image}
-                alt={article.title}
-                class="w-full h-full object-cover min-h-[300px]"
-              />
-              <div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
-              <div class="absolute bottom-4 left-4 text-white">
-                <div class="bg-primary text-black px-3 py-1 rounded-lg font-orbitron font-bold text-xs">
-                  {article.readTime}
-                </div>
-              </div>
-            </div>
-
-            <div class="p-8">
-              <h3 class="text-2xl font-orbitron font-bold text-primary mb-3">
-                {article.title}
-              </h3>
-              <h4 class="text-lg font-semibold text-white mb-4">
-                {article.subtitle}
-              </h4>
-              <p class="text-gray-300 mb-6 leading-relaxed">
-                {article.description}
-              </p>
-              <div class="inline-block bg-primary text-black px-4 py-2 rounded-lg font-semibold hover:bg-primary/80 transition-all duration-300">
-                Read Article →
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <!-- A2LA Compliance Certification System -->
+      <a href="/portfolio" class="glass-morphism rounded-2xl overflow-hidden block hover:border-primary transition-all duration-300 group">
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="relative">
+            <div class="relative w-full h-[300px]">
+              <img src="/assets/Automatic Calculator and Certificate Generator.png" alt="A2LA Compliance Certification System" class="w-full h-full object-cover" />
+              <div class="absolute top-4 left-4">
+                <span class="bg-primary text-black px-3 py-1 rounded-lg text-sm font-bold">
+                  INDUSTRIAL SOFTWARE SOLUTIONS
+                </span>
               </div>
             </div>
           </div>
-        </a>
-      ))}
+
+          <div class="p-8 flex flex-col h-[320px]">
+            <div class="bg-primary text-black px-3 py-1 rounded-lg font-orbitron font-bold text-xs mb-3 inline-block w-fit">
+              Hundreds of Certificates Generated in Minutes
+            </div>
+            <h3 class="text-2xl font-orbitron font-bold text-primary mb-3">
+              A2LA Compliance Certification System
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed flex-grow">
+              Enterprise-grade desktop application for automated calibration certificate generation with A2LA-compliant certifications and streamlined batch operations.
+            </p>
+            <div class="mt-auto">
+              <div class="inline-block bg-primary text-black px-4 py-2 rounded-lg font-semibold hover:bg-primary/80 transition-all duration-300">
+                View Portfolio →
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- RAG Cost Calculator -->
+      <a href="/portfolio" class="glass-morphism rounded-2xl overflow-hidden block hover:border-primary transition-all duration-300 group">
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="relative">
+            <div class="relative w-full h-[300px]">
+              <img src="/assets/Redacted Rag Cost calculator.png" alt="RAG Cost Calculator" class="w-full h-full object-cover" />
+              <div class="absolute top-4 left-4">
+                <span class="bg-primary text-black px-3 py-1 rounded-lg text-sm font-bold">
+                  SALES TECHNOLOGY
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 flex flex-col h-[320px]">
+            <div class="bg-primary text-black px-3 py-1 rounded-lg font-orbitron font-bold text-xs mb-3 inline-block w-fit">
+              High-Converting Lead Magnet Tool
+            </div>
+            <h3 class="text-2xl font-orbitron font-bold text-primary mb-3">
+              RAG Cost Calculator & Lead Magnet
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed flex-grow">
+              Interactive web application engineered as a high-converting lead generation tool that enables prospects to calculate RAG implementation costs.
+            </p>
+            <div class="mt-auto">
+              <div class="inline-block bg-primary text-black px-4 py-2 rounded-lg font-semibold hover:bg-primary/80 transition-all duration-300">
+                View Portfolio →
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- View Full Portfolio Button -->
+    <div class="text-center">
+      <a href="/portfolio" class="inline-flex items-center bg-primary text-black px-8 py-4 rounded-xl font-orbitron font-bold text-lg hover:bg-primary/80 transition-all duration-300 transform hover:scale-105">
+        View Full Portfolio
+        <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12l-4.58 4.59z"/>
+        </svg>
+      </a>
     </div>
   </div>
 </section>

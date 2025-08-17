@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "seo-mcp-server": {
+      "command": "node",
+      "args": ["/path/to/seo-mcp-server/index.js"],
+      "env": {}
+    }
+  }
+}

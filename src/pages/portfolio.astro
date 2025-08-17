@@ -6,10 +6,11 @@ import WireframeBackground from '../components/WireframeBackground.astro';
 const portfolioItems = [
   {
     id: 1,
-    title: "Email Marketing Automation Platform",
+    title: "Email Marketing Automation App",
     category: "Marketing Technology", 
     description: "Comprehensive web application engineered to streamline email marketing operations through intelligent automation of advertisement design and copywriting. Features dynamic content generation with custom asset integration, iterative refinement capabilities, and AIDA framework optimization specifically calibrated for e-commerce conversion maximization.",
     type: "video",
+    media: "/assets/AD Copy App.mp4",
     technologies: ["Full-Stack Development", "AI Content Generation", "Marketing Automation", "UX/UI Design"],
     metrics: "85% Marketing Team Productivity Enhancement"
   },
@@ -19,24 +20,55 @@ const portfolioItems = [
     category: "Industrial Software Solutions",
     description: "Enterprise-grade desktop application engineered for automated calibration certificate generation. Dynamically calculates equipment specifications, integrates customer-specific calibration data, and produces individually customized A2LA-compliant certifications. Transforms complex data entry processes into streamlined batch operations for industrial calibration services.",
     type: "image",
+    media: "/assets/Automatic Calculator and Certificate Generator.png",
     technologies: ["Desktop Application Development", "Data Processing", "Compliance Automation", "Document Generation"],
     metrics: "Hundreds of Certificates Generated in Minutes"
   },
   {
     id: 3,
-    title: "LinkedIn Lead Intelligence Platform", 
+    title: "LinkedIn Lead Enrichment Automation", 
     category: "Sales Automation",
     description: "Advanced lead acquisition and enrichment system that extracts comprehensive prospect data from LinkedIn profiles. Features seamless integration capabilities with CRM platforms, cold email systems, and cascading automation workflows for comprehensive contact discovery. Engineered to optimize sales outreach efficiency through intelligent data aggregation and multi-platform connectivity.",
     type: "image",
+    media: "/assets/Lead Enrichment.PNG",
     technologies: ["Data Extraction", "CRM Integration", "API Development", "Sales Automation"],
     metrics: "300% Lead Qualification Efficiency"
+  },
+  {
+    id: 4,
+    title: "RAG Cost Calculator & Lead Magnet",
+    category: "Sales Technology",
+    description: "Interactive web application engineered as a high-converting lead generation tool for RAG implementation prospects. Enables potential clients to calculate and compare costs of their existing technical stack against streamlined RAG alternatives. Features dynamic cost modeling, comparative analysis, and prospect qualification capabilities specifically designed for sales teams to demonstrate value propositions and capture qualified leads interested in AI document solutions.",
+    type: "image",
+    media: "/assets/Redacted Rag Cost calculator.png",
+    technologies: ["Web Application Development", "Lead Generation", "Cost Modeling", "Sales Enablement"],
+    metrics: "High-Converting Lead Magnet Tool"
+  },
+  {
+    id: 5,
+    title: "Deep Website Lead Enrichment Automation",
+    category: "Sales Automation",
+    description: "Advanced lead enrichment platform that extends beyond LinkedIn data limitations through comprehensive website analysis and deep data mining. Systematically processes company websites to extract decision-maker contact information, organizational structure, and personalization insights unavailable through standard social platforms. Engineered for premium outreach campaigns requiring maximum personalization and contact precision when traditional lead sources fall short.",
+    type: "image",
+    media: "/assets/Voila Workflow addition done.png",
+    technologies: ["Web Scraping", "Data Mining", "Contact Discovery", "Advanced Lead Enrichment"],
+    metrics: "Deep Website Intelligence & Contact Discovery"
+  },
+  {
+    id: 6,
+    title: "Automated Cloud Sync & File Management System",
+    category: "Process Automation",
+    description: "Intelligent workflow automation that eliminates manual file management by automatically synchronizing Zoom cloud recordings with Google Drive storage. Features seamless API integration, automated file organization, and scalable architecture adaptable to multiple cloud platforms including OneDrive, Dropbox, and local storage systems. Engineered to streamline post-meeting workflows and eliminate time-consuming manual file transfers for enterprise clients.",
+    type: "image",
+    media: "/assets/Zoom Downloader Done.png",
+    technologies: ["Workflow Automation", "Cloud Integration", "API Development", "File Management"],
+    metrics: "Automated File Sync & Time Savings"
   }
 ];
 
-const categories = ["All", "Marketing Technology", "Industrial Software Solutions", "Sales Automation"];
 ---
 
-<Layout title="Portfolio - Azoth Automations">
+<Layout title="Portfolio - Nexitas">
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center wireframe-bg overflow-hidden">
@@ -58,29 +90,22 @@ const categories = ["All", "Marketing Technology", "Industrial Software Solution
     <section class="relative py-32 bg-black">
       <div class="max-w-7xl mx-auto px-6">
         
-        <!-- Category Filter -->
-        <div class="text-center mb-16">
-          <div class="glass-morphism-dark rounded-2xl p-4 inline-block">
-            <div class="flex flex-wrap gap-4 justify-center">
-              {categories.map((category) => (
-                <button class="px-6 py-2 rounded-lg font-semibold transition-all duration-300 bg-primary text-black">
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
 
         <!-- Portfolio Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item) => (
             <div class="glass-morphism rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-all duration-300">
-              <div class="relative aspect-video bg-black/90">
+              <a href={item.media} target="_blank" class="relative aspect-video bg-black/90 block">
                 {item.type === "video" ? (
-                  <div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
-                    <svg class="text-primary text-6xl w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+                  <div class="relative w-full h-full">
+                    <video class="w-full h-full object-cover" poster="" muted>
+                      <source src={item.media} type="video/mp4" />
+                    </video>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40">
+                      <svg class="text-white text-6xl w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
                     <div class="absolute top-4 left-4">
                       <span class="bg-primary text-black px-3 py-1 rounded-lg text-sm font-bold">
                         VIDEO
@@ -88,19 +113,17 @@ const categories = ["All", "Marketing Technology", "Industrial Software Solution
                     </div>
                   </div>
                 ) : (
-                  <div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
-                    <svg class="text-primary text-6xl w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                    </svg>
+                  <div class="relative w-full h-full">
+                    <img src={item.media} alt={item.title} class="w-full h-full object-cover" />
                     <div class="absolute top-4 left-4">
-                      <span class="bg-primary/80 text-primary px-3 py-1 rounded-lg text-sm font-bold">
+                      <span class="bg-primary text-black px-3 py-1 rounded-lg text-sm font-bold shadow-lg">
                         {item.category.toUpperCase()}
                       </span>
                     </div>
                   </div>
                 )}
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              </a>
               
               <div class="p-6">
                 <div class="mb-4">
@@ -113,29 +136,39 @@ const categories = ["All", "Marketing Technology", "Industrial Software Solution
                   {item.title}
                 </h3>
                 
-                <p class="text-gray-300 mb-4 line-clamp-2">
-                  {item.description}
-                </p>
+                <div class="text-gray-300 mb-4">
+                  <details class="group/details">
+                    <summary class="cursor-pointer list-none">
+                      <p class="line-clamp-2 mb-2">
+                        {item.description}
+                      </p>
+                      <span class="text-primary hover:text-primary/80 text-sm font-semibold transition-colors duration-300 group-open/details:hidden">
+                        See more...
+                      </span>
+                      <span class="text-primary hover:text-primary/80 text-sm font-semibold transition-colors duration-300 hidden group-open/details:inline">
+                        See less
+                      </span>
+                    </summary>
+                    <p class="mt-2 text-gray-300">
+                      {item.description}
+                    </p>
+                  </details>
+                </div>
                 
                 <div class="flex flex-wrap gap-2 mb-4">
-                  {item.technologies.slice(0, 2).map((tech) => (
-                    <span class="bg-primary/80 text-primary px-2 py-1 rounded text-xs font-semibold">
+                  {item.technologies.map((tech) => (
+                    <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs font-semibold">
                       {tech}
                     </span>
                   ))}
-                  {item.technologies.length > 2 && (
-                    <span class="bg-primary/80 text-primary px-2 py-1 rounded text-xs font-semibold">
-                      +{item.technologies.length - 2} more
-                    </span>
-                  )}
                 </div>
                 
-                <button class="w-full bg-primary text-black font-semibold hover:bg-primary/80 transition-all duration-300 px-4 py-2 rounded">
-                  View Details 
+                <a href={item.media} target="_blank" class="w-full bg-primary text-black font-semibold hover:bg-primary/80 transition-all duration-300 px-4 py-2 rounded block text-center">
+                  {item.type === "video" ? "View Video" : "View Image"}
                   <svg class="ml-2 w-4 h-4 inline" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -152,5 +185,24 @@ const categories = ["All", "Marketing Technology", "Industrial Software Solution
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  
+  /* Remove default details/summary styling */
+  details > summary {
+    list-style: none;
+  }
+  
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* Hide the truncated text when details is open */
+  details[open] .line-clamp-2 {
+    display: none;
+  }
+  
+  /* Smooth transitions for better UX */
+  details summary span {
+    transition: opacity 0.3s ease;
   }
 </style>

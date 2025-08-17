@@ -1,17 +1,20 @@
 ---
 // Footer component - converted from React
+import { Image } from 'astro:assets';
 import WireframeBackground from './WireframeBackground.astro';
 ---
 
-<footer class="relative py-16 wireframe-bg border-t border-primary/30 mt-[30px] mb-[30px]">
+<footer class="relative py-16 wireframe-bg mt-[30px] mb-[30px]">
   <WireframeBackground />
   <div class="max-w-7xl mx-auto px-6 mt-[-60px] mb-[-60px]">
     <div class="flex justify-center mb-6">
       <div class="text-center">
         <div class="flex items-center justify-center mb-4">
-          <img 
-            src="/assets/UPSCALed finalAzothAICROPPED_1754515928222.png" 
-            alt="Azoth AI" 
+          <Image 
+            src="/assets/NEXITAS circle.png" 
+            alt="Nexitas" 
+            width={300}
+            height={192}
             class="h-48 w-auto"
           />
         </div>
@@ -22,8 +25,33 @@ import WireframeBackground from './WireframeBackground.astro';
       </div>
     </div>
 
-    <div class="border-t border-primary/30 pt-4 text-center">
-      <p class="text-gray-400 text-sm">© 2024 Azoth Automations. All rights reserved.</p>
+    <div class="pt-6 text-center">
+      <!-- Footer Links -->
+      <div class="flex flex-wrap justify-center items-center gap-6 mb-4">
+        <a href="/privacy-policy" class="text-gray-400 hover:text-primary text-sm transition-colors duration-300">
+          Privacy Policy
+        </a>
+        <span class="text-gray-600">•</span>
+        <a href="/terms-of-service" class="text-gray-400 hover:text-primary text-sm transition-colors duration-300">
+          Terms of Service
+        </a>
+        <span class="text-gray-600">•</span>
+        <a href="/cookie-policy" class="text-gray-400 hover:text-primary text-sm transition-colors duration-300">
+          Cookie Policy
+        </a>
+        <span class="text-gray-600">•</span>
+        <a href="/#contact" class="text-gray-400 hover:text-primary text-sm transition-colors duration-300">
+          Contact
+        </a>
+      </div>
+      
+      <!-- Copyright and Business Info -->
+      <div class="space-y-1">
+        <p class="text-gray-400 text-sm">© 2024 Nexitas. All rights reserved.</p>
+        <p class="text-gray-500 text-xs">
+          Professional AI automation services • Based in Illinois, USA
+        </p>
+      </div>
     </div>
   </div>
 </footer>

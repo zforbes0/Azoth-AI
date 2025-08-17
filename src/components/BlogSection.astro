@@ -1,0 +1,84 @@
+---
+// Blog Articles Preview component
+import { Image } from 'astro:assets';
+
+const blogArticles = [
+  {
+    title: "AI Document Management System",
+    subtitle: "Intelligent Retrieval & Organization for Business",
+    description: "Transform how your organization manages, retrieves, and organizes documents with cutting-edge artificial intelligence technology.",
+    url: "/blog/ai-document-management-system",
+    image: "https://images.unsplash.com/photo-1583521214690-73421a1829a9?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800&h=400",
+    readTime: "15 min read"
+  },
+  {
+    title: "RAG AI Document Retrieval",
+    subtitle: "How Retrieval-Augmented Generation Transforms Knowledge Access",
+    description: "Discover how RAG technology revolutionizes document search, making enterprise knowledge instantly accessible and contextually relevant.",
+    url: "/blog/rag-ai-document-retrieval",
+    image: "https://images.unsplash.com/photo-1675627453057-c56dc0502ffd?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800&h=400",
+    readTime: "12 min read"
+  },
+  {
+    title: "Intelligent Document Retrieval Software",
+    subtitle: "Features to Look For in 2025",
+    description: "Essential features and capabilities for next-generation document retrieval systems that deliver real business value.",
+    url: "/blog/intelligent-document-retrieval-software",
+    image: "https://images.unsplash.com/photo-1538619727653-f7707682faf9?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800&h=400",
+    readTime: "10 min read"
+  }
+];
+---
+
+<section id="portfolio" class="relative pt-18 pb-32 mt-[25px] mb-[-121px]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <h2 class="text-5xl md:text-6xl font-orbitron font-black text-white mb-6">
+        AI Integration/Automation <span class="text-primary matrix-text-shadow">Insights</span>
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Expert insights and comprehensive guides on AI Integration, Automation, and Optimization
+      </p>
+    </div>
+
+    <div class="space-y-16">
+      {blogArticles.map((article, index) => (
+        <a href={article.url} class="glass-morphism rounded-2xl overflow-hidden block hover:border-primary transition-all duration-300">
+          <div class="grid md:grid-cols-2 gap-0">
+            <div class="relative">
+              <Image
+                src={article.image}
+                alt={article.title}
+                width={800}
+                height={300}
+                class="w-full h-[300px] object-cover"
+              />
+              <div class="absolute bottom-4 left-4 text-white">
+                <div class="bg-primary text-black px-3 py-1 rounded-lg font-orbitron font-bold text-xs">
+                  {article.readTime}
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 flex flex-col h-[320px]">
+              <h3 class="text-2xl font-orbitron font-bold text-primary mb-3">
+                {article.title}
+              </h3>
+              <h4 class="text-lg font-semibold text-white mb-4">
+                {article.subtitle}
+              </h4>
+              <p class="text-gray-300 mb-6 leading-relaxed flex-grow">
+                {article.description}
+              </p>
+              <div class="mt-auto">
+                <div class="inline-block bg-primary text-black px-4 py-2 rounded-lg font-semibold hover:bg-primary/80 transition-all duration-300">
+                  Read Article →
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

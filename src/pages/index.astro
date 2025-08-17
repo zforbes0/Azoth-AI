@@ -2,14 +2,43 @@
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import SuccessStories from '../components/SuccessStories.astro';
+import BlogSection from '../components/BlogSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Azoth Automations - AI Business Automation Solutions">
+<Layout title="Nexitas - AI Business Automation Solutions">
 	<main>
 		<HeroSection />
+		
+		<!-- Service Process Flow Section -->
+		<section class="py-16 bg-black">
+			<div class="max-w-7xl mx-auto px-6">
+				<div class="glass-morphism-dark rounded-2xl p-4">
+					<div class="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
+						<div class="flex-1 p-4 bg-gradient-to-r from-primary/20 to-transparent rounded-xl">
+							<h4 class="font-orbitron font-bold text-primary text-lg mb-1">Analysis</h4>
+							<p class="text-sm text-gray-300">Process Assessment & Strategy</p>
+						</div>
+						<div class="flex-1 p-4 bg-gradient-to-r from-primary/30 to-transparent rounded-xl">
+							<h4 class="font-orbitron font-bold text-primary text-lg mb-1">Development</h4>
+							<p class="text-sm text-gray-300">Custom Solutions</p>
+						</div>
+						<div class="flex-1 p-4 bg-gradient-to-r from-primary/20 to-transparent rounded-xl">
+							<h4 class="font-orbitron font-bold text-primary text-lg mb-1">Integration</h4>
+							<p class="text-sm text-gray-300">Seamless Deployment</p>
+						</div>
+						<div class="flex-1 p-4 bg-gradient-to-r from-primary/30 to-transparent rounded-xl">
+							<h4 class="font-orbitron font-bold text-primary text-lg mb-1">Optimization</h4>
+							<p class="text-sm text-gray-300">Continuous Enhancement</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
 		<SuccessStories />
+		<BlogSection />
 		<ContactSection />
 	</main>
 	<Footer />

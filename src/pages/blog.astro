@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import WireframeBackground from '../components/WireframeBackground.astro';
 
-const categories = ["AI Document Management", "AI Customer Support Automation"];
+const categories = ["AI Document Management", "AI Customer Support Automation", "Automated Lead Generation Tools", "Business Process Automation Services"];
 
 const pillarPages = [
   {
@@ -17,10 +17,172 @@ const pillarPages = [
     url: "/blog/ai-customer-support-automation",
     category: "AI Customer Support Automation",
     description: "24/7 scalable customer support solutions powered by artificial intelligence"
+  },
+  {
+    title: "Automated Lead Generation Tools for Modern Sales Teams",
+    url: "/blog/automated-lead-generation-tools",
+    category: "Automated Lead Generation Tools",
+    description: "Intelligent automation that transforms prospecting and accelerates sales growth"
+  },
+  {
+    title: "Business Process Automation Services for Operational Efficiency",
+    url: "/blog/business-process-automation-services",
+    category: "Business Process Automation Services",
+    description: "Comprehensive automation solutions that optimize workflows and reduce operational costs"
   }
 ];
 
 const blogPosts = [
+  {
+    title: "Internal Workflow Automation Software: Free Your Team from Repetitive Tasks",
+    url: "/blog/internal-workflow-automation-software",
+    category: "Business Process Automation Services",
+    excerpt: "Discover how internal workflow automation software eliminates repetitive tasks, increases productivity by 40%, and allows teams to focus on high-value strategic work.",
+    author: "Azoth Automations",
+    date: "2025-01-15",
+    readTime: "12 min read",
+    tags: ["Workflow Automation", "Productivity", "Internal Processes"]
+  },
+  {
+    title: "AI-Powered Data Entry Automation: Eliminate Manual Entry Errors",
+    url: "/blog/ai-powered-data-entry-automation",
+    category: "Business Process Automation Services",
+    excerpt: "Transform your data entry processes with AI automation that reduces errors by 95%, accelerates processing by 80%, and ensures consistent data quality.",
+    author: "Azoth Automations",
+    date: "2025-01-15",
+    readTime: "13 min read",
+    tags: ["AI Automation", "Data Quality", "Error Reduction"]
+  },
+  {
+    title: "Enterprise Process Automation Solutions for Scalability",
+    url: "/blog/enterprise-process-automation-solutions",
+    category: "Business Process Automation Services",
+    excerpt: "Scale your business operations with enterprise automation solutions that reduce costs by 60%, improve efficiency, and support unlimited growth.",
+    author: "Azoth Automations",
+    date: "2025-01-15",
+    readTime: "14 min read",
+    tags: ["Enterprise Automation", "Scalability", "Process Optimization"]
+  },
+  {
+    title: "Workflow Automation Consulting: How to Identify High-ROI Processes",
+    url: "/blog/workflow-automation-consulting",
+    category: "Business Process Automation Services",
+    excerpt: "Expert guidance for identifying and implementing workflow automation opportunities with proven methodologies that deliver 300-400% ROI within 18 months.",
+    author: "Azoth Automations",
+    date: "2025-01-15",
+    readTime: "11 min read",
+    tags: ["Consulting", "ROI Analysis", "Process Assessment"]
+  },
+  {
+    title: "Case Study: Cutting Operational Costs with Business Process Automation",
+    url: "/blog/business-process-automation-case-study",
+    category: "Business Process Automation Services",
+    excerpt: "Real-world examples of how three organizations achieved 68% cost reduction and improved efficiency through strategic business process automation implementation.",
+    author: "Azoth Automations",
+    date: "2025-01-15",
+    readTime: "15 min read",
+    tags: ["Case Study", "Cost Reduction", "Implementation"]
+  },
+  {
+    title: "Case Study: How Sales Outreach Automation Tripled Our Client's Pipeline",
+    url: "/blog/sales-outreach-automation-case-study",
+    category: "Automated Lead Generation Tools",
+    excerpt: "Discover how CloudTech Solutions transformed their sales operation with automated outreach, generating $8.4M in new pipeline within 18 months.",
+    author: "Azoth Automations",
+    date: "2025-01-15",
+    readTime: "14 min read",
+    tags: ["Case Study", "Pipeline Growth", "ROI"]
+  },
+  {
+    title: "CRM Automation for Sales Teams: Close More Deals, Faster",
+    url: "/blog/crm-automation-sales-teams",
+    category: "Automated Lead Generation Tools",
+    excerpt: "Transform your sales operations with CRM automation that accelerates deal velocity by 40%, increases close rates by 30%, and eliminates administrative overhead.",
+    author: "Azoth Automations",
+    date: "2025-01-12",
+    readTime: "12 min read",
+    tags: ["CRM Automation", "Sales Processes", "Efficiency"]
+  },
+  {
+    title: "Sales Prospecting Automation Tools: Cut Prospecting Time by 70%",
+    url: "/blog/sales-prospecting-automation-tools",
+    category: "Automated Lead Generation Tools",
+    excerpt: "Discover how sales prospecting automation tools transform traditional research processes, enabling sales teams to identify and engage qualified prospects 10x faster.",
+    author: "Azoth Automations",
+    date: "2025-01-10",
+    readTime: "11 min read",
+    tags: ["Prospecting Efficiency", "Lead Qualification", "Automation"]
+  },
+  {
+    title: "AI Lead Enrichment Platforms: Better Data, Better Sales Outcomes",
+    url: "/blog/ai-lead-enrichment-platforms",
+    category: "Automated Lead Generation Tools",
+    excerpt: "Transform incomplete lead data into actionable intelligence with AI-powered enrichment platforms that improve conversion rates by 45% and accelerate sales cycles by 35%.",
+    author: "Azoth Automations",
+    date: "2025-01-08",
+    readTime: "13 min read",
+    tags: ["Data Intelligence", "Lead Enrichment", "AI"]
+  },
+  {
+    title: "B2B Lead Automation Software: Scale Your Prospecting Without Extra Staff",
+    url: "/blog/b2b-lead-automation-software",
+    category: "Automated Lead Generation Tools",
+    excerpt: "Discover how B2B lead automation software transforms prospecting operations, enabling sales teams to generate 10x more qualified leads without expanding headcount.",
+    author: "Azoth Automations",
+    date: "2025-01-05",
+    readTime: "10 min read",
+    tags: ["B2B Sales Technology", "Lead Generation", "Scaling"]
+  },
+  {
+    title: "Case Study: AI-Driven Customer Service Workflows that Increased Retention",
+    url: "/blog/ai-driven-customer-service-case-study",
+    category: "AI Customer Support Automation",
+    excerpt: "How TechFlow Solutions increased customer retention by 47% and reduced operational costs by $890,000 through AI implementation.",
+    author: "Azoth Automations",
+    date: "2024-08-12",
+    readTime: "15 min read",
+    tags: ["Case Study", "Customer Retention", "ROI"]
+  },
+  {
+    title: "Automated Customer Onboarding: Streamlining the First Impression",
+    url: "/blog/automated-customer-onboarding",
+    category: "AI Customer Support Automation",
+    excerpt: "Transform new customer experiences with automated workflows that reduce time-to-value by 70% and increase retention by 35%.",
+    author: "Azoth Automations",
+    date: "2024-08-12",
+    readTime: "14 min read",
+    tags: ["Onboarding", "Customer Experience", "Automation"]
+  },
+  {
+    title: "AI-Powered Knowledge Base Software: Self-Service That Works",
+    url: "/blog/ai-powered-knowledge-base-software",
+    category: "AI Customer Support Automation",
+    excerpt: "Intelligent documentation platforms that reduce support tickets by 60% while improving customer satisfaction by 40%.",
+    author: "Azoth Automations",
+    date: "2024-08-12",
+    readTime: "13 min read",
+    tags: ["Knowledge Base", "Self-Service", "AI"]
+  },
+  {
+    title: "AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience",
+    url: "/blog/ai-chatbots-help-desk",
+    category: "AI Customer Support Automation",
+    excerpt: "Implement AI chatbots that handle 80% of routine help desk inquiries automatically while improving satisfaction scores.",
+    author: "Azoth Automations",
+    date: "2024-08-12",
+    readTime: "12 min read",
+    tags: ["Chatbots", "Help Desk", "Customer Experience"]
+  },
+  {
+    title: "Customer Service Automation Software: Reduce Response Times & Costs",
+    url: "/blog/customer-service-automation-software",
+    category: "AI Customer Support Automation",
+    excerpt: "Discover how automated customer service software reduces response times by 75% and operational costs by 40%.",
+    author: "Azoth Automations",
+    date: "2024-08-12",
+    readTime: "11 min read",
+    tags: ["Automation Software", "Response Times", "Cost Reduction"]
+  },
   {
     title: "RAG AI Document Retrieval: How Retrieval-Augmented Generation Transforms Knowledge Access",
     url: "/blog/rag-ai-document-retrieval",
@@ -72,9 +234,13 @@ const blogPosts = [
     tags: ["Workflow Automation", "Process Optimization", "Efficiency"]
   }
 ];
+
+// Pagination logic - prepare all posts for client-side pagination
+const POSTS_PER_PAGE = 15;
+const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
 ---
 
-<Layout title="Blog - Azoth Automations">
+<Layout title="Blog - Nexitas">
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] flex items-center justify-center wireframe-bg overflow-hidden">
@@ -96,14 +262,43 @@ const blogPosts = [
     </section>
 
     <!-- Pillar Navigation -->
-    <section class="py-8 bg-black border-t border-primary">
+    <section class="py-8 bg-black">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-wrap justify-center gap-4">
           {categories.map((category) => (
-            <a href={category === "AI Document Management" ? "/blog/ai-document-management-system" : "/blog/ai-customer-support-automation"} class="border-primary text-white hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300 px-6 py-3 border rounded-lg font-orbitron font-bold">
+            <a href={
+              category === "AI Document Management" ? "/blog/ai-document-management-system" : 
+              category === "AI Customer Support Automation" ? "/blog/ai-customer-support-automation" : 
+              category === "Automated Lead Generation Tools" ? "/blog/automated-lead-generation-tools" : 
+              "/blog/business-process-automation-services"
+            } class="border-primary text-white hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300 px-6 py-3 border rounded-lg font-orbitron font-bold">
               {category}
             </a>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination Controls (Top) -->
+    <section class="py-4 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-center items-center gap-4" id="pagination-top">
+          <button 
+            id="prev-btn-top"
+            class="px-4 py-2 bg-gray-700 text-gray-500 rounded-lg font-orbitron cursor-not-allowed"
+            disabled
+          >
+            ← Previous
+          </button>
+          <span class="text-white font-orbitron" id="page-info-top">
+            Page 1 of {totalPages}
+          </span>
+          <button 
+            id="next-btn-top"
+            class="px-4 py-2 bg-primary text-black hover:bg-primary/80 transition-all duration-300 rounded-lg font-orbitron font-bold"
+          >
+            Next →
+          </button>
         </div>
       </div>
     </section>
@@ -114,9 +309,9 @@ const blogPosts = [
         <h2 class="text-3xl font-orbitron font-bold text-primary mb-12 text-center">
           Latest Articles
         </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
-            <a href={post.url} class="glass-morphism rounded-xl overflow-hidden hover:border-primary transition-all duration-300 group block">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-posts-container">
+          {blogPosts.map((post, index) => (
+            <a href={post.url} class={`glass-morphism rounded-xl overflow-hidden hover:border-primary transition-all duration-300 group block blog-post-item ${index >= POSTS_PER_PAGE ? 'hidden' : ''}`} data-page={Math.floor(index / POSTS_PER_PAGE) + 1}>
               <div class="p-6">
                 <div class="flex items-center gap-4 mb-4">
                   <span class="bg-primary/80 text-primary px-3 py-1 rounded-full text-sm font-orbitron">
@@ -168,8 +363,32 @@ const blogPosts = [
       </div>
     </section>
 
+    <!-- Pagination Controls (Bottom) -->
+    <section class="py-8 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-center items-center gap-4" id="pagination-bottom">
+          <button 
+            id="prev-btn-bottom"
+            class="px-4 py-2 bg-gray-700 text-gray-500 rounded-lg font-orbitron cursor-not-allowed"
+            disabled
+          >
+            ← Previous
+          </button>
+          <span class="text-white font-orbitron" id="page-info-bottom">
+            Page 1 of {totalPages}
+          </span>
+          <button 
+            id="next-btn-bottom"
+            class="px-4 py-2 bg-primary text-black hover:bg-primary/80 transition-all duration-300 rounded-lg font-orbitron font-bold"
+          >
+            Next →
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- Newsletter Section -->
-    <section class="py-16 bg-black border-t border-primary">
+    <section class="py-16 bg-black">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <div class="glass-morphism p-10 rounded-2xl">
           <h2 class="text-3xl font-orbitron font-bold text-primary mb-4">
@@ -198,3 +417,110 @@ const blogPosts = [
   </main>
   <Footer />
 </Layout>
+
+<script>
+  // Client-side pagination
+  const POSTS_PER_PAGE = 15;
+  const totalPosts = document.querySelectorAll('.blog-post-item').length;
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+  let currentPage = 1;
+
+  // Get all elements
+  const blogPosts = document.querySelectorAll('.blog-post-item');
+  const prevBtnTop = document.getElementById('prev-btn-top');
+  const nextBtnTop = document.getElementById('next-btn-top');
+  const prevBtnBottom = document.getElementById('prev-btn-bottom');
+  const nextBtnBottom = document.getElementById('next-btn-bottom');
+  const pageInfoTop = document.getElementById('page-info-top');
+  const pageInfoBottom = document.getElementById('page-info-bottom');
+
+  function showPage(page) {
+    // Hide all posts
+    blogPosts.forEach(post => {
+      post.classList.add('hidden');
+    });
+
+    // Show posts for current page
+    const startIndex = (page - 1) * POSTS_PER_PAGE;
+    const endIndex = startIndex + POSTS_PER_PAGE;
+    
+    for (let i = startIndex; i < endIndex && i < totalPosts; i++) {
+      blogPosts[i].classList.remove('hidden');
+    }
+
+    // Update page info
+    pageInfoTop.textContent = `Page ${page} of ${totalPages}`;
+    pageInfoBottom.textContent = `Page ${page} of ${totalPages}`;
+
+    // Update button states
+    updateButtonStates(page);
+
+    // Scroll to top of blog section
+    document.getElementById('blog-posts-container').scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
+  function updateButtonStates(page) {
+    // Previous buttons
+    if (page === 1) {
+      prevBtnTop.disabled = true;
+      prevBtnBottom.disabled = true;
+      prevBtnTop.className = 'px-4 py-2 bg-gray-700 text-gray-500 rounded-lg font-orbitron cursor-not-allowed';
+      prevBtnBottom.className = 'px-4 py-2 bg-gray-700 text-gray-500 rounded-lg font-orbitron cursor-not-allowed';
+    } else {
+      prevBtnTop.disabled = false;
+      prevBtnBottom.disabled = false;
+      prevBtnTop.className = 'px-4 py-2 bg-primary text-black hover:bg-primary/80 transition-all duration-300 rounded-lg font-orbitron font-bold';
+      prevBtnBottom.className = 'px-4 py-2 bg-primary text-black hover:bg-primary/80 transition-all duration-300 rounded-lg font-orbitron font-bold';
+    }
+
+    // Next buttons
+    if (page === totalPages) {
+      nextBtnTop.disabled = true;
+      nextBtnBottom.disabled = true;
+      nextBtnTop.className = 'px-4 py-2 bg-gray-700 text-gray-500 rounded-lg font-orbitron cursor-not-allowed';
+      nextBtnBottom.className = 'px-4 py-2 bg-gray-700 text-gray-500 rounded-lg font-orbitron cursor-not-allowed';
+    } else {
+      nextBtnTop.disabled = false;
+      nextBtnBottom.disabled = false;
+      nextBtnTop.className = 'px-4 py-2 bg-primary text-black hover:bg-primary/80 transition-all duration-300 rounded-lg font-orbitron font-bold';
+      nextBtnBottom.className = 'px-4 py-2 bg-primary text-black hover:bg-primary/80 transition-all duration-300 rounded-lg font-orbitron font-bold';
+    }
+  }
+
+  // Event listeners
+  prevBtnTop.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  });
+
+  nextBtnTop.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  });
+
+  prevBtnBottom.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  });
+
+  nextBtnBottom.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  });
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    showPage(1);
+  });
+</script>

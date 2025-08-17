@@ -1,0 +1,110 @@
+<svg width="525" height="315" viewBox="0 0 525 315" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glow effects -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Tagline positioned at top -->
+  <text x="262.5" y="35" 
+        font-family="Orbitron, monospace" 
+        font-size="12" 
+        font-weight="bold" 
+        fill="#00ff88" 
+        text-anchor="middle" 
+        letter-spacing="2px"
+        filter="url(#textGlow)">
+    LEADING AUTOMATION &amp; DEVELOPMENT AGENCY
+  </text>
+  
+  <!-- Circuit board background pattern -->
+  <g stroke="#666666" stroke-width="0.5" fill="none" opacity="0.3">
+    <!-- Horizontal circuit lines -->
+    <line x1="50" y1="120" x2="475" y2="120"/>
+    <line x1="50" y1="180" x2="475" y2="180"/>
+    <line x1="50" y1="240" x2="475" y2="240"/>
+    
+    <!-- Vertical circuit lines -->
+    <line x1="100" y1="80" x2="100" y2="280"/>
+    <line x1="200" y1="80" x2="200" y2="280"/>
+    <line x1="325" y1="80" x2="325" y2="280"/>
+    <line x1="425" y1="80" x2="425" y2="280"/>
+    
+    <!-- Circuit connections -->
+    <path d="M 80 120 L 100 120 L 100 140 L 120 140"/>
+    <path d="M 405 120 L 425 120 L 425 140 L 445 140"/>
+    <path d="M 80 240 L 100 240 L 100 220 L 120 220"/>
+    <path d="M 405 240 L 425 240 L 425 220 L 445 220"/>
+  </g>
+  
+  <!-- Digital rain/matrix effect -->
+  <g fill="#00ff88" opacity="0.4" font-family="monospace" font-size="8">
+    <text x="80" y="90">1</text>
+    <text x="80" y="105">0</text>
+    <text x="80" y="120">1</text>
+    <text x="80" y="135">1</text>
+    <text x="80" y="150">0</text>
+    
+    <text x="450" y="90">0</text>
+    <text x="450" y="105">1</text>
+    <text x="450" y="120">0</text>
+    <text x="450" y="135">1</text>
+    <text x="450" y="150">1</text>
+    
+    <text x="150" y="260">1</text>
+    <text x="150" y="275">0</text>
+    <text x="150" y="290">1</text>
+    
+    <text x="375" y="260">0</text>
+    <text x="375" y="275">1</text>
+    <text x="375" y="290">0</text>
+  </g>
+  
+  <!-- Main NEXITAS text -->
+  <text x="262.5" y="190" 
+        font-family="Arial, sans-serif" 
+        font-size="48" 
+        font-weight="bold" 
+        fill="#00ff88" 
+        text-anchor="middle" 
+        letter-spacing="2px"
+        filter="url(#glow)"
+        stroke="#00ff88" 
+        stroke-width="1">
+    Nexitas
+  </text>
+  
+  <!-- Circuit board connection points -->
+  <g fill="#00ff88">
+    <circle cx="100" cy="120" r="2"/>
+    <circle cx="200" cy="120" r="2"/>
+    <circle cx="325" cy="120" r="2"/>
+    <circle cx="425" cy="120" r="2"/>
+    
+    <circle cx="100" cy="240" r="2"/>
+    <circle cx="200" cy="240" r="2"/>
+    <circle cx="325" cy="240" r="2"/>
+    <circle cx="425" cy="240" r="2"/>
+  </g>
+  
+  <!-- Additional tech elements -->
+  <g stroke="#00ff88" stroke-width="1" fill="none" opacity="0.6">
+    <rect x="60" y="160" width="20" height="40" rx="2"/>
+    <rect x="445" y="160" width="20" height="40" rx="2"/>
+    
+    <polygon points="40,180 50,175 50,185"/>
+    <polygon points="485,180 475,175 475,185"/>
+  </g>
+</svg>

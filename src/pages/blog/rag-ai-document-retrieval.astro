@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
 import WireframeBackground from '../../components/WireframeBackground.astro';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="RAG AI Document Retrieval: How Retrieval-Augmented Generation Transforms Knowledge Access">
@@ -26,16 +27,51 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
 
     <!-- Article Content -->
     <article class="py-12 bg-black">
-      <div class="max-w-7xl mx-auto px-6 lg:px-16">
+      <div class="max-w-4xl mx-auto px-6">
+        
+        <!-- Article Meta -->
+        <div class="border-b border-gray-800 pb-6 mb-8">
+          <div class="flex items-center justify-between text-sm text-gray-400 mb-4">
+            <div class="flex items-center gap-4">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                </svg>
+                January 15, 2025
+              </span>
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                  <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                </svg>
+                12 min read
+              </span>
+              <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-semibold">
+                AI Technology
+              </span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+              <span class="text-black font-bold text-sm">SC</span>
+            </div>
+            <div>
+              <p class="text-white font-medium">Dr. Sarah Chen</p>
+              <p class="text-gray-400 text-sm">AI Research Director</p>
+            </div>
+          </div>
+        </div>
         
         <!-- Hero Image -->
-        <div class="mb-8">
-          <img 
-            src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&h=400&w=800" 
-            alt="RAG AI document retrieval system with server infrastructure and data processing" 
-            class="w-full h-64 object-cover rounded-xl border border-primary opacity-100 bg-black"
-          />
-          <p class="text-xs text-white mt-2 text-center">Advanced server infrastructure powering RAG AI document retrieval systems</p>
+        <div class="mb-12">
+          <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 12px; overflow: hidden;">
+            <img 
+              src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+              alt="AI data analytics dashboard with document retrieval metrics" 
+              class="w-full object-cover shadow-2xl"
+              style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000; height: 160px !important;"
+            />
+          </div>
         </div>
 
         <!-- Introduction -->
@@ -59,12 +95,12 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
             </p>
             
             <div class="bg-primary border-l-4 border-primary p-6 rounded-r-xl mb-6">
-              <h3 class="font-orbitron font-bold text-white mb-3">The RAG Process Explained</h3>
-              <ol class="text-white space-y-3">
-                <li><strong class="text-primary">1. Query Processing:</strong> User questions are analyzed and converted into semantic vectors</li>
-                <li><strong class="text-primary">2. Document Retrieval:</strong> The system searches through indexed documents using vector similarity</li>
-                <li><strong class="text-primary">3. Context Assembly:</strong> Relevant document chunks are combined with the original query</li>
-                <li><strong class="text-primary">4. Response Generation:</strong> AI generates answers using both the query and retrieved context</li>
+              <h3 class="font-orbitron font-bold text-black mb-3">The RAG Process Explained</h3>
+              <ol class="text-black space-y-3">
+                <li><strong class="text-black">1. Query Processing:</strong> User questions are analyzed and converted into semantic vectors</li>
+                <li><strong class="text-black">2. Document Retrieval:</strong> The system searches through indexed documents using vector similarity</li>
+                <li><strong class="text-black">3. Context Assembly:</strong> Relevant document chunks are combined with the original query</li>
+                <li><strong class="text-black">4. Response Generation:</strong> AI generates answers using both the query and retrieved context</li>
               </ol>
             </div>
 
@@ -81,6 +117,18 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
           <div class="space-y-4">
             <!-- Accuracy & Relevance -->
             <div>
+              <!-- Image: AI accuracy metrics - Right positioned, medium size -->
+              <div class="float-right ml-6 mb-4 w-64" style="float: right; margin-left: 1.5rem; margin-bottom: 1rem; width: 16rem; max-width: 16rem;">
+                <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                    alt="Data accuracy and performance metrics dashboard" 
+                    class="w-full h-48 object-cover shadow-lg"
+                    style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                  />
+                </div>
+              </div>
+              
               <h3 class="text-lg font-orbitron font-bold text-white mb-4">Superior Accuracy & Contextual Relevance</h3>
               <p class="text-white leading-relaxed mb-4">
                 RAG AI document retrieval systems demonstrate remarkable accuracy improvements over traditional search methods. Research from Stanford University shows that RAG-enhanced systems achieve <strong class="text-primary">92-96% factual accuracy</strong> compared to 60-75% for keyword-based search systems.
@@ -97,8 +145,8 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
                   </ul>
                 </div>
                 <div class="bg-primary p-4 rounded-lg">
-                  <h4 class="font-bold text-primary mb-2">RAG AI Retrieval</h4>
-                  <ul class="text-white text-sm space-y-1">
+                  <h4 class="font-bold text-black mb-2">RAG AI Retrieval</h4>
+                  <ul class="text-black text-sm space-y-1">
                     <li>• Provides direct answers</li>
                     <li>• Synthesizes multiple sources</li>
                     <li>• Understands context & intent</li>
@@ -110,13 +158,14 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
 
             <!-- Real-Time Knowledge Access -->
             <div>
+              
               <h3 class="text-lg font-orbitron font-bold text-white mb-4">Real-Time Knowledge Access</h3>
               <p class="text-white leading-relaxed mb-4">
                 Unlike static AI models that become outdated, RAG systems provide access to the most current information in your document repositories. This capability is particularly valuable for organizations dealing with frequently updated policies, procedures, regulatory requirements, and technical documentation.
               </p>
               
               <div class="bg-primary border border-primary p-4 rounded-lg">
-                <p class="text-sm text-white italic">
+                <p class="text-sm text-black italic">
                   "Our legal team can now instantly access the latest contract templates and regulatory updates. What used to take hours of searching through multiple systems now happens in seconds with accurate, contextual answers." - Chief Legal Officer, Global Technology Company
                 </p>
               </div>
@@ -157,6 +206,18 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
             </p>
 
             <h3 class="text-lg font-orbitron font-bold text-white mb-6">Technical Architecture Components</h3>
+            
+            <!-- Image: Technical architecture - Left positioned, medium size -->
+            <div class="float-left mr-10 mb-8 w-56" style="float: left; margin-left: 1rem; margin-right: 2rem; margin-bottom: 2.5rem; margin-top: 1rem; width: 14rem; max-width: 14rem; clear: left;">
+              <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                <img 
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2134&q=80" 
+                  alt="Real-time data processing and technical architecture" 
+                  class="w-full h-44 object-cover shadow-lg"
+                  style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                />
+              </div>
+            </div>
             
             <div class="space-y-4">
               <div class="border border-primary p-6 rounded-lg">
@@ -230,8 +291,8 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
               </p>
               
               <div class="bg-primary border border-primary p-4 rounded-lg mb-4">
-                <h4 class="font-bold text-primary mb-2">Real Implementation Example</h4>
-                <p class="text-white text-sm mb-3">
+                <h4 class="font-bold text-black mb-2">Real Implementation Example</h4>
+                <p class="text-black text-sm mb-3">
                   A Fortune 100 consulting firm implemented RAG AI across 500,000+ project documents, research reports, and client deliverables. The system now handles 15,000+ queries daily with 94% user satisfaction ratings.
                 </p>
                 <div class="grid md:grid-cols-2 gap-4 text-center">
@@ -240,8 +301,8 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
                     <div class="text-xs text-white">Faster project research</div>
                   </div>
                   <div class="bg-black p-3 rounded">
-                    <div class="text-lg font-orbitron font-bold text-primary">$3.2M</div>
-                    <div class="text-xs text-white">Annual productivity gains</div>
+                    <div class="text-lg font-orbitron font-bold text-primary">353%</div>
+                    <div class="text-xs text-white">ROI for SMBs</div>
                   </div>
                 </div>
               </div>
@@ -270,16 +331,16 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
               
               <div class="grid md:grid-cols-3 gap-4 text-center">
                 <div class="bg-primary p-4 rounded-lg">
-                  <div class="text-xl font-orbitron font-bold text-primary">87%</div>
-                  <div class="text-sm text-white">First-contact resolution rate</div>
+                  <div class="text-xl font-orbitron font-bold text-black">87%</div>
+                  <div class="text-sm text-black">First-contact resolution rate</div>
                 </div>
                 <div class="bg-primary p-4 rounded-lg">
-                  <div class="text-xl font-orbitron font-bold text-primary">24/7</div>
-                  <div class="text-sm text-white">Availability without human agents</div>
+                  <div class="text-xl font-orbitron font-bold text-black">24/7</div>
+                  <div class="text-sm text-black">Availability without human agents</div>
                 </div>
                 <div class="bg-primary p-4 rounded-lg">
-                  <div class="text-xl font-orbitron font-bold text-primary">60%</div>
-                  <div class="text-sm text-white">Reduction in support costs</div>
+                  <div class="text-xl font-orbitron font-bold text-black">60%</div>
+                  <div class="text-sm text-black">Reduction in support costs</div>
                 </div>
               </div>
             </div>
@@ -398,13 +459,10 @@ import WireframeBackground from '../../components/WireframeBackground.astro';
             Transform your organization's knowledge access with cutting-edge RAG technology. 
             Get expert consultation on RAG implementation strategies and best practices.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="bg-primary text-black opacity-100 backdrop-filter-none py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary transition-all duration-300">
+          <div class="flex justify-center">
+            <a href="/#contact" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block" style="opacity: 1 !important; filter: none !important;">
               Schedule RAG Consultation
-            </button>
-            <button class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary transition-all duration-300">
-              Download RAG Implementation Guide
-            </button>
+            </a>
           </div>
         </section>
 

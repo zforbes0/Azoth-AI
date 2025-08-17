@@ -1,0 +1,25 @@
+{
+  "name": "seo-mcp-server",
+  "version": "1.0.0",
+  "description": "Comprehensive SEO MCP Server with multiple API integrations for keyword research, SERP tracking, and content analysis",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["seo", "mcp", "keyword-research", "serp-tracking", "content-analysis"],
+  "author": "Azoth Automations",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "cheerio": "^1.0.0",
+    "google-trends-api": "^4.9.2",
+    "node-fetch": "^3.3.0",
+    "robots-parser": "^3.0.1",
+    "@mozilla/readability": "^0.4.4",
+    "jsdom": "^22.1.0"
+  }
+}
