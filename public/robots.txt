@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://azoth-ai.vercel.app/sitemap.xml
+Sitemap: https://azoth-ai.vercel.app/sitemap-index.xml
+
+# Disallow admin/private areas
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /_astro/
+
+# Allow specific important pages
+Allow: /blog/
+Allow: /portfolio/
+Allow: /
+
+# Crawl-delay for politeness
+Crawl-delay: 1
