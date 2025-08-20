@@ -1,9 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
-import WireframeBackground from '../components/WireframeBackground.astro';
 
-const categories = ["AI Document Management", "AI Customer Support Automation", "Automated Lead Generation Tools", "Business Process Automation Services"];
 
 const pillarPages = [
   {
@@ -29,10 +27,62 @@ const pillarPages = [
     url: "/blog/business-process-automation-services",
     category: "Business Process Automation Services",
     description: "Comprehensive automation solutions that optimize workflows and reduce operational costs"
+  },
+  {
+    title: "Automation-Ready Web Development Services",
+    url: "/blog/automation-ready-web-development-services",
+    category: "Automation-Ready Web Development", 
+    description: "Modern web development that scales with intelligent automation, API-first architecture, and continuous optimization"
+  },
+  {
+    title: "SEO Optimization Services with AI-Enhanced Strategies",
+    url: "/blog/seo-optimization-services",
+    category: "SEO Optimization Services",
+    description: "AI-enhanced SEO strategies that improve search rankings and drive organic traffic growth"
   }
 ];
 
 const blogPosts = [
+  {
+    title: "SaaS App Development for Automation-First Businesses: A Strategic Blueprint",
+    url: "/blog/saas-app-development-for-automation-first-businesses",
+    category: "Automation-Ready Web Development",
+    excerpt: "Dive deep into SaaS app development tailored for automation-first businesses. Learn how custom SaaS solutions drive efficiency, scalability, and a competitive edge in a digital-first world.",
+    author: "Nexitas Team",
+    date: "2025-08-20",
+    readTime: "12 min read",
+    tags: ["SaaS Development", "Automation", "Business Growth"]
+  },
+  {
+    title: "Custom Automation Web Apps: Tailored Solutions for Your Business Processes",
+    url: "/blog/custom-automation-web-apps",
+    category: "Automation-Ready Web Development",
+    excerpt: "Organizations implementing automation-first SaaS achieve 2.5x productivity increases while the global SaaS market reaches $819.23 billion by 2030.",
+    author: "Azoth Automations",
+    date: "2025-01-18",
+    readTime: "10 min read",
+    tags: ["SaaS Development", "Automation", "Business Growth"]
+  },
+  {
+    title: "API Integration for Process Automation: Connecting Your Tools for Efficiency", 
+    url: "/blog/api-integration-for-process-automation",
+    category: "Automation-Ready Web Development",
+    excerpt: "Organizations implementing strategic API integration achieve 473% ROI while the global API management market reaches $32.77 billion by 2032.",
+    author: "Azoth Automations",
+    date: "2025-01-16",
+    readTime: "9 min read",
+    tags: ["API Integration", "Process Automation", "Efficiency"]
+  },
+  {
+    title: "Custom AI Chatbot Development for Websites & Apps",
+    url: "/blog/custom-ai-chatbot-development",
+    category: "Automation-Ready Web Development",
+    excerpt: "Organizations implementing custom AI chatbots achieve 270% ROI over three years while the global chatbot market reaches $27.29 billion by 2030.",
+    author: "Azoth Automations",
+    date: "2025-01-14",
+    readTime: "11 min read",
+    tags: ["AI Chatbots", "Customer Service", "ROI"]
+  },
   {
     title: "Internal Workflow Automation Software: Free Your Team from Repetitive Tasks",
     url: "/blog/internal-workflow-automation-software",
@@ -244,7 +294,6 @@ const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] flex items-center justify-center wireframe-bg overflow-hidden">
-      <WireframeBackground />
       <div class="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
         <div class="animate-slide-up">
           <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow">
@@ -262,17 +311,12 @@ const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
     </section>
 
     <!-- Pillar Navigation -->
-    <section class="py-8 bg-black">
+    <section class="py-8">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-wrap justify-center gap-4">
-          {categories.map((category) => (
-            <a href={
-              category === "AI Document Management" ? "/blog/ai-document-management-system" : 
-              category === "AI Customer Support Automation" ? "/blog/ai-customer-support-automation" : 
-              category === "Automated Lead Generation Tools" ? "/blog/automated-lead-generation-tools" : 
-              "/blog/business-process-automation-services"
-            } class="border-primary text-white hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300 px-6 py-3 border rounded-lg font-orbitron font-bold">
-              {category}
+          {pillarPages.map((pillar) => (
+            <a href={pillar.url} class="border-primary text-white hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300 px-6 py-3 border rounded-lg font-orbitron font-bold">
+              {pillar.category}
             </a>
           ))}
         </div>
@@ -280,7 +324,7 @@ const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
     </section>
 
     <!-- Pagination Controls (Top) -->
-    <section class="py-4 bg-black">
+    <section class="py-4">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex justify-center items-center gap-4" id="pagination-top">
           <button 
@@ -304,7 +348,7 @@ const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
     </section>
 
     <!-- All Blog Posts -->
-    <section class="py-8 bg-black">
+    <section class="py-8">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-3xl font-orbitron font-bold text-primary mb-12 text-center">
           Latest Articles
@@ -364,7 +408,7 @@ const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
     </section>
 
     <!-- Pagination Controls (Bottom) -->
-    <section class="py-8 bg-black">
+    <section class="py-8">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex justify-center items-center gap-4" id="pagination-bottom">
           <button 
@@ -388,7 +432,7 @@ const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
     </section>
 
     <!-- Newsletter Section -->
-    <section class="py-16 bg-black">
+    <section class="py-16">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <div class="glass-morphism p-10 rounded-2xl">
           <h2 class="text-3xl font-orbitron font-bold text-primary mb-4">
