@@ -1,0 +1,8 @@
+Contact: zach@nexitasai.com
+Expires: 2026-08-27T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://nexitas.net/.well-known/security.txt
+
+# Security Contact Information
+# NEXITAS takes security seriously and appreciates responsible disclosure
+# of potential vulnerabilities in our systems and applications.

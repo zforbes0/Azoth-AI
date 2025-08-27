@@ -39,6 +39,12 @@ const pillarPages = [
     url: "/blog/seo-optimization-services",
     category: "SEO Optimization Services",
     description: "AI-enhanced SEO strategies that improve search rankings and drive organic traffic growth"
+  },
+  {
+    title: "Automation Use Cases in Business — Industry Examples & Ideas",
+    url: "/blog/automation-use-cases-in-business",
+    category: "Automation Use Cases in Business",
+    description: "Industry-specific automation examples across healthcare, legal, real estate, HR, and event management"
   }
 ];
 
@@ -290,7 +296,129 @@ const POSTS_PER_PAGE = 15;
 const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
 ---
 
-<Layout title="Blog - Nexitas">
+<Layout 
+  title="NEXITAS Blog - Business Automation & AI Implementation Insights"
+  description="Expert insights on business automation, AI implementation, digital transformation, and process optimization. Latest strategies, case studies, and industry trends from automation specialists."
+  keywords="business automation blog, AI implementation insights, digital transformation strategies, process automation guides, workflow optimization, enterprise automation"
+  type="website"
+  ogImage="/assets/NEXITAS circle.png"
+  canonicalURL="https://nexitas.net/blog"
+>
+  <!-- Blog-specific Schema Markup -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://nexitas.com/blog#blog",
+    "url": "https://nexitas.com/blog",
+    "name": "NEXITAS Business Automation Blog",
+    "description": "Expert insights on business automation, AI implementation, digital transformation, and process optimization from industry specialists.",
+    "publisher": {
+      "@id": "https://nexitas.com/#organization"
+    },
+    "inLanguage": "en-US",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Business Process Automation"
+      },
+      {
+        "@type": "Thing",
+        "name": "Artificial Intelligence"
+      },
+      {
+        "@type": "Thing",
+        "name": "Digital Transformation"
+      },
+      {
+        "@type": "Thing",
+        "name": "Workflow Optimization"
+      }
+    ],
+    "keywords": [
+      "business automation",
+      "AI implementation",
+      "digital transformation",
+      "process optimization",
+      "workflow automation",
+      "enterprise automation"
+    ]
+  }
+  </script>
+
+  <!-- WebPage Schema for Blog Index -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://nexitas.com/blog#webpage",
+    "url": "https://nexitas.com/blog",
+    "name": "Business Automation Blog - Latest Insights & Strategies",
+    "description": "Comprehensive blog covering business automation strategies, AI implementation guides, and digital transformation insights for modern enterprises.",
+    "isPartOf": {
+      "@id": "https://nexitas.com/#website"
+    },
+    "about": {
+      "@id": "https://nexitas.com/#organization"
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "/assets/NEXITAS circle.png"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexitas.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://nexitas.com/blog"
+        }
+      ]
+    },
+    "mainEntity": {
+      "@id": "https://nexitas.com/blog#blog"
+    }
+  }
+  </script>
+
+  <!-- CollectionPage Schema for Blog Listing -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "NEXITAS Blog Articles",
+    "description": "Complete collection of business automation articles, AI implementation guides, and digital transformation resources.",
+    "url": "https://nexitas.com/blog",
+    "hasPart": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://nexitas.com/blog/ai-document-management-system",
+        "headline": "AI Document Management System",
+        "url": "https://nexitas.com/blog/ai-document-management-system"
+      },
+      {
+        "@type": "BlogPosting", 
+        "@id": "https://nexitas.com/blog/ai-customer-support-automation",
+        "headline": "AI Customer Support Automation",
+        "url": "https://nexitas.com/blog/ai-customer-support-automation"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://nexitas.com/blog/business-process-automation-services",
+        "headline": "Business Process Automation Services",
+        "url": "https://nexitas.com/blog/business-process-automation-services"
+      }
+    ],
+    "numberOfItems": ${blogPosts.length}
+  }
+  </script>
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[60vh] flex items-center justify-center wireframe-bg overflow-hidden">

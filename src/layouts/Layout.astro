@@ -11,6 +11,7 @@ export interface Props {
 	author?: string;
 	publishedTime?: string;
 	modifiedTime?: string;
+	canonicalURL?: string;
 }
 
 const { 
@@ -21,10 +22,11 @@ const {
 	type = "website",
 	author,
 	publishedTime,
-	modifiedTime
+	modifiedTime,
+	canonicalURL
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
+const finalCanonicalURL = canonicalURL || new URL(Astro.url.pathname, Astro.site || 'https://nexitas.net');
 ---
 
 <!DOCTYPE html>
@@ -34,8 +36,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 		<meta name="description" content={description} />
 		<meta name="keywords" content={keywords} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="canonical" href={canonicalURL} />
+		<link rel="canonical" href={finalCanonicalURL} />
+		
+		<!-- Enhanced Technical SEO Meta Tags -->
+		<meta name="author" content="NEXITAS" />
+		<meta name="publisher" content="NEXITAS" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="revisit-after" content="7 days" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="theme-color" content="#00ffff" />
+		
+		<!-- Favicon Suite for All Devices -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		
 		<meta name="generator" content={Astro.generator} />
 		
 		<!-- Enhanced Social Media Tags (X, LinkedIn, Instagram, Facebook) -->
@@ -43,40 +62,118 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 			title={title}
 			description={description}
 			image={ogImage}
-			url={canonicalURL.toString()}
+			url={finalCanonicalURL.toString()}
 			type={type}
 			author={author}
 			publishedTime={publishedTime}
 			modifiedTime={modifiedTime}
 		/>
 
-		<!-- Business/Organization Schema -->
+		<!-- Enhanced Business/Organization Schema -->
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "Organization",
-			"name": "Nexitas",
-			"description": "Leading automation and development agency specializing in AI-powered business solutions",
-			"url": "https://azothautomations.com",
-			"logo": "/assets/NEXITAS circle.png",
-			"sameAs": [],
-			"contactPoint": {
-				"@type": "ContactPoint",
-				"contactType": "Business Inquiry",
-				"availableLanguage": "English"
+			"@type": ["Organization", "ProfessionalService", "TechnologyCompany"],
+			"@id": "https://nexitas.net/#organization",
+			"name": "NEXITAS",
+			"legalName": "NEXITAS",
+			"description": "Leading automation and development agency specializing in AI-powered business solutions, custom software development, and intelligent process optimization.",
+			"url": "https://nexitas.net",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "/assets/NEXITAS circle.png",
+				"width": "512",
+				"height": "512"
 			},
+			"image": "/assets/NEXITAS circle.png",
+			"sameAs": [],
+			"contactPoint": [
+				{
+					"@type": "ContactPoint",
+					"contactType": "Customer Service",
+					"availableLanguage": ["English"],
+					"contactOption": "TollFree"
+				},
+				{
+					"@type": "ContactPoint", 
+					"contactType": "Technical Support",
+					"availableLanguage": ["English"]
+				}
+			],
 			"address": {
 				"@type": "PostalAddress",
-				"addressCountry": "US"
+				"addressCountry": "US",
+				"addressRegion": "United States"
 			},
 			"foundingDate": "2024",
+			"numberOfEmployees": "2-10",
+			"knowsAbout": [
+				"Business Process Automation",
+				"Artificial Intelligence",
+				"Custom Software Development",
+				"Workflow Optimization",
+				"Digital Transformation",
+				"API Integration",
+				"SEO Services",
+				"Web Development"
+			],
 			"serviceType": [
 				"Business Process Automation",
-				"Custom Software Development", 
-				"AI Integration",
+				"Custom Software Development",
+				"AI Integration Services", 
 				"Workflow Optimization",
-				"Digital Transformation"
-			]
+				"Digital Transformation Consulting",
+				"SEO Optimization Services",
+				"Web Development",
+				"API Integration"
+			],
+			"areaServed": {
+				"@type": "Country",
+				"name": "United States"
+			},
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "NEXITAS Services",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Business Automation Consulting",
+							"description": "Comprehensive business process automation and workflow optimization"
+						}
+					},
+					{
+						"@type": "Offer", 
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Custom Software Development",
+							"description": "Bespoke software solutions and web applications"
+						}
+					}
+				]
+			}
+		}
+		</script>
+		
+		<!-- Website Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"@id": "https://nexitas.com/#website",
+			"url": "https://nexitas.com",
+			"name": "NEXITAS - AI Business Automation Solutions",
+			"description": "Transform your business with cutting-edge automation solutions, custom software development, and intelligent process optimization.",
+			"publisher": {
+				"@id": "https://nexitas.com/#organization"
+			},
+			"inLanguage": "en-US",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://nexitas.com/blog?search={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
 		}
 		</script>
 		
@@ -87,7 +184,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 		
 		<title>{title}</title>
 	</head>
-	<body class="dark text-white font-inter overflow-x-hidden bg-black">
+	<body class="dark text-white font-inter overflow-x-hidden">
 		<Navigation />
 		<slot />
 	</body>

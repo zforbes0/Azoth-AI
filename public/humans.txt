@@ -1,0 +1,50 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Team: NEXITAS Team
+    Contact: zach@nexitasai.com
+    Location: Illinois, United States
+
+# THANKS
+
+    AI Assistant: Claude (Anthropic)
+    Development Environment: VS Code
+    Version Control: Git
+
+# TECHNOLOGY COLOPHON
+
+    ## Frontend
+    Framework: Astro
+    CSS Framework: Tailwind CSS
+    JavaScript: TypeScript
+    Icons: Heroicons
+
+    ## Backend & Infrastructure  
+    Hosting: Vercel
+    CDN: Vercel Edge Network
+    Analytics: Vercel Analytics
+    Domain: Vercel Domains
+
+    ## Development Tools
+    Package Manager: npm
+    Build Tool: Vite (via Astro)
+    Code Quality: ESLint, Prettier
+    
+    ## SEO & Performance
+    Schema Markup: JSON-LD
+    Image Optimization: Astro Image
+    Performance: Core Web Vitals Optimized
+    
+    ## Security
+    HTTPS: Enforced
+    Content Security Policy: Implemented
+    Security Headers: Configured
+
+# SITE
+
+    Last update: 2025/08/27
+    Language: English
+    Doctype: HTML5
+    IDE: Visual Studio Code

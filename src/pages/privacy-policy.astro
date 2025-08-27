@@ -4,7 +4,125 @@ import Footer from '../components/Footer.astro';
 import WireframeBackground from '../components/WireframeBackground.astro';
 ---
 
-<Layout title="Privacy Policy - Nexitas">
+<Layout 
+  title="Privacy Policy - NEXITAS | Data Protection & User Privacy Rights"
+  description="NEXITAS Privacy Policy explains how we collect, use, and protect your personal information. Learn about your privacy rights, data security measures, and our commitment to protecting your information."
+  keywords="privacy policy, data protection, GDPR compliance, user privacy rights, data security, personal information protection, cookie policy, data retention"
+  type="website"
+  canonicalURL="https://nexitas.net/privacy-policy"
+  ogImage="/assets/NEXITAS circle.png"
+>
+  <!-- Enhanced Schema Markup for Privacy Policy -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy - NEXITAS | Data Protection & User Privacy Rights",
+      "description": "NEXITAS Privacy Policy explains how we collect, use, and protect your personal information. Learn about your privacy rights, data security measures, and our commitment to protecting your information.",
+      "url": "https://nexitas.net/privacy-policy",
+      "inLanguage": "en-US",
+      "datePublished": "2024-01-01T00:00:00Z",
+      "dateModified": "2025-01-12T00:00:00Z",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "NEXITAS - AI Business Automation & Custom Software Development",
+        "url": "https://nexitas.net"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Privacy Policy",
+        "description": "Legal document explaining data collection, usage, and protection practices"
+      },
+      "mainEntity": {
+        "@type": "PrivacyPolicy",
+        "name": "NEXITAS Privacy Policy",
+        "text": "Comprehensive privacy policy outlining data collection, usage, sharing, security, and user rights practices",
+        "dateModified": "2025-01-12T00:00:00Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "NEXITAS"
+        }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nexitas.net"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy",
+            "item": "https://nexitas.net/privacy-policy"
+          }
+        ]
+      },
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "cssSelector": "main"
+      },
+      "relatedLink": [
+        "https://nexitas.net/terms-of-service",
+        "https://nexitas.net/cookie-policy"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "NEXITAS",
+        "url": "https://nexitas.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nexitas.net/assets/NEXITAS circle.png",
+          "width": 300,
+          "height": 192
+        }
+      }
+    }
+  </script>
+
+  <!-- Legal Document Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalDocument",
+      "name": "NEXITAS Privacy Policy",
+      "description": "Privacy policy document explaining how NEXITAS collects, uses, and protects personal information",
+      "dateModified": "2025-01-12T00:00:00Z",
+      "datePublished": "2024-01-01T00:00:00Z",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NEXITAS",
+        "url": "https://nexitas.net",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+16304886751",
+          "email": "zach@nexitasai.com",
+          "contactType": "customer service"
+        }
+      },
+      "jurisdiction": "United States",
+      "legalName": "Privacy Policy",
+      "category": "Privacy Policy",
+      "inLanguage": "en-US"
+    }
+  </script>
+
+  <!-- Organization Contact Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPoint",
+      "contactType": "Privacy Officer",
+      "telephone": "+16304886751",
+      "email": "zach@nexitasai.com",
+      "availableLanguage": "English",
+      "areaServed": "US",
+      "contactOption": "TollFree"
+    }
+  </script>
+
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">

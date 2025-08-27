@@ -4,7 +4,167 @@ import Footer from '../components/Footer.astro';
 import WireframeBackground from '../components/WireframeBackground.astro';
 ---
 
-<Layout title="Terms of Service - Nexitas">
+<Layout 
+  title="Terms of Service - NEXITAS | Legal Terms & Service Conditions"
+  description="NEXITAS Terms of Service outline the legal terms and conditions for using our AI automation and custom software development services. Read our service agreement, intellectual property rights, and user obligations."
+  keywords="terms of service, service agreement, legal terms, intellectual property, user agreement, service conditions, business automation terms, software development agreement"
+  type="website"
+  canonicalURL="https://nexitas.net/terms-of-service"
+  ogImage="/assets/NEXITAS circle.png"
+>
+  <!-- Enhanced Schema Markup for Terms of Service -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Terms of Service - NEXITAS | Legal Terms & Service Conditions",
+      "description": "NEXITAS Terms of Service outline the legal terms and conditions for using our AI automation and custom software development services. Read our service agreement, intellectual property rights, and user obligations.",
+      "url": "https://nexitas.net/terms-of-service",
+      "inLanguage": "en-US",
+      "datePublished": "2024-01-01T00:00:00Z",
+      "dateModified": "2025-01-12T00:00:00Z",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "NEXITAS - AI Business Automation & Custom Software Development",
+        "url": "https://nexitas.net"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Terms of Service",
+        "description": "Legal document outlining terms and conditions for service usage"
+      },
+      "mainEntity": {
+        "@type": "TermsOfService",
+        "name": "NEXITAS Terms of Service",
+        "text": "Comprehensive terms of service outlining user agreements, intellectual property rights, service conditions, and legal obligations",
+        "dateModified": "2025-01-12T00:00:00Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "NEXITAS"
+        }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nexitas.net"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms of Service",
+            "item": "https://nexitas.net/terms-of-service"
+          }
+        ]
+      },
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "cssSelector": "main"
+      },
+      "relatedLink": [
+        "https://nexitas.net/privacy-policy",
+        "https://nexitas.net/cookie-policy"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "NEXITAS",
+        "url": "https://nexitas.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nexitas.net/assets/NEXITAS circle.png",
+          "width": 300,
+          "height": 192
+        }
+      }
+    }
+  </script>
+
+  <!-- Legal Document Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalDocument",
+      "name": "NEXITAS Terms of Service",
+      "description": "Terms of service document outlining legal terms and conditions for using NEXITAS AI automation and software development services",
+      "dateModified": "2025-01-12T00:00:00Z",
+      "datePublished": "2024-01-01T00:00:00Z",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NEXITAS",
+        "url": "https://nexitas.net",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+16304886751",
+          "email": "zach@nexitasai.com",
+          "contactType": "customer service"
+        }
+      },
+      "jurisdiction": "Illinois, United States",
+      "legalName": "Terms of Service",
+      "category": "Terms of Service",
+      "inLanguage": "en-US",
+      "legislationResponsible": {
+        "@type": "Legislation",
+        "name": "Illinois State Law"
+      }
+    }
+  </script>
+
+  <!-- Service Agreement Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "NEXITAS AI Business Automation Services",
+      "description": "AI automation and custom software development services governed by terms of service",
+      "provider": {
+        "@type": "Organization",
+        "name": "NEXITAS",
+        "url": "https://nexitas.net"
+      },
+      "termsOfService": "https://nexitas.net/terms-of-service",
+      "serviceType": "Business Automation & Custom Software Development",
+      "areaServed": "United States",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "NEXITAS Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Document Management System"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Customer Support Automation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Process Automation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automated Lead Generation Tools"
+            }
+          }
+        ]
+      }
+    }
+  </script>
+
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">

@@ -59,8 +59,14 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased text-foreground;
     font-family: 'Inter', system-ui, sans-serif;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url('/assets/Matrix Background_1754025095714.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -369,4 +375,17 @@
 
 .font-orbitron {
   font-family: 'Orbitron', monospace;
+}
+
+/* Fix for broken CSS classes - keep this for malformed class attributes */
+div[class*="/50"],
+div[class*="/30"],
+div[class*="/70"],
+div[class*="/80"],
+div[class^="/"] {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(1, 251, 135, 0.2) !important;
+  padding: 1.5rem !important;
+  border-radius: 0.75rem !important;
+  backdrop-filter: blur(10px) !important;
 }

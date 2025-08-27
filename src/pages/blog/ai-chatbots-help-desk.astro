@@ -1,19 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/Footer.astro';
-import WireframeBackground from '../../components/WireframeBackground.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 
-<Layout 
-  title="AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience" 
-  description="AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience – Learn best practices, benefits, and implementation tips for AI chatbot for help desk."
-  type="article"
-  author="Nexitas Team"
-  ogImage="/assets/NEXITAS circle.png"
-  publishedTime="2025-01-14T08:00:00.000Z"
-  modifiedTime="2025-08-18T08:00:00.000Z"
->
+---
+const meta = {
+  title: "AI Chatbots for Help Desk: 7 Ways to Improve Customer Experience & Response Times | NEXITAS",
+  description: "Transform help desk operations with AI chatbots delivering instant, accurate responses and seamless human escalation. Expert customer experience optimization, automated support workflows, and intelligent ticket routing.",
+  type: "article",
+  author: "NEXITAS Team",
+  ogImage: "/assets/NEXITAS circle.png",
+  publishedTime: "2025-01-14T08:00:00.000Z",
+  modifiedTime: new Date().toISOString(),
+  canonicalURL: "https://nexitas.net/blog/ai-chatbots-help-desk",
+  keywords: "AI chatbots help desk, automated customer support, AI help desk software, intelligent customer service automation, chatbot help desk integration, automated ticket routing, AI customer support chatbots, help desk automation, intelligent customer service, automated support workflows"
+};
+---
+
+<Layout {...meta}>
   <!-- Article Schema JSON-LD -->
   <script type="application/ld+json">
   {
@@ -71,7 +76,6 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-[40vh] flex items-center justify-center wireframe-bg overflow-hidden">
-      <WireframeBackground />
       <div class="relative z-10 max-w-7xl mx-auto px-6 py-12 text-center">
         <div class="animate-slide-up">
           <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow">
@@ -88,7 +92,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
     </section>
 
     <!-- Main Content -->
-    <section class="py-16 bg-black">
+    <section class="py-16 ">
       <div class="max-w-4xl mx-auto px-6">
         
         <!-- Introduction -->
@@ -171,7 +175,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
           <div class="space-y-8">
             <!-- Way 1 -->
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <div class="flex items-start gap-4">
                 <div class="bg-primary text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">1</div>
                 <div>
@@ -179,7 +183,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <p class="text-white mb-4">
                     AI chatbots provide immediate response to customer inquiries at any time, eliminating wait times and queue frustrations. This constant availability ensures customers receive instant acknowledgment and initial support, even during peak hours or outside business hours when human agents are unavailable.
                   </p>
-                  <div class="bg-black p-4 rounded-lg">
+                  <div class=" p-4 rounded-lg">
                     <h4 class="font-bold text-white mb-2">Impact Metrics</h4>
                     <div class="grid md:grid-cols-3 gap-4 text-sm">
                       <div class="text-center">
@@ -201,7 +205,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
             </div>
 
             <!-- Way 2 -->
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <div class="flex items-start gap-4">
                 <div class="bg-primary text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">2</div>
                 <div>
@@ -209,7 +213,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <p class="text-white mb-4">
                     Advanced AI chatbots access customer history, previous interactions, and account information to provide personalized support experiences. This contextual awareness enables relevant responses, proactive assistance, and continuity across multiple conversation sessions.
                   </p>
-                  <div class="bg-black p-4 rounded-lg">
+                  <div class=" p-4 rounded-lg">
                     <div class="grid md:grid-cols-2 gap-4 text-sm">
                       <ul class="text-gray-300 space-y-1">
                         <li>• Customer purchase and interaction history integration</li>
@@ -228,7 +232,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
             </div>
 
             <!-- Way 3 -->
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <div class="flex items-start gap-4">
                 <div class="bg-primary text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">3</div>
                 <div>
@@ -236,7 +240,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <p class="text-white mb-4">
                     AI chatbots analyze customer issues, determine complexity levels, and either provide immediate solutions or intelligently escalate to appropriate human specialists with full context and recommended resolutions. This ensures optimal resource allocation and faster problem solving. These capabilities are enhanced through integration with <a href="/blog/ai-powered-knowledge-base-software" class="text-primary hover:underline">AI-powered knowledge base software</a> for comprehensive solution databases and <a href="/blog/intelligent-workflow-automation" class="text-primary hover:underline">intelligent workflow automation</a> for end-to-end customer service processes.
                   </p>
-                  <div class="bg-black p-4 rounded-lg">
+                  <div class=" p-4 rounded-lg">
                     <h4 class="font-bold text-white mb-2">Resolution Capabilities</h4>
                     <div class="grid md:grid-cols-3 gap-4 text-sm">
                       <div>
@@ -258,7 +262,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
             </div>
 
             <!-- Way 4 -->
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <div class="flex items-start gap-4">
                 <div class="bg-primary text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">4</div>
                 <div>
@@ -266,7 +270,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <p class="text-white mb-4">
                     AI chatbots maintain consistent service quality across websites, mobile apps, messaging platforms, and social media channels. Customers receive the same intelligent support regardless of their preferred communication method, creating a unified brand experience.
                   </p>
-                  <div class="bg-black p-4 rounded-lg">
+                  <div class=" p-4 rounded-lg">
                     <div class="grid md:grid-cols-4 gap-4 text-sm text-center">
                       <div>
                         <div class="text-primary font-bold">Web Chat</div>
@@ -291,7 +295,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
             </div>
 
             <!-- Way 5 -->
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <div class="flex items-start gap-4">
                 <div class="bg-primary text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">5</div>
                 <div>
@@ -299,7 +303,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <p class="text-white mb-4">
                     Advanced AI chatbots monitor customer behavior patterns, system status, and known issues to provide proactive support notifications, prevent problems before they occur, and guide customers through potential complications with preemptive assistance.
                   </p>
-                  <div class="bg-black p-4 rounded-lg">
+                  <div class=" p-4 rounded-lg">
                     <div class="grid md:grid-cols-2 gap-4 text-sm">
                       <ul class="text-gray-300 space-y-1">
                         <li>• Predictive issue identification and alerts</li>
@@ -318,7 +322,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
             </div>
 
             <!-- Way 6 -->
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <div class="flex items-start gap-4">
                 <div class="bg-primary text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">6</div>
                 <div>
@@ -326,7 +330,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <p class="text-white mb-4">
                     AI chatbots continuously analyze interaction data, customer feedback, and resolution outcomes to improve response accuracy, expand knowledge capabilities, and optimize conversation flows. This ensures constantly evolving service quality that adapts to changing customer needs.
                   </p>
-                  <div class="bg-black p-4 rounded-lg">
+                  <div class=" p-4 rounded-lg">
                     <h4 class="font-bold text-white mb-2">Learning Mechanisms</h4>
                     <div class="grid md:grid-cols-3 gap-4 text-sm text-center">
                       <div>
@@ -348,7 +352,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
             </div>
 
             <!-- Way 7 -->
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <div class="flex items-start gap-4">
                 <div class="bg-primary text-black rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">7</div>
                 <div>
@@ -356,7 +360,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <p class="text-white mb-4">
                     AI chatbots augment human agent capabilities by handling routine inquiries, providing real-time assistance during complex interactions, and delivering comprehensive context when escalating issues. This enables agents to focus on high-value, relationship-building activities.
                   </p>
-                  <div class="bg-black p-4 rounded-lg">
+                  <div class=" p-4 rounded-lg">
                     <div class="grid md:grid-cols-2 gap-4 text-sm">
                       <div>
                         <h5 class="font-bold text-primary mb-1">Agent Assistance</h5>
@@ -405,13 +409,13 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
           </div>
 
           <div class="space-y-8">
-            <div class="bg-black/30 p-6 rounded-lg">
+            <div class="/30 p-6 rounded-lg">
               <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Phase 1: Strategy & Design Planning (1-2 weeks)</h3>
               <p class="text-white mb-4">
                 Define chatbot objectives, identify use cases, and design conversation flows that align with customer needs and business goals. This foundation phase ensures the AI chatbot enhances rather than complicates the existing help desk experience.
               </p>
               <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">Use Case Identification</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• Common inquiry analysis and categorization</li>
@@ -420,7 +424,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                     <li>• Success metrics and KPI definition</li>
                   </ul>
                 </div>
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">Conversation Design</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• Intent classification and entity modeling</li>
@@ -432,12 +436,12 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
               </div>
             </div>
 
-            <div class="bg-black/30 p-6 rounded-lg">
+            <div class="/30 p-6 rounded-lg">
               <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Phase 2: Platform Integration & Configuration (2-3 weeks)</h3>
               <p class="text-white mb-4">
                 Integrate the AI chatbot with help desk systems, knowledge bases, and customer data platforms. Configure intelligent routing, escalation procedures, and real-time data access to enable comprehensive support capabilities.
               </p>
-              <div class="bg-black p-4 rounded-lg">
+              <div class=" p-4 rounded-lg">
                 <h4 class="font-bold text-white mb-2">Integration Requirements</h4>
                 <div class="grid md:grid-cols-3 gap-4 text-sm">
                   <ul class="text-gray-300 space-y-1">
@@ -462,13 +466,13 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
               </div>
             </div>
 
-            <div class="bg-black/30 p-6 rounded-lg">
+            <div class="/30 p-6 rounded-lg">
               <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Phase 3: Training & Optimization (2-3 weeks)</h3>
               <p class="text-white mb-4">
                 Train the AI chatbot using historical customer interactions, knowledge base content, and specific business terminology. Conduct comprehensive testing across various scenarios and optimize conversation flows based on performance metrics.
               </p>
               <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">Training Data</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• Historical chat and email interactions</li>
@@ -477,7 +481,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                     <li>• Business-specific terminology and processes</li>
                   </ul>
                 </div>
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">Testing & Validation</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• Conversation accuracy and relevance testing</li>
@@ -489,7 +493,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
               </div>
             </div>
 
-            <div class="bg-black/30 p-6 rounded-lg">
+            <div class="/30 p-6 rounded-lg">
               <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Phase 4: Deployment & Monitoring (1-2 weeks)</h3>
               <p class="text-white mb-4">
                 Execute gradual deployment with real-time monitoring and continuous optimization. Begin with limited customer segments and expand based on performance metrics, customer feedback, and agent adoption rates.
@@ -534,12 +538,12 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <h3 class="font-bold text-primary mb-4">Technology & Software Support</h3>
               <p class="text-white text-sm mb-4">
                 Software companies implement AI chatbots to handle technical troubleshooting, account management, and user education. The chatbots access technical documentation, system status, and user account information to provide comprehensive technical support while seamlessly escalating complex issues to specialized engineers.
               </p>
-              <div class="bg-black p-4 rounded-lg">
+              <div class=" p-4 rounded-lg">
                 <h4 class="font-bold text-white mb-2">Implementation Results</h4>
                 <ul class="text-gray-300 space-y-1 text-sm">
                   <li>• 75% of technical issues resolved without human intervention</li>
@@ -550,12 +554,12 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
               </div>
             </div>
 
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <h3 class="font-bold text-primary mb-4">E-commerce & Retail Support</h3>
               <p class="text-white text-sm mb-4">
                 Online retailers deploy AI chatbots to handle order inquiries, product questions, return processes, and shipping updates. Integration with <a href="/blog/customer-service-automation-software" class="text-primary hover:underline">e-commerce platforms</a> enables real-time order status updates and personalized product recommendations.
               </p>
-              <div class="bg-black p-4 rounded-lg">
+              <div class=" p-4 rounded-lg">
                 <h4 class="font-bold text-white mb-2">Performance Improvements</h4>
                 <ul class="text-gray-300 space-y-1 text-sm">
                   <li>• 85% of order inquiries handled automatically</li>
@@ -573,7 +577,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
               Elisa, a leading Northern European telecommunications company, implemented AI chatbot "Annika" across their help desk operations to handle service inquiries, technical support, billing questions, and equipment troubleshooting. The system now processes over 560,000 customer interactions while maintaining high satisfaction rates and delivering substantial operational improvements.
             </p>
             <div class="grid md:grid-cols-3 gap-4 text-sm">
-              <div class="bg-black/50 p-4 rounded-lg">
+              <div class="/50 p-4 rounded-lg">
                 <h5 class="font-bold text-primary mb-2">Implementation Scope</h5>
                 <ul class="text-gray-300 space-y-1">
                   <li>• Service plan inquiries and modifications</li>
@@ -582,7 +586,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <li>• 150 different topics and 800+ problems handled</li>
                 </ul>
               </div>
-              <div class="bg-black/50 p-4 rounded-lg">
+              <div class="/50 p-4 rounded-lg">
                 <h5 class="font-bold text-primary mb-2">Technology Features</h5>
                 <ul class="text-gray-300 space-y-1">
                   <li>• Multi-channel deployment (web, mobile, voice)</li>
@@ -591,7 +595,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <li>• Intelligent escalation to technical specialists</li>
                 </ul>
               </div>
-              <div class="bg-black/50 p-4 rounded-lg">
+              <div class="/50 p-4 rounded-lg">
                 <h5 class="font-bold text-primary mb-2">Measured Outcomes</h5>
                 <ul class="text-gray-300 space-y-1">
                   <li>• <strong>70% of all inbound contacts</strong> handled by AI</li>
@@ -605,12 +609,12 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
           <div class="mb-8">
             <h3 class="text-xl font-orbitron font-bold text-primary mb-6">Financial Services Help Desk Automation</h3>
-            <div class="bg-black/30 p-6 rounded-lg">
+            <div class="/30 p-6 rounded-lg">
               <p class="text-white mb-4">
                 Financial institutions leverage AI chatbots for account inquiries, transaction support, fraud prevention, and investment guidance. These systems handle sensitive financial information while maintaining strict compliance requirements and security protocols throughout all customer interactions.
               </p>
               <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">Service Applications</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• Account balance and transaction inquiries</li>
@@ -620,7 +624,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                     <li>• Mobile banking support and troubleshooting</li>
                   </ul>
                 </div>
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">Security & Compliance</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• Multi-factor authentication integration</li>
@@ -648,12 +652,12 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
           </p>
 
           <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <h3 class="font-bold text-primary mb-4">Leading Chatbot Platforms</h3>
               <p class="text-white text-sm mb-4">
                 Enterprise-grade AI chatbot platforms provide sophisticated natural language processing, conversation management, and integration capabilities specifically designed for help desk environments. These solutions offer scalability, customization, and advanced analytics for optimal performance.
               </p>
-              <div class="bg-black p-4 rounded-lg">
+              <div class=" p-4 rounded-lg">
                 <h4 class="font-bold text-white mb-2">Platform Capabilities</h4>
                 <ul class="text-gray-300 space-y-1 text-sm">
                   <li>• Advanced NLP with intent recognition and entity extraction</li>
@@ -665,12 +669,12 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
               </div>
             </div>
 
-            <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+            <div class="/50 p-6 rounded-lg border border-primary/20">
               <h3 class="font-bold text-primary mb-4">Conversation Design Excellence</h3>
               <p class="text-white text-sm mb-4">
                 Effective conversation design creates natural, helpful interactions that guide customers toward successful issue resolution. This involves understanding user intent, designing intuitive conversation flows, and implementing intelligent fallback mechanisms for complex scenarios.
               </p>
-              <div class="bg-black p-4 rounded-lg">
+              <div class=" p-4 rounded-lg">
                 <h4 class="font-bold text-white mb-2">Design Principles</h4>
                 <ul class="text-gray-300 space-y-1 text-sm">
                   <li>• Clear intent identification and entity extraction</li>
@@ -689,7 +693,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
               Following proven implementation best practices ensures successful chatbot deployment with high adoption rates and customer satisfaction. These guidelines represent insights from hundreds of successful AI chatbot implementations across diverse help desk environments.
             </p>
             <div class="grid md:grid-cols-2 gap-6 text-sm">
-              <div class="bg-black/50 p-4 rounded-lg">
+              <div class="/50 p-4 rounded-lg">
                 <h5 class="font-bold text-primary mb-2">Strategic Planning</h5>
                 <ul class="text-gray-300 space-y-1">
                   <li>• Start with high-volume, low-complexity use cases</li>
@@ -699,7 +703,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                   <li>• Establish feedback loops for continuous improvement</li>
                 </ul>
               </div>
-              <div class="bg-black/50 p-4 rounded-lg">
+              <div class="/50 p-4 rounded-lg">
                 <h5 class="font-bold text-primary mb-2">Operational Excellence</h5>
                 <ul class="text-gray-300 space-y-1">
                   <li>• Regular conversation flow optimization and updates</li>
@@ -714,12 +718,12 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
           <div class="mb-8">
             <h3 class="text-xl font-orbitron font-bold text-primary mb-6">Integration & Analytics Tools</h3>
-            <div class="bg-black/30 p-6 rounded-lg">
+            <div class="/30 p-6 rounded-lg">
               <p class="text-white mb-4">
                 Comprehensive integration and analytics capabilities enable AI chatbots to access necessary information, provide contextual responses, and deliver insights for continuous optimization. These tools create a unified ecosystem that enhances both customer experience and operational efficiency.
               </p>
               <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">System Integration</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• Help desk platform APIs (Zendesk, ServiceNow)</li>
@@ -729,7 +733,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                     <li>• Multi-channel deployment platforms</li>
                   </ul>
                 </div>
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">Performance Analytics</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• Conversation success rate tracking</li>
@@ -739,7 +743,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
                     <li>• Response time and resolution metrics</li>
                   </ul>
                 </div>
-                <div class="bg-black p-4 rounded-lg">
+                <div class=" p-4 rounded-lg">
                   <h4 class="font-bold text-primary mb-2">Optimization Tools</h4>
                   <ul class="text-gray-300 space-y-1 text-sm">
                     <li>• A/B testing for conversation flows</li>

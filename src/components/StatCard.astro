@@ -1,0 +1,15 @@
+---
+export interface Props {
+  value: string;
+  label?: string;
+  description: string;
+}
+
+const { value, label, description } = Astro.props;
+---
+
+<div class="bg-primary/10 border border-primary/30 p-6 rounded-xl text-center">
+  <div class="text-4xl font-orbitron font-bold text-primary mb-2">{value}</div>
+  {label && <div class="text-lg font-orbitron text-primary mb-2">{label}</div>}
+  <p class="text-white">{description}</p>
+</div>

@@ -8,11 +8,98 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
-  title="Nexitas - AI Business Automation Solutions"
+  title="NEXITAS - AI Business Automation Solutions"
   description="Transform your business with cutting-edge automation solutions, custom software development, and intelligent process optimization that delivers measurable ROI."
   type="website"
   ogImage="/assets/NEXITAS circle.png"
+  canonicalURL="https://nexitas.net/"
 >
+	<!-- Homepage-specific Schema Markup -->
+	<script type="application/ld+json" slot="head">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"@id": "https://nexitas.net/#homepage",
+		"url": "https://nexitas.net",
+		"name": "NEXITAS - AI Business Automation Solutions",
+		"description": "Transform your business with cutting-edge automation solutions, custom software development, and intelligent process optimization that delivers measurable ROI.",
+		"isPartOf": {
+			"@id": "https://nexitas.net/#website"
+		},
+		"about": {
+			"@id": "https://nexitas.net/#organization"
+		},
+		"primaryImageOfPage": {
+			"@type": "ImageObject",
+			"url": "/assets/NEXITAS circle.png"
+		},
+		"datePublished": "2024-01-01",
+		"dateModified": new Date().toISOString().split('T')[0],
+		"breadcrumb": {
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://nexitas.net"
+				}
+			]
+		},
+		"mainEntity": {
+			"@type": "Service",
+			"name": "Business Automation Solutions",
+			"description": "Comprehensive business process automation, AI integration, and custom software development services",
+			"provider": {
+				"@id": "https://nexitas.net/#organization"
+			},
+			"serviceType": [
+				"Business Process Automation",
+				"AI Integration",
+				"Custom Software Development",
+				"SEO Optimization"
+			],
+			"areaServed": {
+				"@type": "Country",
+				"name": "United States"
+			}
+		}
+	}
+	</script>
+	
+	<!-- FAQ Schema for Common Questions -->
+	<script type="application/ld+json" slot="head">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{
+				"@type": "Question",
+				"name": "What business automation services does NEXITAS provide?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "NEXITAS provides comprehensive business process automation, AI integration, custom software development, workflow optimization, and SEO services designed to transform operations and deliver measurable ROI."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "How can AI automation benefit my business?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "AI automation can reduce manual work by up to 80%, improve accuracy, cut operational costs, and scale your operations efficiently while freeing your team to focus on strategic initiatives."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "What industries does NEXITAS serve?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "NEXITAS serves businesses across all industries including healthcare, legal, real estate, HR, event management, and any organization looking to optimize processes through automation and AI."
+				}
+			}
+		]
+	}
+	</script>
 	<main>
 		<HeroSection />
 		

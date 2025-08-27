@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://azoth-ai.vercel.app',
+  site: 'https://nexitas.net',
   integrations: [
     tailwind({
       applyBaseStyles: false, // Let our custom global.css handle base styles

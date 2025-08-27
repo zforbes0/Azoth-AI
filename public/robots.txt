@@ -2,14 +2,16 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://azoth-ai.vercel.app/sitemap.xml
-Sitemap: https://azoth-ai.vercel.app/sitemap-index.xml
+Sitemap: https://nexitas.net/sitemap.xml
+Sitemap: https://nexitas.net/sitemap-index.xml
 
 # Disallow admin/private areas
 Disallow: /admin/
 Disallow: /_next/
 Disallow: /api/
 Disallow: /_astro/
+Disallow: /node_modules/
+Disallow: /.git/
 
 # Allow specific important pages
 Allow: /blog/
@@ -18,3 +20,6 @@ Allow: /
 
 # Crawl-delay for politeness
 Crawl-delay: 1
+
+# Host preference
+Host: https://nexitas.net
